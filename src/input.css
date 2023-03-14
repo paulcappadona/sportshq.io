@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .striped:nth-of-type(odd) {
+    @apply bg-gray-100
+  }
+}
