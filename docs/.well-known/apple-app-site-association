@@ -1,0 +1,10 @@
+{
+  "applinks": {
+      "details": [
+      {
+        "appIDs": ["A6WT5D732M.io.sportshub.app", "A6WT5D732M.io.sportshub.app.local", "A6WT5D732M.io.sportacle.app.local"],
+        "paths": ["*"]
+      }
+    ]
+  }
+}
