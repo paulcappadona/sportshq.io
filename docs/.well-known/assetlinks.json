@@ -1,0 +1,20 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.sportshub.app",
+      "sha256_cert_fingerprints":
+      ["EA:1A:CE:78:24:35:BB:17:0E:22:B6:C3:F8:E6:64:30:71:4A:8D:BB:59:8B:6F:65:B1:B2:CF:40:AE:C3:CB:8D"]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.sportacle.app",
+      "sha256_cert_fingerprints":
+      ["74:3E:E8:90:9D:E3:11:C5:36:A8:3B:22:EA:44:19:58:55:85:3E:49:7A:1A:F7:33:20:A3:0B:88:DE:96:E2:A6"]
+    }
+  }
+]
