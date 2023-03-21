@@ -27,7 +27,7 @@ function getMobileOperatingSystem() {
 function isDeeplinkPath() {
   var paths = [ '/event' ];
   var l = window.location;
-  // alert(l.pathname);
+  alert(l.pathname);
   for (var i = 0; i < paths.length; i++) {
     if (l.pathname.startsWith(paths[i])) {
       return true;
