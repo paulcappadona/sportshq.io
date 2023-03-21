@@ -27,9 +27,9 @@ function getMobileOperatingSystem() {
 function isDeeplinkPath() {
   var paths = [ '/event' ];
   var l = window.location;
-  alert(l.pathname);
+  // alert(l.pathname);
   for (var i = 0; i < paths.length; i++) {
-    if (l.pathname === paths[i]) {
+    if (l.pathname.startsWith(paths[i])) {
       return true;
     }
   }
@@ -37,6 +37,7 @@ function isDeeplinkPath() {
 }
 
 const os = getMobileOperatingSystem();
+// alert(os);
 
 if (isDeeplinkPath()) {
   if (os === "iOS") {
