@@ -12,6 +12,10 @@
       {
         "appID": "A6WT5D732M.io.sportacle.app",
         "paths": ["/event/*"]
+      },
+      {
+        "appID": "A6WT5D732M.dev.ptc.sample.applinks",
+        "paths": ["*"]
       }
     ]
   }
