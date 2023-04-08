@@ -1,6 +1,10 @@
 {
   "applinks": {
-      "details": [
+    "details": [
+      {
+        "appID": "A6WT5D732M.io.sportacle.app",
+        "paths": ["/event/*"]
+      },
       {
         "appID": "A6WT5D732M.io.sportshub.app",
         "paths": ["/event/*"]
@@ -8,14 +12,6 @@
       {
         "appID": "A6WT5D732M.io.sportshub.app.local",
         "paths": ["/event/*"]
-      },
-      {
-        "appID": "A6WT5D732M.io.sportacle.app",
-        "paths": ["/event/*"]
-      },
-      {
-        "appID": "A6WT5D732M.dev.ptc.sample.applinks",
-        "paths": ["*"]
       }
     ]
   }
