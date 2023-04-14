@@ -80,12 +80,44 @@
 		<!--Left Col-->
 		<div class="flex flex-col w-full xl:w-1/2 justify-center lg:items-start overflow-y-hidden">
 			<h1 class="my-4 text-3xl md:text-4xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1" style="color: #4A73E8;">Looking for a sporting partner or group?<br />Need a better way to manage activity attendance each week?</h1>
-			<p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Search for athletes and activities to join, filtering by sports, gender, age and location</p>
-			<a href="#events" class="no-underline hover:underline"><p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Easily manage activity creation, membership and attendance - no more chat groups required</p></a>
-			<a href="#schedule" class="no-underline hover:underline"><p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">View and manage your activity schedule</p></a>
-			<a href="#follow" class="no-underline hover:underline"><p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Build your network, following other athletes</p></a>
-			<a href="#profile" class="no-underline hover:underline"><p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Support for over 60+ sports, and growing.</p></a>		
-		</div>
+			<p class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Search for athletes and activities to join, filtering by sports, gender, age and location</p>
+			<a href="#events" class="flex no-underline hover:underline"><div class="flex leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Easily manage activity creation, membership and attendance
+				<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<use xlink:href="images/heroicons.svg#chevron-down-2"></use>
+				</svg>
+			</div>
+			</a>
+			<a href="#schedule" class="no-underline hover:underline"><div class="flex leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">View and manage your activity schedule
+				<svg class="h-5 w-5 align-bottom" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"></path>
+				</svg>
+			</div></a>
+			<a href="#follow" class="no-underline hover:underline"><div class="flex leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Build your network, following other athletes
+				<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"></path>
+				</svg>
+			</div></a>
+			<a href="#profile" class="no-underline hover:underline"><div class="flex leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Support for over 60+ sports, and growing
+				<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"></path>
+				</svg>
+			</div></a>
+
+			<h1 class="my-4 text-3xl md:text-4xl font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Use Cases</h1>
+			<!-- <h6 class="my-1 text-xl md:text-2xl font-bold leading-tight text-center md:text-left slide-in-bottom-h6">Use Cases</h6> -->
+			<ul>
+				<li class="leading-normal text-base md:text-lg mb-1 text-center md:text-left slide-in-bottom-subtitle">
+					<a href="./use-cases.html" class="flex text-blue-500 underline">See different use cases
+						<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25">
+							</path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+	</div>
 		
 		<!--Right Col-->
 		<div class="w-full xl:w-1/2 py-6 overflow-y-hidden">
@@ -110,12 +142,15 @@
 		<!--Right Col-->
 		<div class="w-full xl:w-1/2 py-6 overflow-y-hidden">
 			<h1 class="my-4 text-3xl md:text-4xl font-bold leading-tight text-center md:text-left slide-in-bottom-h1" style="color: #4A73E8;"><a id="events">Manage Events</a></h1>
+			<p class="pb-5">An Event is a template from which activities are generated.  Seup an event with a schedule and members, then each scheduled 
+				instance will generate an activity setup with the parameters from the event (ie location, members, etc)</p>
 			<ul>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Create publicly searchable or private events</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Schedule the frequency of the event</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Set a location with optional gender and age criteria</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Event membership is handled in app, invite users and handle join requests</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Notifications sent on event updates</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Create private or public events</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Schedule the instance frequency</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Set a location and optional gender and age criteria</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Event membership and security is handled in app, invite users and handle join requests</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Easily promote and share events with others with a link</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Receieve notifications on event updates</li>
 			</ul>
 		</div>
 	</div>
@@ -127,12 +162,12 @@
 		<div class="w-full xl:w-1/2 py-6 overflow-y-hidden">
 			<h1 class="my-4 text-3xl md:text-4xl font-bold leading-tight text-center md:text-left slide-in-bottom-h1" style="color: #4A73E8;">Manage Activities</h1>
 			<ul>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">An event will generate an acitvity for each instance in the schedule</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Users can opt to confirm or decline attendance</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Once an activity is full, the app will waitlist users</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Allow confirmed users to select shirt colors prior to the activity to ensure even numbers</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">You can update detail for an activity independant of the settings in the parent Event</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Notifications sent to members on activity creation and update</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">An event will generate an acitvity for each instance in the schedule</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Users can opt to confirm or decline attendance</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Once an activity is full, the app will waitlist users</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Allow confirmed users to select shirt colors prior to the activity to ensure even numbers</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">You can update detail for an activity independant of the settings in the parent Event</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Notifications sent to members on activity creation and update</li>
 			</ul>
 		</div>
 
@@ -155,7 +190,7 @@
 		<div class="w-full xl:w-1/2 py-6 overflow-y-hidden">
 			<h1 class="my-4 text-3xl md:text-4xl font-bold leading-tight text-center md:text-left slide-in-bottom-h1" style="color: #4A73E8;"><a id="schedule">Your Activity Schedule</a></h1>
 			<ul>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">View and manage your confirmed activity schedule</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">View and manage your confirmed activity schedule</li>
 			</ul>
 		</div>
 	</div>
@@ -167,9 +202,9 @@
 		<div class="w-full xl:w-1/2 py-6 overflow-y-hidden">
 			<h1 class="my-4 text-3xl md:text-4xl font-bold leading-tight text-center md:text-left slide-in-bottom-h1" style="color: #4A73E8;"><a id="follow">Follow Other Athletes</a></h1>
 			<ul>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Build your network and follow other athletes</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Rate the ability of those you follow</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Browse the follow lists of others to identify athletes that are matched with similar ability</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Build your network and follow other athletes</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Rate the ability of those you follow</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Browse the follow lists of others to identify athletes that are matched with similar ability</li>
 			</ul>
 		</div>
 
@@ -192,10 +227,11 @@
 		<div class="w-full xl:w-1/2 py-6 overflow-y-hidden">
 			<h1 class="my-4 text-3xl md:text-4xl font-bold leading-tight text-center md:text-left slide-in-bottom-h1" style="color: #4A73E8;"><a id="profile">Your Profile</a></h1>
 			<ul>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Register your sports of interest in your profile</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Provide an optional bio for each of your registered sports</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Optionally configure alerting preferences to be notified of new athletes and events in your area</li>
-				<li class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">An ever increasing number of sports and variations supported, including Badminton, Basketball, Cycling, Football, Hiking, Running, Squash, Tennis, Climbing, Parkour to name a few</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Register your sports of interest in your profile</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Provide an optional bio for each of your registered sports</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Optionally configure alerting preferences to be notified of new athletes and events in your area</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">Guardians can setup minors under their account, and interact on the minors behalf</li>
+				<li class="leading-normal text-base md:text-2xl mb-4 text-center md:text-left slide-in-bottom-subtitle">An ever increasing number of sports and variations supported, including Badminton, Basketball, Cycling, Football, Hiking, Running, Squash, Tennis, Climbing, Parkour to name a few</li>
 			</ul>
 		</div>
 	</div>
