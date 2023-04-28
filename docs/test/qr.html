@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sports HQ QRCode reference</title>
+  <script src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Zen+Dots" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    @media print {
+      .noprint {
+        visibility: hidden;
+      }
+      @page { margin: 0; }
+      body { margin: 1.6cm; }
+    }
+  </style>
+
+  <script type="text/javascript">
+    share.addEventListener('click', event => {
+      if (navigator.share) {
+        navigator.share({
+          title: 'My Event',
+          url: window.location
+        }).then(() => {
+          console.log('Thanks for sharing!');
+        })
+        .catch(console.error);
+      }
+    });
+  </script>
+</head>
+<body style="font-family: 'Source Sans Pro', sans-serif;">
+  <div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4">
+        <h1 class="text-center" style="font-family: 'Zen Dots';">Sports HQ</h1>
+        <h4 class="text-center">www.sportshq.io</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4">
+        <qr-code
+          id="qr1"
+          contents="https://www.sportshq.io/event/view/gKybDHQ1rVO0yKQYdEym"
+          module-color="#4A73E8"
+          position-ring-color="#0337CB"
+          position-center-color="#4A73E8"
+          mask-x-to-y-ratio="1.2"
+          style="
+            width: 100%;
+            height: 100%;
+            margin: 2em auto;
+            background-color: #fff;
+          "
+        >
+        <img src="../images/logo-inv.svg" slot="icon" />
+        </qr-code>
+      </div>
+    </div>
+    <div class="row pb-5">
+      <div class="col-lg-4 offset-lg-4">
+        <h2 class="text-center">Join Event</h2>
+        <h3 class="text-center pb-3">Weekly City Cycle</h3>
+        <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <img src="../images/print.svg" onclick="window.print();return false;" class="noprint" />
+            </div>
+          </div>
+          <div class="col">
+            <!-- <img src="../images/share.svg" onclick="navigator.share(window.location);return false;" class="noprint" /> -->
+            <div class="d-flex justify-content-center">
+              <img id="share" src="../images/share.svg" class="noprint" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
