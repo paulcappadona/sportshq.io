@@ -3,15 +3,15 @@
     "details": [
       {
         "appID": "A6WT5D732M.io.sportacle.app",
-        "paths": ["/event/*"]
+        "paths": ["/event/*", "/venue/*"]
       },
       {
         "appID": "A6WT5D732M.io.sportshub.app",
-        "paths": ["/event/*"]
+        "paths": ["/event/*", "/venue/*"]
       },
       {
         "appID": "A6WT5D732M.io.sportshub.app.local",
-        "paths": ["/event/*"]
+        "paths": ["/event/*", "/venue/*"]
       }
     ]
   }
