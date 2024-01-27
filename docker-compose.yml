@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  db:
+    image: httpd:2.4
+    ports:
+      - 8800:80
+    volumes:
+      - type: bind
+        source: ./docs
+        target: /usr/local/apache2/htdocs
