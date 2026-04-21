@@ -1,0 +1,19 @@
+title: Sports HQ
+description: Find your game. Build your team.
+url: https://www.sportshq.io
+
+include:
+  - .well-known
+
+exclude:
+  - node_modules
+  - src
+  - docs
+  - _site
+  - docker-compose.yml
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - Gemfile
+  - Gemfile.lock
+  - "README*.md"
