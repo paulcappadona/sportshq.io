@@ -104,3 +104,9 @@ dist
 .tern-port
 
 **/.DS_Store
+
+# Jekyll build output
+_site/
+docs/
+.jekyll-cache/
+Gemfile.lock

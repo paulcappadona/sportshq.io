@@ -50,8 +50,8 @@ if (isDeeplinkPath()) {
     window.location.href = "https://play.google.com/store/apps/details?id=io.sportacle.app";
   }
 
-  if (os === "unknown") {
-    // Just replace `https://` with `market://` on your app's PlayStore link.
-    window.location.href = "https://www.sportshq.io";
-  }
+  // if (os === "unknown") {
+  //   // Just replace `https://` with `market://` on your app's PlayStore link.
+  //   window.location.href = "https://www.sportshq.io";
+  // }
 }

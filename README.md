@@ -1,15 +1,101 @@
 # sportshq.io
-Sports HQ github pages site
 
-# Landing page
-https://github.com/tailwindtoolbox/App-Landing-Page
+Sports HQ marketing site, built with Jekyll and deployed to GitHub Pages via GitHub Actions.
 
-# Development
-## Tailwind CSS
-Watch for changes in the input.css file and output to the output.css file
-`npx tailwindcss -i ./src/input.css -o ./docs/output.css --watch`
+## Project structure
 
-## Http Server
-There is a docker compose file that will run a simple http server to serve the static files in the docs folder
-To start the server `docker-compose up`
-To stop the server `docker-compose down`
+```
+/
+├── _includes/        # Reusable HTML components
+│   ├── nav.html      # Site navigation
+│   └── footer.html   # Site footer
+├── _layouts/
+│   └── default.html  # Base HTML shell (head, nav, footer, scripts)
+├── _config.yml       # Jekyll configuration
+├── index.html        # Home page (front matter + content only)
+├── about/
+│   ├── pp.html       # Privacy Policy
+│   └── tos.html      # Terms of Service
+├── css/              # Stylesheets
+│   ├── style.css     # Main design system
+│   └── legal.css     # Legal page styles
+├── js/
+│   └── main.js       # Theme toggle, nav scroll, animations
+└── .github/
+    └── workflows/
+        └── pages.yml # CI/CD: build Jekyll → deploy to Pages
+```
+
+Pages with Jekyll front matter use `layout: default` and get the nav/footer automatically. Pages without front matter pass through as static files.
+
+## Local development
+
+### Option A — Docker (recommended, no Ruby setup required)
+
+Uses the official `ruby:3.3` image, which supports Apple Silicon (arm64) natively.
+
+```bash
+docker-compose up
+```
+
+The site will be available at **http://localhost:8800** with live reload on file changes. Stop with `Ctrl+C`, then `docker-compose down`.
+
+On first run Docker pulls the Ruby image and installs gems into a named volume — this takes a couple of minutes. Subsequent starts are fast.
+
+### Option B — Native Ruby
+
+Requires Ruby 3.x. Check your version with `ruby --version`; use [rbenv](https://github.com/rbenv/rbenv) or [mise](https://mise.jdx.dev) to manage versions if needed.
+
+```bash
+gem install bundler
+bundle install
+bundle exec jekyll serve --livereload
+```
+
+Site runs at **http://localhost:4000**.
+
+### Build only (no server)
+
+```bash
+# Docker
+docker-compose run --rm jekyll jekyll build
+
+# Native
+bundle exec jekyll build
+```
+
+Output goes to `_site/`. This directory is gitignored — it's generated on every deploy.
+
+## Creating a new page
+
+Add front matter to any `.html` file and it will inherit the nav, footer, and full `<head>`:
+
+```yaml
+---
+layout: default
+title: "Page Title — Sports HQ"
+description: "Page description for SEO."
+---
+
+<!-- your page content here -->
+```
+
+Additional front matter options:
+
+| Key | Effect |
+|---|---|
+| `nav_solid: true` | Nav renders with solid background from the top (use on pages without a dark hero section) |
+| `extra_css: /css/legal.css` | Injects an extra stylesheet into `<head>` |
+| `toc: true` | Activates the sticky sidebar TOC scroll-highlight script (legal pages) |
+
+## Deployment
+
+Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/pages.yml`), which builds Jekyll and deploys directly to GitHub Pages. No manual build or `docs/` commit needed.
+
+## Tailwind (legacy pages)
+
+The older support pages (`faqs.html`, `howto.html`, etc.) still use the Tailwind-compiled `output.css`. To regenerate it after editing `src/input.css`:
+
+```bash
+npx tailwindcss -i ./src/input.css -o ./output.css --watch
+```
