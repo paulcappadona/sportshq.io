@@ -9,6 +9,7 @@ exclude:
   - node_modules
   - src
   - docs
+  - test
   - _site
   - docker-compose.yml
   - package.json
