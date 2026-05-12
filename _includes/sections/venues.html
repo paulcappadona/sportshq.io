@@ -1,0 +1,45 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── VENUES ── -->
+  <section class="venues" id="venues">
+    <div class="container venues__inner">
+      <div class="venues__copy">
+        <div class="section-tag">{{ _loc.venues_tag | default: "For Venue Owners" }}</div>
+        <h2 class="section-title">{{ _loc.venues_headline | default: "Put your facility on the map" }}</h2>
+        <p>{{ _loc.venues_sub | default: "Whether you run a tennis club, a community pitch, or a private gym — Sports HQ gives you the tools to attract members, manage registrations, and promote your events." }}</p>
+        <ul class="venues__list">
+          <li>
+            <div class="vl-icon">📍</div>
+            <div>
+              <strong>{{ _loc.venues_feature_1_title | default: "Instant Visibility" }}</strong>
+              <p>{{ _loc.venues_feature_1_sub | default: "Appear on the map search for athletes in your area browsing for places to play." }}</p>
+            </div>
+          </li>
+          <li>
+            <div class="vl-icon">📲</div>
+            <div>
+              <strong>{{ _loc.venues_feature_2_title | default: "QR Code Registration" }}</strong>
+              <p>{{ _loc.venues_feature_2_sub | default: "Let athletes register on the spot with a QR code — no paperwork needed." }}</p>
+            </div>
+          </li>
+          <li>
+            <div class="vl-icon">👥</div>
+            <div>
+              <strong>{{ _loc.venues_feature_3_title | default: "Member Management" }}</strong>
+              <p>{{ _loc.venues_feature_3_sub | default: "See who's registered, manage access, and communicate with your community." }}</p>
+            </div>
+          </li>
+          <li>
+            <div class="vl-icon">📣</div>
+            <div>
+              <strong>{{ _loc.venues_feature_4_title | default: "Event Promotion" }}</strong>
+              <p>{{ _loc.venues_feature_4_sub | default: "Create and publicise venue events that reach followers and local athletes automatically." }}</p>
+            </div>
+          </li>
+        </ul>
+        <a href="#download" class="btn btn--navy btn--lg">{{ _loc.venues_cta | default: "Register Your Venue" }}</a>
+      </div>
+      <div class="venues__visual">
+        {% if page.locale_id %}<img src="/assets/screenshots/{{ page.locale_id }}/03.png" alt="Venue details screen" style="width:100%;max-width:320px;height:auto;display:block;">{% else %}<img src="/images/venue-details.png" alt="Venue details screen" style="width:100%;max-width:320px;height:auto;display:block;">{% endif %}
+      </div>
+    </div>
+  </section>

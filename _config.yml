@@ -2,6 +2,9 @@ title: Sports HQ
 description: Find your game. Build your team.
 url: https://www.sportshq.io
 
+plugins:
+  - jekyll-sitemap
+
 include:
   - .well-known
 

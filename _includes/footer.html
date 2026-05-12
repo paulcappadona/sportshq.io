@@ -1,3 +1,4 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
@@ -14,37 +15,37 @@
         </div>
         <span class="footer__logo-wordmark">Sports<span>HQ</span></span>
       </div>
-      <p>Connecting athletes, events, and venues worldwide.</p>
+      <p>{{ _loc.footer_tagline | default: "Connecting athletes, events, and venues worldwide." }}</p>
       <div class="footer__store-links">
         <a href="https://apps.apple.com/us/app/sportacleio/id6444780403" target="_blank" rel="noopener">iOS App</a>
         <a href="https://play.google.com/store/apps/details?id=io.sportacle.app" target="_blank" rel="noopener">Android App</a>
       </div>
     </div>
     <div class="footer__col">
-      <h5>Product</h5>
-      <a href="/#features">Features</a>
-      <a href="/#sports">Sports</a>
-      <a href="/#venues">For Venues</a>
-      <a href="/#download">Download</a>
+      <h5>{{ _loc.footer_product | default: "Product" }}</h5>
+      <a href="/#features">{{ _loc.nav_features | default: "Features" }}</a>
+      <a href="/#sports">{{ _loc.nav_sports | default: "Sports" }}</a>
+      <a href="/#venues">{{ _loc.footer_venues_link | default: "For Venues" }}</a>
+      <a href="/#download">{{ _loc.nav_download | default: "Download" }}</a>
     </div>
     <div class="footer__col">
-      <h5>Support</h5>
+      <h5>{{ _loc.footer_support | default: "Support" }}</h5>
       <!-- <a href="/howto.html">How Tos</a>
       <a href="/faqs.html">FAQs</a> -->
-      <a href="mailto:support@sportshq.io">Contact Us</a>
+      <a href="mailto:support@sportshq.io">{{ _loc.footer_contact | default: "Contact Us" }}</a>
       <a href="https://twitter.com/SportsHQ_io" target="_blank" rel="noopener">Twitter</a>
     </div>
     <div class="footer__col">
-      <h5>Legal</h5>
-      <a href="/about/pp.html">Privacy Policy</a>
-      <a href="/about/tos.html">Terms of Service</a>
-      <a href="/faq/account-delete.html">Account Deletion</a>
+      <h5>{{ _loc.footer_legal | default: "Legal" }}</h5>
+      <a href="/about/pp.html">{{ _loc.footer_privacy | default: "Privacy Policy" }}</a>
+      <a href="/about/tos.html">{{ _loc.footer_tos | default: "Terms of Service" }}</a>
+      <a href="/faq/account-delete.html">{{ _loc.footer_account_delete | default: "Account Deletion" }}</a>
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container">
-      <span>&copy; 2026 Sports HQ. All rights reserved.</span>
-      <span>Available worldwide in 15+ languages</span>
+      <span>&copy; 2026 Sports HQ. {{ _loc.footer_copyright | default: "All rights reserved." }}</span>
+      <span>{{ _loc.footer_available | default: "Available worldwide in 15+ languages" }}</span>
     </div>
   </div>
 </footer>

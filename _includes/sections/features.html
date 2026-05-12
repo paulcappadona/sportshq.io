@@ -1,0 +1,112 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── FEATURES ── -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">{{ _loc.features_tag | default: "Features" }}</div>
+          <h2 class="section-title">{{ _loc.features_headline | default: "Engineered for<br /><em class=\"features__title-accent\">Excellence.</em>" }}</h2>
+          <p class="section-sub" style="text-align:left;margin:0">{{ _loc.features_sub | default: "Our features are built to bridge the gap between amateur play and professional organisation." }}</p>
+        </div>
+        <div class="features__counter">01–06</div>
+      </div>
+
+      <div class="features__bento">
+
+        <!-- Card 1: Discovery -->
+        <div class="bento-card bento-card--8 bento-card--dark bento-card--split">
+          <div class="feature-card__content">
+            <div class="feature-icon feature-icon--lime-on-dark">
+              <span class="material-symbols-outlined">location_on</span>
+            </div>
+            <div class="card-label">{{ _loc.feature_1_label | default: "Intelligence" }}</div>
+            <h3>{{ _loc.feature_1_title | default: "Discover Nearby Athletes, Events &amp; Venues" }}</h3>
+            <p>{{ _loc.feature_1_body | default: "Search the map for activities near you. Filter by sport, gender, age range, and distance to find exactly the right game or group to join." }}</p>
+            <ul class="feature-list">
+              <li>{{ _loc.feature_1_li_1 | default: "Interactive map-based search" }}</li>
+              <li>{{ _loc.feature_1_li_2 | default: "Smart sport &amp; demographic filters" }}</li>
+              <li>{{ _loc.feature_1_li_3 | default: "Public &amp; private event listings" }}</li>
+              <li>{{ _loc.feature_1_li_4 | default: "Notifications for new athletes and events that match your interests" }}</li>
+            </ul>
+          </div>
+          <div class="feature-card__visual">
+            {% if page.locale_id %}<img src="/assets/screenshots/{{ page.locale_id }}/02.png" alt="Search results screen" style="width:100%;max-width:260px;height:auto;display:block;border-radius:1.5rem;">{% else %}<img src="/images/search-results-people.png" alt="Search results screen" style="width:100%;max-width:260px;height:auto;display:block;border-radius:1.5rem;">{% endif %}
+          </div>
+        </div>
+
+        <!-- Card 2: Events -->
+        <div class="bento-card bento-card--4 bento-card--events">
+          <div class="feature-icon feature-icon--navy">
+            <span class="material-symbols-outlined">event_available</span>
+          </div>
+          <h3>{{ _loc.feature_2_title | default: "Events &amp; Activity Management" }}</h3>
+          <p>{{ _loc.feature_2_body | default: "Create recurring or one-off events with schedules, capacity limits, and membership rules. Each activity auto-generates from your event template." }}</p>
+          <ul class="feature-list">
+            <li>{{ _loc.feature_2_li_1 | default: "Recurring event scheduling" }}</li>
+            <li>{{ _loc.feature_2_li_2 | default: "Capacity &amp; waitlists" }}</li>
+            <li>{{ _loc.feature_2_li_3 | default: "Confirm / decline attendance" }}</li>
+            <li>{{ _loc.feature_2_li_4 | default: "Team colour assignments" }}</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Network -->
+        <div class="bento-card bento-card--4 bento-card--network">
+          <div class="feature-icon feature-icon--lime">
+            <span class="material-symbols-outlined">hub</span>
+          </div>
+          <h3>{{ _loc.feature_3_title | default: "Build Your Sports Network" }}</h3>
+          <p>{{ _loc.feature_3_body | default: "Follow athletes, see their activity feeds, and connect with players who match your skill level. Expand your playing group organically." }}</p>
+          <ul class="feature-list">
+            <li>{{ _loc.feature_3_li_1 | default: "Follow athletes &amp; see their activity" }}</li>
+            <li>{{ _loc.feature_3_li_2 | default: "Skill &amp; ability ratings" }}</li>
+            <li>{{ _loc.feature_3_li_3 | default: "Mutual connection requests" }}</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Venues -->
+        <div class="bento-card bento-card--8 bento-card--dark">
+          <div class="feature-icon feature-icon--teal">
+            <span class="material-symbols-outlined">apartment</span>
+          </div>
+          <div class="card-label card-label--teal">{{ _loc.feature_4_label | default: "Infrastructure" }}</div>
+          <h3>{{ _loc.feature_4_title | default: "Venue Management" }}</h3>
+          <p>{{ _loc.feature_4_body | default: "Register courts, pitches, gyms, and facilities. Share via QR code, manage memberships, and promote your venue to the local sports community." }}</p>
+          <ul class="feature-list">
+            <li>{{ _loc.feature_4_li_1 | default: "Commercial, public &amp; private venues" }}</li>
+            <li>{{ _loc.feature_4_li_2 | default: "QR code &amp; link sharing" }}</li>
+            <li>{{ _loc.feature_4_li_3 | default: "Athlete registration &amp; check-in" }}</li>
+            <li>{{ _loc.feature_4_li_4 | default: "Drive member engagement" }}</li>
+          </ul>
+        </div>
+
+        <!-- Card 5: Notifications -->
+        <div class="bento-card bento-card--6 bento-card--notif">
+          <div class="feature-icon feature-icon--lime">
+            <span class="material-symbols-outlined">notifications</span>
+          </div>
+          <h3>{{ _loc.feature_5_title | default: "Real-Time Notifications" }}</h3>
+          <p>{{ _loc.feature_5_body | default: "Stay in the loop with push notifications for events, activity updates, and new joiners. Never miss a game update." }}</p>
+          <ul class="feature-list">
+            <li>{{ _loc.feature_5_li_1 | default: "Activity update alerts" }}</li>
+            <li>{{ _loc.feature_5_li_2 | default: "Instant join notifications" }}</li>
+            <li>{{ _loc.feature_5_li_3 | default: "Event reminder scheduling" }}</li>
+          </ul>
+        </div>
+
+        <!-- Card 6: Safety -->
+        <div class="bento-card bento-card--6 bento-card--lime">
+          <div class="feature-icon feature-icon--navy">
+            <span class="material-symbols-outlined">shield</span>
+          </div>
+          <h3>{{ _loc.feature_6_title | default: "Safe &amp; Family Friendly" }}</h3>
+          <p>{{ _loc.feature_6_body | default: "Guardian accounts let parents manage minor profiles with full visibility and control. Age and gender filters keep events appropriate." }}</p>
+          <ul class="feature-list">
+            <li>{{ _loc.feature_6_li_1 | default: "Parent / guardian accounts" }}</li>
+            <li>{{ _loc.feature_6_li_2 | default: "Minor profile controls" }}</li>
+            <li>{{ _loc.feature_6_li_3 | default: "Age &amp; gender filters on all events" }}</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>

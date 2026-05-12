@@ -1,3 +1,4 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
 <header class="nav{% if page.nav_solid %} nav--solid{% endif %}" id="nav">
   <div class="nav__inner">
     <a href="/" class="nav__logo">
@@ -14,16 +15,28 @@
       <span class="logo-wordmark">Sports<span>HQ</span></span>
     </a>
     <nav class="nav__links">
-      <a href="/#features">Features</a>
-      <a href="/#sports">Sports</a>
-      <a href="/#venues">Venues</a>
-      <a href="/#download">Download</a>
+      <a href="/#features">{{ _loc.nav_features | default: "Features" }}</a>
+      <a href="/#sports">{{ _loc.nav_sports | default: "Sports" }}</a>
+      <a href="/#venues">{{ _loc.nav_venues | default: "Venues" }}</a>
+      <a href="/#download">{{ _loc.nav_download | default: "Download" }}</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="material-symbols-outlined icon-moon">dark_mode</span>
       <span class="material-symbols-outlined icon-sun">light_mode</span>
     </button>
-    <a href="/#download" class="btn btn--lime nav__cta">Get the App</a>
+    <div class="nav__locale" id="navLocale">
+      <button class="nav__locale-btn" id="navLocaleBtnTrigger" aria-label="Select language" aria-expanded="false">
+        <span class="material-symbols-outlined">language</span>
+        <span class="nav__locale-label" id="navLocaleLabel">EN</span>
+        <span class="material-symbols-outlined nav__locale-chevron">expand_more</span>
+      </button>
+      <div class="nav__locale-dropdown" id="navLocaleDropdown" role="listbox">
+        <a class="locale-opt" href="/" data-locale-path="/"><span class="locale-opt__flag">🇺🇸</span><span class="locale-opt__name">English (US)</span></a>
+        {% for loc in site.data.locales %}<a class="locale-opt" href="{{ loc.path }}" data-locale-path="{{ loc.path }}"><span class="locale-opt__flag">{{ loc.flag }}</span><span class="locale-opt__name">{{ loc.name }}</span></a>
+        {% endfor %}
+      </div>
+    </div>
+    <a href="/#download" class="btn btn--lime nav__cta">{{ _loc.nav_cta | default: "Get the App" }}</a>
     <button class="nav__hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
