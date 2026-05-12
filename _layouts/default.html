@@ -2,11 +2,13 @@
   {%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
   {%- assign _title = _loc.title -%}
   {%- assign _desc = _loc.description -%}
+  {%- assign _keywords = _loc.keywords -%}
   {%- assign _lang = _loc.lang -%}
   {%- assign _dir = _loc.dir | default: "ltr" -%}
 {%- else -%}
   {%- assign _title = page.title | default: site.title -%}
   {%- assign _desc = page.description | default: site.description -%}
+  {%- assign _keywords = page.keywords -%}
   {%- assign _lang = page.lang | default: "en" -%}
   {%- assign _dir = "ltr" -%}
 {%- endif -%}
@@ -17,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ _title }}</title>
   <meta name="description" content="{{ _desc }}" />
-  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}" />{% endif %}
+  {% if _keywords %}<meta name="keywords" content="{{ _keywords }}" />{% endif %}
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ _title }}" />
@@ -55,7 +57,7 @@
   (function(){
     var p=window.location.pathname;
     if(p!=='/'&&p!=='/index.html')return;
-    var PATHS={'ar':'/ar/','de':'/de/','el':'/el/','en-AU':'/en-AU/','en-CA':'/en-CA/','en-GB':'/en-GB/','en-IN':'/en-IN/','en-SG':'/en-SG/','es':'/es/','fr':'/fr/','hi':'/hi/','id':'/id/','it':'/it/','ja':'/ja/','ko':'/ko/','nl':'/nl/','pt':'/pt-PT/','pt-BR':'/pt-BR/','pt-PT':'/pt-PT/','ru':'/ru/','sv':'/sv/','zh-HK':'/zh-HK/','zh-Hant':'/zh-Hant/','zh-Hans':'/zh-Hans/'};
+    var PATHS={'ar':'/ar/','de':'/de/','el':'/el/','en-AU':'/en-AU/','en-CA':'/en-CA/','en-GB':'/en-GB/','en-IN':'/en-IN/','en-SG':'/en-SG/','es':'/es/','es-419':'/es-419/','fr':'/fr/','hi':'/hi/','id':'/id/','it':'/it/','ja':'/ja/','ko':'/ko/','nl':'/nl/','pt':'/pt-PT/','pt-BR':'/pt-BR/','pt-PT':'/pt-PT/','ru':'/ru/','sv':'/sv/','zh-HK':'/zh-HK/','zh-Hant':'/zh-Hant/','zh-Hans':'/zh-Hans/'};
     var LATAM=['MX','AR','CO','CL','PE','VE','EC','BO','PY','UY','CR','PA','DO','GT','HN','NI','SV','CU','PR'];
     function toPath(lang){
       if(PATHS[lang])return PATHS[lang];
@@ -65,9 +67,10 @@
       if(lang.startsWith('en-'))return PATHS[lang]||null;
       var pfx=lang.split('-')[0];return PATHS[pfx]||null;
     }
+    var VALID_PATHS=['/'].concat(Object.keys(PATHS).map(function(k){return PATHS[k];})).filter(function(v,i,a){return a.indexOf(v)===i;});
     try{
       var stored=localStorage.getItem('shq_locale');
-      if(stored!==null){if(stored!=='/')window.location.replace(stored);return;}
+      if(stored!==null){if(VALID_PATHS.indexOf(stored)>=0){if(stored!=='/')window.location.replace(stored);return;}}
     }catch(e){}
     var langs=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en'];
     for(var i=0;i<langs.length;i++){var d=toPath(langs[i]);if(d&&d!=='/')return window.location.replace(d);}

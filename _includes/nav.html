@@ -15,10 +15,10 @@
       <span class="logo-wordmark">Sports<span>HQ</span></span>
     </a>
     <nav class="nav__links">
-      <a href="/#features">{{ _loc.nav_features | default: "Features" }}</a>
-      <a href="/#sports">{{ _loc.nav_sports | default: "Sports" }}</a>
-      <a href="/#venues">{{ _loc.nav_venues | default: "Venues" }}</a>
-      <a href="/#download">{{ _loc.nav_download | default: "Download" }}</a>
+      <a href="{{ _loc.path | default: '/' }}#features">{{ _loc.nav_features | default: "Features" }}</a>
+      <a href="{{ _loc.path | default: '/' }}#sports">{{ _loc.nav_sports | default: "Sports" }}</a>
+      <a href="{{ _loc.path | default: '/' }}#venues">{{ _loc.nav_venues | default: "Venues" }}</a>
+      <a href="{{ _loc.path | default: '/' }}#download">{{ _loc.nav_download | default: "Download" }}</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="material-symbols-outlined icon-moon">dark_mode</span>
@@ -30,13 +30,13 @@
         <span class="nav__locale-label" id="navLocaleLabel">EN</span>
         <span class="material-symbols-outlined nav__locale-chevron">expand_more</span>
       </button>
-      <div class="nav__locale-dropdown" id="navLocaleDropdown" role="listbox">
-        <a class="locale-opt" href="/" data-locale-path="/"><span class="locale-opt__flag">🇺🇸</span><span class="locale-opt__name">English (US)</span></a>
-        {% for loc in site.data.locales %}<a class="locale-opt" href="{{ loc.path }}" data-locale-path="{{ loc.path }}"><span class="locale-opt__flag">{{ loc.flag }}</span><span class="locale-opt__name">{{ loc.name }}</span></a>
+      <div class="nav__locale-dropdown" id="navLocaleDropdown" role="menu">
+        <a class="locale-opt" href="/" data-locale-path="/" role="menuitem"><span class="locale-opt__flag">🇺🇸</span><span class="locale-opt__name">English (US)</span></a>
+        {% for loc in site.data.locales %}<a class="locale-opt" href="{{ loc.path }}" data-locale-path="{{ loc.path }}" role="menuitem"><span class="locale-opt__flag">{{ loc.flag }}</span><span class="locale-opt__name">{{ loc.name }}</span></a>
         {% endfor %}
       </div>
     </div>
-    <a href="/#download" class="btn btn--lime nav__cta">{{ _loc.nav_cta | default: "Get the App" }}</a>
+    <a href="{{ _loc.path | default: '/' }}#download" class="btn btn--lime nav__cta">{{ _loc.nav_cta | default: "Get the App" }}</a>
     <button class="nav__hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>

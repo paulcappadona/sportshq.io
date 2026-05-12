@@ -23,10 +23,10 @@
     </div>
     <div class="footer__col">
       <h5>{{ _loc.footer_product | default: "Product" }}</h5>
-      <a href="/#features">{{ _loc.nav_features | default: "Features" }}</a>
-      <a href="/#sports">{{ _loc.nav_sports | default: "Sports" }}</a>
-      <a href="/#venues">{{ _loc.footer_venues_link | default: "For Venues" }}</a>
-      <a href="/#download">{{ _loc.nav_download | default: "Download" }}</a>
+      <a href="{{ _loc.path | default: '/' }}#features">{{ _loc.nav_features | default: "Features" }}</a>
+      <a href="{{ _loc.path | default: '/' }}#sports">{{ _loc.nav_sports | default: "Sports" }}</a>
+      <a href="{{ _loc.path | default: '/' }}#venues">{{ _loc.footer_venues_link | default: "For Venues" }}</a>
+      <a href="{{ _loc.path | default: '/' }}#download">{{ _loc.nav_download | default: "Download" }}</a>
     </div>
     <div class="footer__col">
       <h5>{{ _loc.footer_support | default: "Support" }}</h5>
