@@ -1,0 +1,18 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── PROOF STRIP ── -->
+  <section class="proof-strip">
+    <div class="proof-strip__inner">
+      <span class="proof-strip__label">{{ _loc.proof_works_with | default: "Works with" }}</span>
+      <div class="proof-strip__sports">
+        <span class="sport-item"><span class="material-symbols-outlined">sports_soccer</span>{{ _loc.sport_football | default: "Football" }}</span>
+        <span class="sport-item"><span class="material-symbols-outlined">sports_tennis</span>{{ _loc.sport_tennis | default: "Tennis" }}</span>
+        <span class="sport-item"><span class="material-symbols-outlined">sports_basketball</span>{{ _loc.sport_basketball | default: "Basketball" }}</span>
+        <span class="sport-item"><span class="material-symbols-outlined">sports_kabaddi</span>{{ _loc.sport_badminton | default: "Badminton" }}</span>
+        <span class="sport-item"><span class="material-symbols-outlined">pool</span>{{ _loc.sport_swimming | default: "Swimming" }}</span>
+        <span class="sport-item"><span class="material-symbols-outlined">directions_bike</span>{{ _loc.sport_cycling | default: "Cycling" }}</span>
+        <span class="sport-item"><span class="material-symbols-outlined">directions_run</span>{{ _loc.sport_running | default: "Running" }}</span>
+        <span class="sport-item"><span class="material-symbols-outlined">fitness_center</span>{{ _loc.sport_gym | default: "Gym" }}</span>
+        <span class="sport-item">{{ _loc.proof_more_sports | default: "+ 52 more sports" }}</span>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,37 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── HOW IT WORKS ── -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag section-tag--on-dark">{{ _loc.how_tag | default: "How It Works" }}</div>
+        <h2 class="section-title">{{ _loc.how_headline | default: "Up and playing in minutes" }}</h2>
+        <p class="section-sub">{{ _loc.how_sub | default: "Simple, seamless, and lightning fast. From couch to court in four steps." }}</p>
+      </div>
+      <div class="how__steps">
+        <div class="step">
+          <div class="step__circle">01</div>
+          <span class="step__icon">👤</span>
+          <h4>{{ _loc.how_step_1_title | default: "Create Your Profile" }}</h4>
+          <p>{{ _loc.how_step_1_sub | default: "Pick your sports, set your location, and tell the community a little about yourself." }}</p>
+        </div>
+        <div class="step">
+          <div class="step__circle">02</div>
+          <span class="step__icon">🔍</span>
+          <h4>{{ _loc.how_step_2_title | default: "Discover &amp; Join" }}</h4>
+          <p>{{ _loc.how_step_2_sub | default: "Search the map for nearby activities that match your sport, age, and schedule." }}</p>
+        </div>
+        <div class="step">
+          <div class="step__circle">03</div>
+          <span class="step__icon">🎯</span>
+          <h4>{{ _loc.how_step_3_title | default: "Confirm &amp; Play" }}</h4>
+          <p>{{ _loc.how_step_3_sub | default: "RSVP, get notified of updates, and show up ready to play." }}</p>
+        </div>
+        <div class="step">
+          <div class="step__circle">04</div>
+          <span class="step__icon">🏆</span>
+          <h4>{{ _loc.how_step_4_title | default: "Grow Your Network" }}</h4>
+          <p>{{ _loc.how_step_4_sub | default: "Follow great players, build your squad, and organise your own events." }}</p>
+        </div>
+      </div>
+    </div>
+  </section>

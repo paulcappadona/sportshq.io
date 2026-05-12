@@ -1,0 +1,29 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── GLOBAL ── -->
+  <section class="global">
+    <div class="container global__inner">
+      <div class="global__copy">
+        <div class="section-tag section-tag--on-dark">{{ _loc.global_tag | default: "Global" }}</div>
+        <h2 class="section-title">{{ _loc.global_headline | default: "Sports without borders" }}</h2>
+        <p>{{ _loc.global_sub | default: "Sports HQ is available worldwide with support for 15+ languages. Whether you're at home or travelling, find your game wherever you are." }}</p>
+        <div class="language-chips">
+          <span>English</span><span>Español</span><span>Français</span>
+          <span>Deutsch</span><span>Italiano</span><span>Português</span>
+          <span>中文</span><span>日本語</span><span>한국어</span>
+          <span>العربية</span><span>हिन्दी</span><span>+ 4 more</span>
+        </div>
+      </div>
+      <div class="global__graphic">
+        <div class="globe">
+          <div class="globe__ring globe__ring--1"></div>
+          <div class="globe__ring globe__ring--2"></div>
+          <div class="globe__ring globe__ring--3"></div>
+          <div class="globe__dot globe__dot--1">⚽</div>
+          <div class="globe__dot globe__dot--2">🎾</div>
+          <div class="globe__dot globe__dot--3">🏀</div>
+          <div class="globe__dot globe__dot--4">🏸</div>
+          <div class="globe__dot globe__dot--5">🏊</div>
+        </div>
+      </div>
+    </div>
+  </section>
