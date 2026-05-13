@@ -1,8 +1,8 @@
 {%- if page.locale_id -%}
   {%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
-  {%- assign _title = _loc.title -%}
-  {%- assign _desc = _loc.description -%}
-  {%- assign _keywords = _loc.keywords -%}
+  {%- assign _title = page.title | default: _loc.title -%}
+  {%- assign _desc = page.description | default: _loc.description -%}
+  {%- assign _keywords = page.keywords | default: _loc.keywords -%}
   {%- assign _lang = _loc.lang -%}
   {%- assign _dir = _loc.dir | default: "ltr" -%}
 {%- else -%}
