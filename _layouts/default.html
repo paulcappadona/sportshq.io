@@ -39,10 +39,22 @@
   <link rel="canonical" href="{{ page.url | prepend: site.url }}" />
 
   <!-- hreflang alternates -->
+  {% if page.legal_type == 'pp' %}
+  {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}/{{ loc.id }}/pp.html" />
+  {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/about/pp.html" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/about/pp.html" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/about/pp.html" />
+  {% elsif page.legal_type == 'tos' %}
+  {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}/{{ loc.id }}/tos.html" />
+  {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/about/tos.html" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/about/tos.html" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/about/tos.html" />
+  {% else %}
   {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}{{ loc.path }}" />
   {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/" />
   <link rel="alternate" hreflang="en" href="{{ site.url }}/" />
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
+  {% endif %}
 
   <!-- Structured data (homepage only) -->
   {% if page.url == "/" %}<script type="application/ld+json">

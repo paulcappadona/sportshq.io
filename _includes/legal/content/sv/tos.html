@@ -1,0 +1,217 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── PAGE HEADER ── -->
+  <div class="legal-hero">
+    <div class="container legal-hero__inner">
+      <div class="legal-hero__breadcrumb">
+        <a href="{{ _loc.path | default: '/' }}">Hem</a><span>›</span>Användarvillkor
+      </div>
+      <div class="legal-hero__badge">Juridisk</div>
+      <h1 class="legal-hero__title">Användar<span>villkor</span></h1>
+      <p class="legal-hero__meta">Senast uppdaterad: 5 maj 2026</p>
+    </div>
+  </div>
+
+  <!-- ── CONTENT ── -->
+  <main class="legal-main">
+    <div class="container legal-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="legal-toc">
+        <p class="legal-toc__heading">Innehåll</p>
+        <nav class="legal-toc__list">
+          <a href="#definitions">Definitioner</a>
+          <a href="#acknowledgment">Bekräftelse</a>
+          <a href="#accounts">Användarkonton</a>
+          <a href="#content">Innehåll</a>
+          <a href="#conduct">Uppförande</a>
+          <a href="#interactions">Användarinteraktioner</a>
+          <a href="#copyright">Upphovsrättspolicy</a>
+          <a href="#ip">Immateriella rättigheter</a>
+          <a href="#links">Länkar</a>
+          <a href="#termination">Uppsägning</a>
+          <a href="#liability">Ansvarsbegränsning</a>
+          <a href="#disclaimer">Ansvarsfriskrivning</a>
+          <a href="#governing-law">Tillämplig lag</a>
+          <a href="#changes">Ändringar</a>
+          <a href="#contact">Kontakta oss</a>
+        </nav>
+      </aside>
+
+      <!-- Body -->
+      <article class="legal-body">
+
+        <div class="legal-intro-card">
+          <p>Läs dessa användarvillkor noggrant innan du använder Sports HQ-tjänsten. Genom att använda eller få tillgång till tjänsten godkänner du att vara bunden av dessa villkor.</p>
+        </div>
+
+        <section id="definitions">
+          <h2>Tolkning och definitioner</h2>
+          <h3>Tolkning</h3>
+          <p>Ord vars initiala bokstav är versal har definitioner under följande villkor. Följande definitioner ska ha samma innebörd oavsett om de förekommer i singular eller plural.</p>
+          <h3>Definitioner</h3>
+          <p>I dessa användarvillkor avses med:</p>
+          <ul>
+            <li><strong>"Affiliate"</strong> ett företag som kontrollerar, kontrolleras av eller är under gemensam kontroll med en part, där "kontroll" innebär ägande av 50 % eller mer av aktierna, ägarintresset eller andra värdepapper med rösträtt för val av styrelseledamöter eller annan ledningsauktoritet.</li>
+            <li><strong>"Konto"</strong> ett unikt konto skapat för dig för att komma åt vår tjänst eller delar av vår tjänst.</li>
+            <li><strong>"Företaget"</strong> (benämnt antingen "Företaget", "Vi", "Oss" eller "Vår" i detta avtal) avser Sports HQ.</li>
+            <li><strong>"Land"</strong> avser Singapore.</li>
+            <li><strong>"Innehåll"</strong> avser innehåll såsom text, bilder eller annan information som kan publiceras, laddas upp, länkas till eller på annat sätt göras tillgänglig av dig, oavsett form av sådant innehåll.</li>
+            <li><strong>"Enhet"</strong> avser vilken enhet som helst som kan komma åt tjänsten, till exempel en dator, en mobiltelefon eller en digital surfplatta.</li>
+            <li><strong>"Feedback"</strong> avser feedback, innovationer eller förslag som skickas av dig angående attribut, prestanda eller funktioner i vår tjänst.</li>
+            <li><strong>"Tjänst"</strong> avser applikationen, backend-servrar, system och processer.</li>
+            <li><strong>"Användarvillkor"</strong> (även kallade "Villkor") avser dessa användarvillkor som utgör hela avtalet mellan dig och företaget angående användningen av tjänsten.</li>
+            <li><strong>"Tredjeparts sociala medietjänst"</strong> avser alla tjänster eller innehåll som tillhandahålls av en tredje part som kan visas, inkluderas eller göras tillgängliga av tjänsten.</li>
+            <li><strong>"Du"</strong> avser den person som använder eller har åtkomst till tjänsten, eller det företag, eller annan juridisk enhet för vars räkning sådan person använder eller har åtkomst till tjänsten, beroende på vad som är tillämpligt.</li>
+          </ul>
+        </section>
+
+        <section id="acknowledgment">
+          <h2>Bekräftelse</h2>
+          <p>Dessa är användarvillkoren som styr användningen av denna tjänst och avtalet som gäller mellan dig och företaget. Dessa villkor fastställer rättigheter och skyldigheter för alla användare avseende användningen av tjänsten.</p>
+          <p>Din åtkomst till och användning av tjänsten är villkorad av ditt godkännande och efterlevnad av dessa villkor. Dessa villkor gäller för alla besökare, användare och andra som använder eller har åtkomst till tjänsten.</p>
+          <p>Genom att använda eller få tillgång till tjänsten godkänner du att vara bunden av dessa villkor. Om du inte håller med om någon del av dessa villkor kan du inte använda tjänsten.</p>
+          <p>Du bekräftar att du är över 18 år. Företaget tillåter inte personer under 18 år att använda tjänsten.</p>
+          <p>Din åtkomst till och användning av tjänsten är också villkorad av ditt godkännande och efterlevnad av <a href="{% if page.locale_id %}/{{ page.locale_id }}/pp.html{% else %}/about/pp.html{% endif %}">Integritetspolicyn</a> för företaget. Läs vår integritetspolicy noggrant innan du använder vår tjänst.</p>
+        </section>
+
+        <section id="accounts">
+          <h2>Användarkonton</h2>
+          <p>Du måste vara minst 13 år för att skapa ett konto och använda tjänsten.</p>
+          <p>När du skapar ett konto hos oss måste du förse oss med information som är korrekt, fullständig och aktuell vid alla tidpunkter. Underlåtenhet att göra detta utgör ett brott mot villkoren, vilket kan leda till omedelbar uppsägning av ditt konto på vår tjänst.</p>
+          <p>Du är ansvarig för att skydda lösenordet som du använder för att komma åt tjänsten och för alla aktiviteter eller åtgärder under ditt lösenord.</p>
+          <p>Du samtycker till att inte avslöja ditt lösenord till någon tredje part. Du måste omedelbart meddela oss när du blir medveten om ett säkerhetsbrott eller obehörig användning av ditt konto.</p>
+          <p>Du får inte använda som användarnamn en annan persons eller enhets namn som inte är lagligt tillgängligt för användning, ett namn eller varumärke som är föremål för rättigheter för en annan person eller enhet utan lämplig auktorisation, eller ett namn som annars är stötande, vulgärt eller obscent.</p>
+          <p>Tjänsten får inte användas för kommersiella ändamål utan företagets uttryckliga samtycke.</p>
+        </section>
+
+        <section id="content">
+          <h2>Innehåll</h2>
+          <h3>Din rätt att publicera innehåll</h3>
+          <p>Vår tjänst gör det möjligt för dig att publicera innehåll. Du är ansvarig för det innehåll du publicerar på tjänsten, inklusive dess laglighet, tillförlitlighet och lämplighet.</p>
+          <p>Genom att publicera innehåll på tjänsten ger du oss rätten och licensen att använda, modifiera, offentligt framföra, offentligt visa, reproducera och distribuera sådant innehåll på och via tjänsten. Du behåller alla dina rättigheter till allt innehåll du lämnar in, publicerar eller visar på eller via tjänsten och du är ansvarig för att skydda dessa rättigheter.</p>
+          <p>Du intygar och garanterar att: (i) innehållet är ditt eller du har rätt att använda det och ge oss rättigheterna och licensen enligt dessa villkor, och (ii) att publicering av ditt innehåll på eller via tjänsten inte kränker integritetsrättigheter, publicitetssrättigheter, upphovsrätt, avtalsrättigheter eller andra rättigheter för någon person.</p>
+          <h3>Innehållsbegränsningar</h3>
+          <p>Företaget är inte ansvarigt för innehållet från tjänstens användare. Du förstår och godkänner uttryckligen att du ensam är ansvarig för innehållet och för all aktivitet som sker under ditt konto.</p>
+          <p>Du får inte sända något innehåll som är olagligt, stötande, upprörande, hotfullt, ärekränkande, förtal, obscent eller på annat sätt klandervärt, inklusive:</p>
+          <ul>
+            <li>Olagligt eller som främjar olaglig verksamhet.</li>
+            <li>Ärekränkande, diskriminerande eller elakt innehåll, inklusive hänvisningar eller kommentarer om religion, ras, sexuell läggning, kön, nationellt/etniskt ursprung eller andra riktade grupper.</li>
+            <li>Skräppost, maskinellt genererad eller otillåten reklam, kedjebrev, annan form av oönskad framställning eller lotteri- eller spelformer.</li>
+            <li>Innehåller eller installerar virus, maskar, skadlig programvara, trojanska hästar eller annat innehåll utformat för att störa, skada eller begränsa funktionen hos program-, maskinvara eller telekommunikationsutrustning.</li>
+            <li>Intrång i någon parts äganderättigheter, inklusive patent, varumärke, affärshemlighet, upphovsrätt, publicitetsrätt eller andra rättigheter.</li>
+            <li>Utge sig för att vara en person eller enhet inklusive företaget och dess anställda eller representanter.</li>
+            <li>Kränka en tredje persons integritet.</li>
+            <li>Falsk information och funktioner.</li>
+          </ul>
+          <h3>Säkerhetskopiering av innehåll</h3>
+          <p>Även om regelbundna säkerhetskopieringar av innehåll utförs garanterar inte företaget att det inte sker förlust eller korruption av data. Du samtycker till att upprätthålla en fullständig och korrekt kopia av allt innehåll på en plats oberoende av tjänsten.</p>
+        </section>
+
+        <section id="conduct">
+          <h2>Uppförande</h2>
+          <p>Tjänsten är för ditt personliga och icke-kommersiella bruk. Du får inte modifiera, kopiera, distribuera, sända, visa, utföra, reproducera, publicera, licensiera, skapa härledda verk, överföra eller sälja för kommersiella ändamål någon del av tjänsten. Du får inte använda tjänsten för att ägna dig åt följande förbjudna aktiviteter:</p>
+          <ul>
+            <li>Kopiering, inramning eller spegling av någon del av tjänsten.</li>
+            <li>Åtkomst till tjänsten för att övervaka dess tillgänglighet, prestanda eller funktionalitet.</li>
+            <li>Tillåta tredje part att använda tjänsten.</li>
+            <li>Använda, kopiera, modifiera, skapa härlett verk, bakåtkompilera, dekompilera eller på annat sätt försöka extrahera källkoden för programvaran som ligger till grund för tjänsten.</li>
+            <li>Publicera, sända, distribuera eller lagra innehåll i strid med våra innehållsbegränsningar.</li>
+            <li>Försöka störa, försämra, försämra eller kränka integriteten eller säkerheten i tjänsten.</li>
+            <li>Begå handlingar som kan vara skadliga för minderåriga.</li>
+            <li>Distribuera eller avslöja någon del av tjänsten i något medium, inklusive genom automatisk eller icke-automatisk "skrapning".</li>
+            <li>Använda något automatiserat system för att komma åt tjänsten på ett sätt som skickar fler förfrågningar än en människa rimligen kan producera under samma tidsperiod.</li>
+            <li>Samla in eller skörda information som rör en identifierad eller identifierbar individ från tjänsten.</li>
+            <li>Använda tjänsten för olämplig kommersiell inbjudan.</li>
+            <li>Kringgå åtgärder vi kan använda för att förhindra eller begränsa åtkomst till tjänsten.</li>
+            <li>Bryta mot tillämpliga lagar, stadgar, förordningar eller föreskrifter, eller uppmuntra till beteende som kan utgöra ett brott eller ge upphov till civilrättsligt ansvar.</li>
+          </ul>
+        </section>
+
+        <section id="interactions">
+          <h2>Interaktioner med andra användare</h2>
+          <p>Tjänsten fungerar som ett virtuellt utrymme för att koppla samman användare. Som sådant är företaget:</p>
+          <ul>
+            <li>Inte direkt involverat i de faktiska interaktionerna mellan användare och har ingen kontroll över sanningshalten, noggrannheten, kvaliteten, lagligheten eller säkerheten för inlägg gjorda av andra som använder tjänsten.</li>
+            <li>Har inget ansvar för att bekräfta användarnas identitet.</li>
+            <li>Har inget ansvar för att bekräfta eller verifiera kvalifikationer, bakgrund eller förmågor hos användare som använder tjänsten.</li>
+          </ul>
+        </section>
+
+        <section id="copyright">
+          <h2>Upphovsrättspolicy</h2>
+          <h3>Intrång i immateriella rättigheter</h3>
+          <p>Vi respekterar andras immateriella rättigheter. Det är vår policy att svara på alla påståenden om att innehåll som publicerats på tjänsten gör intrång på upphovsrätt eller andra immateriella rättigheter för någon person.</p>
+          <p>Om du är upphovsrättsinnehavare, eller auktoriserad på dennes vägnar, och du anser att det upphovsrättsskyddade verket har kopierats på ett sätt som utgör upphovsrättsintrång via tjänsten, måste du skicka ditt meddelande skriftligen till vår upphovsrättsagent via e-post (<a href="mailto:support@sportshq.io">support@sportshq.io</a>) och inkludera en detaljerad beskrivning av det påstådda intrånget.</p>
+          <h3>DMCA-meddelande och förfarande</h3>
+          <p>Du kan skicka in ett meddelande enligt Digital Millennium Copyright Act (DMCA) genom att ge vår upphovsrättsagent följande information:</p>
+          <ul>
+            <li>En elektronisk eller fysisk underskrift av den person som är behörig att agera på uppdrag av ägaren av upphovsrättsintresset.</li>
+            <li>En beskrivning av det upphovsrättsskyddade verket som du hävdar har gjorts intrång i, inklusive URL:en för platsen där det upphovsrättsskyddade verket finns.</li>
+            <li>Identifiering av URL:en eller annan specifik plats på tjänsten där det material du hävdar gör intrång finns.</li>
+            <li>Din adress, telefonnummer och e-postadress.</li>
+            <li>En förklaring av dig att du i god tro tror att den omtvistade användningen inte är auktoriserad av upphovsrättsinnehavaren, dess ombud eller lagen.</li>
+            <li>En förklaring av dig, gjord under straffansvar för mened, att ovanstående information i ditt meddelande är korrekt och att du är upphovsrättsinnehavaren eller behörig att agera på upphovsrättsinnehavarens vägnar.</li>
+          </ul>
+        </section>
+
+        <section id="ip">
+          <h2>Immateriella rättigheter</h2>
+          <p>Tjänsten och dess ursprungliga innehåll (exklusive innehåll som tillhandahålls av dig eller andra användare), funktioner och funktionalitet är och förblir exklusiv egendom för företaget och dess licensgivare.</p>
+          <p>Tjänsten skyddas av upphovsrätt, varumärke och andra lagar i både landet och utländska länder.</p>
+          <p>Våra varumärken och trade dress får inte användas i samband med någon produkt eller tjänst utan företagets föregående skriftliga samtycke.</p>
+          <h3>Din feedback till oss</h3>
+          <p>Du överlåter alla rättigheter, äganderätt och intressen i all feedback du lämnar till företaget. Om en sådan överlåtelse av någon anledning är ineffektiv samtycker du till att ge företaget en icke-exklusiv, evig, oåterkallelig, royaltyfri, världsomspännande rätt och licens att använda, reproducera, avslöja, underlicensiera, distribuera, modifiera och utnyttja sådan feedback utan begränsning.</p>
+        </section>
+
+        <section id="links">
+          <h2>Länkar till andra webbplatser</h2>
+          <p>Vår tjänst kan innehålla länkar till tredjepartswebbplatser eller -tjänster som inte ägs eller kontrolleras av företaget. Företaget har ingen kontroll över och tar inget ansvar för innehållet, integritetspolicyer eller praxis på tredjepartswebbplatser eller -tjänster.</p>
+          <p>Vi rekommenderar starkt att du läser villkoren och integritetspolicyer för alla tredjepartswebbplatser eller -tjänster du besöker.</p>
+        </section>
+
+        <section id="termination">
+          <h2>Uppsägning</h2>
+          <p>Vi kan säga upp eller stänga av ditt konto omedelbart, utan föregående meddelande eller ansvar, av vilken anledning som helst, inklusive utan begränsning om du bryter mot dessa användarvillkor.</p>
+          <p>Vid uppsägning upphör din rätt att använda tjänsten omedelbart. Om du vill avsluta ditt konto kan du helt enkelt sluta använda tjänsten.</p>
+        </section>
+
+        <section id="liability">
+          <h2>Ansvarsbegränsning</h2>
+          <p>I den maximala utsträckning som tillåts av tillämplig lag ska företaget under inga omständigheter vara ansvarigt för särskilda, oförutsedda, indirekta eller följdskador (inklusive men inte begränsat till skador för vinstförlust, dataförlust eller annan information, för affärsavbrott, för personskada, förlust av integritet som uppstår ur eller på något sätt relaterat till användning av eller oförmåga att använda tjänsten), även om företaget har informerats om möjligheten till sådana skador.</p>
+          <p>Vissa stater tillåter inte undantag från underförstådda garantier eller begränsning av ansvar för oförutsedda eller följdskador, vilket innebär att vissa av ovanstående begränsningar kanske inte är tillämpliga. I dessa stater begränsas varje parts ansvar till den maximala utsträckning som lagen tillåter.</p>
+        </section>
+
+        <section id="disclaimer">
+          <h2>Ansvarsfriskrivning "SOM DEN ÄR" och "SOM TILLGÄNGLIG"</h2>
+          <p>Tjänsten tillhandahålls till dig "SOM DEN ÄR" och "SOM TILLGÄNGLIG" och med alla fel och defekter utan garanti av något slag. I den maximala utsträckning som tillåts enligt tillämplig lag friskriver sig företaget uttryckligen från alla garantier, vare sig uttryckliga, underförstådda, lagstadgade eller på annat sätt, avseende tjänsten, inklusive alla underförstådda garantier om säljbarhet, lämplighet för ett visst syfte, äganderätt och icke-intrång.</p>
+          <p>Utan att begränsa det föregående lämnar varken företaget eller någon av företagets leverantörer någon representation eller garanti av något slag att tjänsten uppfyller dina krav, uppnår avsedda resultat, är kompatibel eller fungerar med annan programvara, applikationer, system eller tjänster, fungerar utan avbrott eller är felfri.</p>
+        </section>
+
+        <section id="governing-law">
+          <h2>Tillämplig lag</h2>
+          <p>Lagarna i Singapore, exklusive dess lagvalsregler, ska styra dessa villkor och din användning av tjänsten. Din användning av applikationen kan också vara föremål för andra lokala, statliga, nationella eller internationella lagar.</p>
+          <h3>Tvistlösning</h3>
+          <p>Om du har oro eller tvist angående tjänsten samtycker du till att först försöka lösa tvisten informellt genom att kontakta företaget.</p>
+          <h3>För Europeiska unionens (EU) användare</h3>
+          <p>Om du är konsument i Europeiska unionen kommer du att dra nytta av eventuella obligatoriska bestämmelser i lagen i det land du är bosatt.</p>
+          <h3>Separationsklausul och avstående</h3>
+          <p>Om någon bestämmelse i dessa villkor anses inte kunna verkställas eller ogiltig, ändras och tolkas en sådan bestämmelse för att uppnå målen för en sådan bestämmelse i den maximala utsträckning som är möjlig enligt tillämplig lag, och de återstående bestämmelserna fortsätter att gälla fullt ut.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Ändringar i dessa villkor</h2>
+          <p>Vi förbehåller oss rätten att efter eget gottfinnande när som helst ändra eller ersätta dessa villkor. Om en revidering är väsentlig gör vi rimliga ansträngningar för att informera minst 30 dagar innan nya villkor träder i kraft.</p>
+          <p>Genom att fortsätta använda vår tjänst efter att dessa revideringar trätt i kraft samtycker du till att vara bunden av de reviderade villkoren. Om du inte godkänner de nya villkoren, sluta använda tjänsten.</p>
+        </section>
+
+        <section id="contact">
+          <h2>Kontakta oss</h2>
+          <p>Om du har frågor om dessa användarvillkor kan du kontakta oss:</p>
+          <div class="legal-contact-box">
+            <p>Via e-post: <a href="mailto:support@sportshq.io">support@sportshq.io</a></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>

@@ -1,0 +1,217 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── PAGE HEADER ── -->
+  <div class="legal-hero">
+    <div class="container legal-hero__inner">
+      <div class="legal-hero__breadcrumb">
+        <a href="{{ _loc.path | default: '/' }}">Home</a><span>›</span>Gebruiksvoorwaarden
+      </div>
+      <div class="legal-hero__badge">Juridisch</div>
+      <h1 class="legal-hero__title">Gebruiks<span>voorwaarden</span></h1>
+      <p class="legal-hero__meta">Laatst bijgewerkt: 5 mei 2026</p>
+    </div>
+  </div>
+
+  <!-- ── CONTENT ── -->
+  <main class="legal-main">
+    <div class="container legal-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="legal-toc">
+        <p class="legal-toc__heading">Inhoud</p>
+        <nav class="legal-toc__list">
+          <a href="#definitions">Definities</a>
+          <a href="#acknowledgment">Erkenning</a>
+          <a href="#accounts">Gebruikersaccounts</a>
+          <a href="#content">Inhoud</a>
+          <a href="#conduct">Gedrag</a>
+          <a href="#interactions">Gebruikersinteracties</a>
+          <a href="#copyright">Auteursrechtbeleid</a>
+          <a href="#ip">Intellectueel eigendom</a>
+          <a href="#links">Links</a>
+          <a href="#termination">Beëindiging</a>
+          <a href="#liability">Beperking van aansprakelijkheid</a>
+          <a href="#disclaimer">Disclaimer</a>
+          <a href="#governing-law">Toepasselijk recht</a>
+          <a href="#changes">Wijzigingen</a>
+          <a href="#contact">Neem contact op</a>
+        </nav>
+      </aside>
+
+      <!-- Body -->
+      <article class="legal-body">
+
+        <div class="legal-intro-card">
+          <p>Lees deze Gebruiksvoorwaarden aandachtig door voordat u de Sports HQ-service gebruikt. Door de Service te openen of te gebruiken, stemt u ermee in gebonden te zijn aan deze voorwaarden.</p>
+        </div>
+
+        <section id="definitions">
+          <h2>Interpretatie en definities</h2>
+          <h3>Interpretatie</h3>
+          <p>De woorden waarvan de beginletter een hoofdletter is, hebben de betekenissen die onder de volgende voorwaarden zijn gedefinieerd. De volgende definities hebben dezelfde betekenis, ongeacht of ze in enkelvoud of meervoud voorkomen.</p>
+          <h3>Definities</h3>
+          <p>Voor de doeleinden van deze Gebruiksvoorwaarden:</p>
+          <ul>
+            <li><strong>"Gelieerde onderneming"</strong> betekent een entiteit die een partij beheert, wordt beheerd door of onder gemeenschappelijk beheer staat met een partij, waarbij "beheer" de eigendom betekent van 50% of meer van de aandelen, aandelenbelang of andere effecten die gerechtigd zijn om te stemmen voor de verkiezing van directeuren of andere leidinggevende autoriteit.</li>
+            <li><strong>"Account"</strong> betekent een uniek account dat voor u is aangemaakt om toegang te krijgen tot onze Service of delen van onze Service.</li>
+            <li><strong>"Bedrijf"</strong> (in deze Overeenkomst aangeduid als "het Bedrijf", "Wij", "Ons" of "Onze") verwijst naar Sports HQ.</li>
+            <li><strong>"Land"</strong> verwijst naar Singapore.</li>
+            <li><strong>"Inhoud"</strong> verwijst naar inhoud zoals tekst, afbeeldingen of andere informatie die door u kan worden geplaatst, geüpload, gekoppeld of anderszins beschikbaar gesteld, ongeacht de vorm van die inhoud.</li>
+            <li><strong>"Apparaat"</strong> betekent elk apparaat dat toegang heeft tot de Service, zoals een computer, een mobiele telefoon of een digitale tablet.</li>
+            <li><strong>"Feedback"</strong> betekent feedback, innovaties of suggesties die door u worden verzonden met betrekking tot de kenmerken, prestaties of functies van onze Service.</li>
+            <li><strong>"Service"</strong> verwijst naar de applicatie, backend-servers, systemen en processen.</li>
+            <li><strong>"Gebruiksvoorwaarden"</strong> (ook aangeduid als "Voorwaarden") betekent deze Gebruiksvoorwaarden die de volledige overeenkomst vormen tussen u en het Bedrijf met betrekking tot het gebruik van de Service.</li>
+            <li><strong>"Sociale-mediadienst van derden"</strong> betekent alle diensten of inhoud die door een derde partij worden aangeboden en die door de Service kunnen worden weergegeven, opgenomen of beschikbaar gesteld.</li>
+            <li><strong>"U"</strong> betekent de persoon die toegang heeft tot of gebruik maakt van de Service, of het bedrijf, of een andere juridische entiteit namens welke die persoon toegang heeft tot of gebruik maakt van de Service, voor zover van toepassing.</li>
+          </ul>
+        </section>
+
+        <section id="acknowledgment">
+          <h2>Erkenning</h2>
+          <p>Dit zijn de Gebruiksvoorwaarden die het gebruik van deze Service regelen en de overeenkomst die geldt tussen u en het Bedrijf. Deze Voorwaarden stellen de rechten en verplichtingen vast van alle gebruikers met betrekking tot het gebruik van de Service.</p>
+          <p>Uw toegang tot en gebruik van de Service is afhankelijk van uw aanvaarding van en naleving van deze Voorwaarden. Deze Voorwaarden zijn van toepassing op alle bezoekers, gebruikers en anderen die toegang hebben tot of gebruik maken van de Service.</p>
+          <p>Door toegang te krijgen tot of gebruik te maken van de Service, stemt u ermee in gebonden te zijn aan deze Voorwaarden. Als u het niet eens bent met een deel van deze Voorwaarden, heeft u geen toegang tot de Service.</p>
+          <p>U verklaart dat u ouder bent dan 18 jaar. Het Bedrijf staat personen onder 18 jaar niet toe de Service te gebruiken.</p>
+          <p>Uw toegang tot en gebruik van de Service is ook afhankelijk van uw aanvaarding van en naleving van het <a href="{% if page.locale_id %}/{{ page.locale_id }}/pp.html{% else %}/about/pp.html{% endif %}">Privacybeleid</a> van het Bedrijf. Lees Ons Privacybeleid aandachtig door voordat u Onze Service gebruikt.</p>
+        </section>
+
+        <section id="accounts">
+          <h2>Gebruikersaccounts</h2>
+          <p>U moet minimaal 13 jaar oud zijn om een account aan te maken en de service te gebruiken.</p>
+          <p>Wanneer u een account bij Ons aanmaakt, moet u Ons te allen tijde informatie verstrekken die nauwkeurig, volledig en actueel is. Als u dit niet doet, vormt dit een schending van de Voorwaarden, wat kan leiden tot onmiddellijke beëindiging van uw account op Onze Service.</p>
+          <p>U bent verantwoordelijk voor het beveiligen van het wachtwoord dat u gebruikt om toegang te krijgen tot de Service en voor alle activiteiten of acties onder uw wachtwoord.</p>
+          <p>U stemt ermee in uw wachtwoord niet aan derden bekend te maken. U moet Ons onmiddellijk op de hoogte stellen zodra u op de hoogte wordt gesteld van een inbreuk op de beveiliging of ongeoorloofd gebruik van uw account.</p>
+          <p>U mag als gebruikersnaam niet de naam van een andere persoon of entiteit gebruiken, een naam of handelsmerk dat onderworpen is aan rechten van een andere persoon of entiteit dan uzelf zonder gepaste toestemming, of een naam die anderszins aanstootgevend, vulgair of obsceen is.</p>
+          <p>De Service mag niet worden gebruikt voor commerciële doeleinden zonder de uitdrukkelijke toestemming van het Bedrijf.</p>
+        </section>
+
+        <section id="content">
+          <h2>Inhoud</h2>
+          <h3>Uw recht om inhoud te plaatsen</h3>
+          <p>Onze Service stelt u in staat Inhoud te plaatsen. U bent verantwoordelijk voor de Inhoud die u op de Service plaatst, inclusief de wettigheid, betrouwbaarheid en geschiktheid ervan.</p>
+          <p>Door Inhoud op de Service te plaatsen, verleent u Ons het recht en de licentie om dergelijke Inhoud op en via de Service te gebruiken, te wijzigen, openbaar uit te voeren, openbaar weer te geven, te reproduceren en te distribueren. U behoudt alle rechten op de Inhoud die u indient, plaatst of weergeeft op of via de Service en u bent verantwoordelijk voor het beschermen van die rechten.</p>
+          <p>U verklaart en garandeert dat: (i) de Inhoud van u is of u het recht heeft het te gebruiken en Ons de rechten en licentie te verlenen zoals bepaald in deze Voorwaarden, en (ii) het plaatsen van uw Inhoud op of via de Service de privacyrechten, publiciteitsrechten, auteursrechten, contractrechten of andere rechten van een persoon niet schendt.</p>
+          <h3>Inhoudsbeperkingen</h3>
+          <p>Het Bedrijf is niet verantwoordelijk voor de inhoud van de gebruikers van de Service. U begrijpt en stemt er uitdrukkelijk mee in dat u als enige verantwoordelijk bent voor de Inhoud en voor alle activiteiten die plaatsvinden onder uw account.</p>
+          <p>U mag geen Inhoud verzenden die onwettig, beledigend, verontrustend, bedreigend, lasterlijk, defamatoir, obsceen of anderszins aanstootgevend is, inclusief:</p>
+          <ul>
+            <li>Onwettige activiteiten of het bevorderen van onwettige activiteiten.</li>
+            <li>Defamatoire, discriminerende of kleinerende inhoud, inclusief verwijzingen of commentaar over religie, ras, seksuele geaardheid, geslacht, nationale/etnische afkomst of andere doelgroepen.</li>
+            <li>Spam, machinegegenereerde of ongeautoriseerde reclame, kettingbrieven, elke andere vorm van ongewenste sollicitatie of enige vorm van loterij of gokken.</li>
+            <li>Inhoud die virussen, wormen, malware, trojaanse paarden of andere inhoud bevat of installeert die is ontworpen om de werking van software, hardware of telecommunicatieapparatuur te verstoren, te beschadigen of te beperken.</li>
+            <li>Inbreuk op eigendomsrechten van een partij, inclusief patent, handelsmerk, handelsgeheim, auteursrecht, publiciteitsrecht of andere rechten.</li>
+            <li>Zich voordoen als een persoon of entiteit, inclusief het Bedrijf en zijn werknemers of vertegenwoordigers.</li>
+            <li>Schending van de privacy van een derde persoon.</li>
+            <li>Valse informatie en functies.</li>
+          </ul>
+          <h3>Back-ups van inhoud</h3>
+          <p>Hoewel regelmatige back-ups van Inhoud worden gemaakt, garandeert het Bedrijf niet dat er geen verlies of beschadiging van gegevens zal zijn. U stemt ermee in een volledige en nauwkeurige kopie van alle Inhoud bij te houden op een locatie die onafhankelijk is van de Service.</p>
+        </section>
+
+        <section id="conduct">
+          <h2>Gedrag</h2>
+          <p>De Service is voor uw persoonlijk en niet-commercieel gebruik. U mag geen deel van de Service wijzigen, kopiëren, distribueren, verzenden, weergeven, uitvoeren, reproduceren, publiceren, licentiëren, afgeleide werken creëren van, overdragen of verkopen voor commerciële doeleinden. U mag de Service niet gebruiken om deel te nemen aan de volgende verboden activiteiten:</p>
+          <ul>
+            <li>Kopiëren, framen of spiegelen van een deel van de Service.</li>
+            <li>Toegang tot de Service om de beschikbaarheid, prestaties of functionaliteit ervan te monitoren.</li>
+            <li>Derden toegang verlenen tot de Service.</li>
+            <li>Gebruiken, kopiëren, wijzigen, een afgeleid werk maken van, reverse-engineeren, decompileren of anderszins proberen de broncode van de software die ten grondslag ligt aan de Service te extraheren.</li>
+            <li>Inhoud publiceren, verzenden, distribueren of opslaan in strijd met onze Inhoudsbeperkingen.</li>
+            <li>Proberen de integriteit of beveiliging van de Service te verstoren, te degraderen, te beschadigen of te schenden.</li>
+            <li>Elk handeling plegen die schadelijk kan zijn voor minderjarigen.</li>
+            <li>Delen of bekendmaken van een deel van de Service in enig medium, inclusief door automatisch of niet-automatisch "scrapen".</li>
+            <li>Gebruik maken van een geautomatiseerd systeem om toegang te krijgen tot de Service op een manier die meer verzoeken verzendt dan een mens redelijkerwijs kan produceren in dezelfde periode.</li>
+            <li>Informatie verzamelen of oogsten met betrekking tot een geïdentificeerde of identificeerbare persoon van de Service.</li>
+            <li>De Service gebruiken voor ongepaste commerciële werving.</li>
+            <li>Maatregelen omzeilen die wij mogelijk gebruiken om toegang tot de Service te voorkomen of te beperken.</li>
+            <li>Schending van toepasselijke wet- en regelgeving, of het aanmoedigen van gedrag dat een strafbaar feit zou kunnen vormen of aanleiding zou kunnen geven tot burgerlijke aansprakelijkheid.</li>
+          </ul>
+        </section>
+
+        <section id="interactions">
+          <h2>Interacties met andere gebruikers</h2>
+          <p>De Service fungeert als een virtuele ruimte om gebruikers met elkaar te verbinden. Als zodanig is het Bedrijf:</p>
+          <ul>
+            <li>Niet direct betrokken bij de feitelijke interacties tussen gebruikers en heeft geen controle over de waarheid, nauwkeurigheid, kwaliteit, wettigheid of veiligheid van berichten die door anderen worden geplaatst via de Service.</li>
+            <li>Niet verantwoordelijk om de identiteit van gebruikers te bevestigen.</li>
+            <li>Niet verantwoordelijk om de kwalificaties, achtergrond of capaciteiten van gebruikers die de Service gebruiken te bevestigen of te verifiëren.</li>
+          </ul>
+        </section>
+
+        <section id="copyright">
+          <h2>Auteursrechtbeleid</h2>
+          <h3>Schending van intellectueel eigendom</h3>
+          <p>Wij respecteren de intellectuele eigendomsrechten van anderen. Het is Ons beleid om te reageren op elke claim dat Inhoud die op de Service is geplaatst een auteursrecht of ander intellectueel eigendomsrecht van een persoon schendt.</p>
+          <p>Als u een auteursrechthebbende bent, of daartoe gemachtigd bent namens een auteursrechthebbende, en u van mening bent dat het auteursrechtelijk beschermde werk is gekopieerd op een manier die inbreuk maakt op het auteursrecht via de Service, dient u Uw kennisgeving schriftelijk in bij onze auteursrechtagent via e-mail (<a href="mailto:support@sportshq.io">support@sportshq.io</a>) en inclusief een gedetailleerde beschrijving van de vermeende inbreuk.</p>
+          <h3>DMCA-kennisgeving en -procedure</h3>
+          <p>U kunt een kennisgeving indienen conform de Digital Millennium Copyright Act (DMCA) door onze Copyright Agent de volgende informatie te verstrekken:</p>
+          <ul>
+            <li>Een elektronische of fysieke handtekening van de persoon die gemachtigd is om te handelen namens de eigenaar van het auteursrechtbelang.</li>
+            <li>Een beschrijving van het auteursrechtelijk beschermde werk waarvan u beweert dat het is geschonden, inclusief de URL van de locatie waar het auteursrechtelijk beschermde werk bestaat.</li>
+            <li>Identificatie van de URL of andere specifieke locatie op de Service waar het materiaal dat u beweert in strijd te zijn zich bevindt.</li>
+            <li>Uw adres, telefoonnummer en e-mailadres.</li>
+            <li>Een verklaring van u dat u te goeder trouw gelooft dat het betwiste gebruik niet is geautoriseerd door de auteursrechthebbende, zijn agent of de wet.</li>
+            <li>Een verklaring van u, gedaan onder straf van meineed, dat de bovenstaande informatie in uw kennisgeving nauwkeurig is en dat u de auteursrechthebbende bent of gemachtigd bent om namens de auteursrechthebbende te handelen.</li>
+          </ul>
+        </section>
+
+        <section id="ip">
+          <h2>Intellectueel eigendom</h2>
+          <p>De Service en de originele inhoud ervan (met uitzondering van Inhoud geleverd door u of andere gebruikers), functies en functionaliteit zijn en blijven de exclusieve eigendom van het Bedrijf en zijn licentiegevers.</p>
+          <p>De Service wordt beschermd door auteursrecht, handelsmerk en andere wetten van zowel het Land als buitenlandse landen.</p>
+          <p>Onze handelsmerken en trade dress mogen niet worden gebruikt in verband met enig product of dienst zonder de voorafgaande schriftelijke toestemming van het Bedrijf.</p>
+          <h3>Uw feedback aan Ons</h3>
+          <p>U draagt alle rechten, titels en belangen in alle Feedback die u aan het Bedrijf verstrekt over. Als om welke reden dan ook een dergelijke overdracht niet effectief is, stemt u ermee in het Bedrijf een niet-exclusief, eeuwigdurend, onherroepelijk, royaltyvrij, wereldwijd recht en licentie te verlenen om dergelijke Feedback zonder beperking te gebruiken, te reproduceren, openbaar te maken, in sublicentie te geven, te distribueren, te wijzigen en te exploiteren.</p>
+        </section>
+
+        <section id="links">
+          <h2>Links naar andere websites</h2>
+          <p>Onze Service kan links bevatten naar websites of diensten van derden die niet eigendom zijn van of worden beheerd door het Bedrijf. Het Bedrijf heeft geen controle over en aanvaardt geen verantwoordelijkheid voor de inhoud, het privacybeleid of de praktijken van websites of diensten van derden.</p>
+          <p>Wij adviseren u dringend de algemene voorwaarden en het privacybeleid te lezen van websites of diensten van derden die u bezoekt.</p>
+        </section>
+
+        <section id="termination">
+          <h2>Beëindiging</h2>
+          <p>Wij kunnen uw Account onmiddellijk beëindigen of opschorten, zonder voorafgaande kennisgeving of aansprakelijkheid, om welke reden dan ook, inclusief zonder beperking als u deze Gebruiksvoorwaarden schendt.</p>
+          <p>Bij beëindiging eindigt uw recht om de Service te gebruiken onmiddellijk. Als u uw Account wilt beëindigen, kunt u eenvoudigweg stoppen met het gebruik van de Service.</p>
+        </section>
+
+        <section id="liability">
+          <h2>Beperking van aansprakelijkheid</h2>
+          <p>Voor zover maximaal toegestaan door toepasselijk recht, is het Bedrijf in geen geval aansprakelijk voor speciale, incidentele, indirecte of gevolgschade (inclusief maar niet beperkt tot schade wegens winstderving, gegevensverlies of andere informatie, bedrijfsonderbreking, persoonlijk letsel, verlies van privacy) die voortvloeit uit of op welke manier dan ook verband houdt met het gebruik van of het onvermogen om de Service te gebruiken, zelfs als het Bedrijf op de hoogte is gesteld van de mogelijkheid van dergelijke schade.</p>
+          <p>Sommige staten staan de uitsluiting van impliciete garanties of beperking van aansprakelijkheid voor incidentele of gevolgschade niet toe, wat betekent dat sommige van de bovenstaande beperkingen mogelijk niet van toepassing zijn. In deze staten wordt de aansprakelijkheid van elke partij beperkt tot de grootste mate die is toegestaan door de wet.</p>
+        </section>
+
+        <section id="disclaimer">
+          <h2>"ZOALS HET IS" en "ZOALS BESCHIKBAAR" Disclaimer</h2>
+          <p>De Service wordt aan u verstrekt "ZOALS HET IS" en "ZOALS BESCHIKBAAR" en met alle fouten en gebreken zonder enige garantie. Voor zover maximaal toegestaan onder toepasselijk recht, wijst het Bedrijf uitdrukkelijk alle garanties af, hetzij uitdrukkelijk, impliciet, wettelijk of anderszins, met betrekking tot de Service, inclusief alle impliciete garanties van verkoopbaarheid, geschiktheid voor een bepaald doel, titel en niet-inbreuk.</p>
+          <p>Zonder het voorgaande te beperken, maakt noch het Bedrijf noch een van de leveranciers van het Bedrijf enige verklaring of garantie van welke aard dan ook dat de Service aan uw vereisten voldoet, beoogde resultaten bereikt, compatibel is of werkt met andere software, applicaties, systemen of diensten, werkt zonder onderbreking of vrij is van fouten.</p>
+        </section>
+
+        <section id="governing-law">
+          <h2>Toepasselijk recht</h2>
+          <p>De wetten van Singapore, met uitsluiting van zijn conflicterende rechtregels, zijn van toepassing op deze Voorwaarden en uw gebruik van de Service. Uw gebruik van de Applicatie kan ook onderworpen zijn aan andere lokale, nationale of internationale wetten.</p>
+          <h3>Geschillenbeslechting</h3>
+          <p>Als u een zorg of geschil heeft over de Service, stemt u ermee in eerst te proberen het geschil informeel op te lossen door contact op te nemen met het Bedrijf.</p>
+          <h3>Voor gebruikers van de Europese Unie (EU)</h3>
+          <p>Als u een consument in de Europese Unie bent, profiteert u van alle dwingende bepalingen van het recht van het land waar u woonachtig bent.</p>
+          <h3>Scheidbaarheid en afstand van recht</h3>
+          <p>Als een bepaling van deze Voorwaarden niet-afdwingbaar of ongeldig wordt geacht, wordt die bepaling gewijzigd en geïnterpreteerd om de doelstellingen van die bepaling zo veel mogelijk te bereiken onder toepasselijk recht en de resterende bepalingen blijven volledig van kracht.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Wijzigingen in deze Voorwaarden</h2>
+          <p>Wij behouden het recht voor, naar Ons uitsluitend oordeel, deze Voorwaarden op elk moment te wijzigen of te vervangen. Als een herziening wezenlijk is, zullen Wij redelijke inspanningen leveren om ten minste 30 dagen van tevoren te informeren voordat nieuwe voorwaarden van kracht worden.</p>
+          <p>Door de Service te blijven gebruiken nadat die herzieningen van kracht worden, stemt u ermee in gebonden te zijn aan de herziene voorwaarden. Als u niet akkoord gaat met de nieuwe voorwaarden, stop dan met het gebruik van de Service.</p>
+        </section>
+
+        <section id="contact">
+          <h2>Neem contact op</h2>
+          <p>Als u vragen heeft over deze Gebruiksvoorwaarden, kunt u contact met ons opnemen:</p>
+          <div class="legal-contact-box">
+            <p>Per e-mail: <a href="mailto:support@sportshq.io">support@sportshq.io</a></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>

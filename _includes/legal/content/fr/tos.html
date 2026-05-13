@@ -1,0 +1,217 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── PAGE HEADER ── -->
+  <div class="legal-hero">
+    <div class="container legal-hero__inner">
+      <div class="legal-hero__breadcrumb">
+        <a href="{{ _loc.path | default: '/' }}">Accueil</a><span>›</span>Conditions d'utilisation
+      </div>
+      <div class="legal-hero__badge">Légal</div>
+      <h1 class="legal-hero__title">Conditions d'<span>utilisation</span></h1>
+      <p class="legal-hero__meta">Dernière mise à jour : 5 mai 2026</p>
+    </div>
+  </div>
+
+  <!-- ── CONTENT ── -->
+  <main class="legal-main">
+    <div class="container legal-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="legal-toc">
+        <p class="legal-toc__heading">Sommaire</p>
+        <nav class="legal-toc__list">
+          <a href="#definitions">Définitions</a>
+          <a href="#acknowledgment">Reconnaissance</a>
+          <a href="#accounts">Comptes utilisateurs</a>
+          <a href="#content">Contenu</a>
+          <a href="#conduct">Comportement</a>
+          <a href="#interactions">Interactions entre utilisateurs</a>
+          <a href="#copyright">Politique de droits d'auteur</a>
+          <a href="#ip">Propriété intellectuelle</a>
+          <a href="#links">Liens</a>
+          <a href="#termination">Résiliation</a>
+          <a href="#liability">Limitation de responsabilité</a>
+          <a href="#disclaimer">Avertissement</a>
+          <a href="#governing-law">Droit applicable</a>
+          <a href="#changes">Modifications</a>
+          <a href="#contact">Nous contacter</a>
+        </nav>
+      </aside>
+
+      <!-- Body -->
+      <article class="legal-body">
+
+        <div class="legal-intro-card">
+          <p>Veuillez lire attentivement ces Conditions d'utilisation avant d'utiliser le service Sports HQ. En accédant ou en utilisant le Service, vous acceptez d'être lié par ces conditions.</p>
+        </div>
+
+        <section id="definitions">
+          <h2>Interprétation et définitions</h2>
+          <h3>Interprétation</h3>
+          <p>Les mots dont la première lettre est en majuscule ont des significations définies dans les conditions suivantes. Les définitions suivantes ont la même signification qu'elles apparaissent au singulier ou au pluriel.</p>
+          <h3>Définitions</h3>
+          <p>Aux fins des présentes Conditions d'utilisation :</p>
+          <ul>
+            <li><strong>« Affilié »</strong> désigne une entité qui contrôle, est contrôlée par ou est sous contrôle commun avec une partie, où « contrôle » signifie la propriété de 50 % ou plus des actions, des parts ou d'autres titres donnant droit de vote pour l'élection des administrateurs ou d'autres autorités de gestion.</li>
+            <li><strong>« Compte »</strong> désigne un compte unique créé pour vous permettre d'accéder à notre Service ou à des parties de notre Service.</li>
+            <li><strong>« Société »</strong> (désignée par « la Société », « Nous », « Notre » ou « Nos » dans le présent accord) désigne Sports HQ.</li>
+            <li><strong>« Pays »</strong> désigne Singapore.</li>
+            <li><strong>« Contenu »</strong> désigne le contenu tel que du texte, des images ou d'autres informations pouvant être publiés, téléchargés, liés ou autrement mis à disposition par vous, quelle que soit la forme de ce contenu.</li>
+            <li><strong>« Appareil »</strong> désigne tout appareil pouvant accéder au Service tel qu'un ordinateur, un téléphone portable ou une tablette numérique.</li>
+            <li><strong>« Retour d'information »</strong> désigne les commentaires, innovations ou suggestions envoyés par vous concernant les attributs, les performances ou les fonctionnalités de notre Service.</li>
+            <li><strong>« Service »</strong> désigne l'application, les serveurs backend, les systèmes et les processus.</li>
+            <li><strong>« Conditions d'utilisation »</strong> (également désignées par « Conditions ») désignent les présentes Conditions d'utilisation qui constituent l'intégralité de l'accord entre vous et la Société concernant l'utilisation du Service.</li>
+            <li><strong>« Service de médias sociaux tiers »</strong> désigne tout service ou contenu fourni par un tiers pouvant être affiché, inclus ou mis à disposition par le Service.</li>
+            <li><strong>« Vous »</strong> désigne la personne accédant ou utilisant le Service, ou la société, ou toute autre entité juridique au nom de laquelle cette personne accède ou utilise le Service, selon le cas.</li>
+          </ul>
+        </section>
+
+        <section id="acknowledgment">
+          <h2>Reconnaissance</h2>
+          <p>Ce sont les Conditions d'utilisation régissant l'utilisation de ce Service et l'accord qui existe entre vous et la Société. Ces Conditions définissent les droits et obligations de tous les utilisateurs concernant l'utilisation du Service.</p>
+          <p>Votre accès et votre utilisation du Service sont conditionnés à votre acceptation et au respect de ces Conditions. Ces Conditions s'appliquent à tous les visiteurs, utilisateurs et autres personnes qui accèdent ou utilisent le Service.</p>
+          <p>En accédant ou en utilisant le Service, vous acceptez d'être lié par ces Conditions. Si vous n'êtes pas d'accord avec une partie de ces Conditions, vous ne pouvez pas accéder au Service.</p>
+          <p>Vous déclarez être âgé de plus de 18 ans. La Société n'autorise pas les personnes de moins de 18 ans à utiliser le Service.</p>
+          <p>Votre accès et votre utilisation du Service sont également conditionnés à votre acceptation et au respect de la <a href="{% if page.locale_id %}/{{ page.locale_id }}/pp.html{% else %}/about/pp.html{% endif %}">Politique de confidentialité</a> de la Société. Veuillez lire attentivement notre Politique de confidentialité avant d'utiliser notre Service.</p>
+        </section>
+
+        <section id="accounts">
+          <h2>Comptes utilisateurs</h2>
+          <p>Vous devez avoir au moins 13 ans pour créer un compte et utiliser le service.</p>
+          <p>Lorsque vous créez un compte avec nous, vous devez nous fournir des informations exactes, complètes et à jour en tout temps. Le non-respect de cette obligation constitue une violation des Conditions, ce qui peut entraîner la résiliation immédiate de votre compte sur notre Service.</p>
+          <p>Vous êtes responsable de la protection du mot de passe que vous utilisez pour accéder au Service et de toutes les activités ou actions effectuées sous votre mot de passe, que votre mot de passe soit associé à notre Service ou à un Service de médias sociaux tiers.</p>
+          <p>Vous acceptez de ne pas divulguer votre mot de passe à des tiers. Vous devez nous informer immédiatement dès que vous avez connaissance d'une violation de la sécurité ou d'une utilisation non autorisée de votre compte.</p>
+          <p>Vous ne pouvez pas utiliser comme nom d'utilisateur le nom d'une autre personne ou entité, ou un nom qui n'est pas légalement disponible, un nom ou une marque déposée soumis aux droits d'une autre personne ou entité autre que vous sans autorisation appropriée, ou un nom qui est autrement offensant, vulgaire ou obscène.</p>
+          <p>Le Service ne peut pas être utilisé à des fins commerciales sans le consentement explicite de la Société.</p>
+        </section>
+
+        <section id="content">
+          <h2>Contenu</h2>
+          <h3>Votre droit de publier du contenu</h3>
+          <p>Notre Service vous permet de publier du Contenu. Vous êtes responsable du Contenu que vous publiez sur le Service, notamment de sa légalité, de sa fiabilité et de sa pertinence.</p>
+          <p>En publiant du Contenu sur le Service, vous nous accordez le droit et la licence d'utiliser, modifier, exécuter publiquement, afficher publiquement, reproduire et distribuer ce Contenu sur et via le Service. Vous conservez tous vos droits sur tout Contenu que vous soumettez, publiez ou affichez sur ou via le Service et vous êtes responsable de la protection de ces droits.</p>
+          <p>Vous déclarez et garantissez que : (i) le Contenu vous appartient ou vous avez le droit de l'utiliser et de nous accorder les droits et la licence prévus dans ces Conditions, et (ii) la publication de votre Contenu sur ou via le Service ne viole pas les droits à la vie privée, les droits à la publicité, les droits d'auteur, les droits contractuels ou tout autre droit d'une personne.</p>
+          <h3>Restrictions de contenu</h3>
+          <p>La Société n'est pas responsable du contenu des utilisateurs du Service. Vous comprenez et acceptez expressément que vous êtes seul responsable du Contenu et de toutes les activités qui se produisent sous votre compte.</p>
+          <p>Vous ne pouvez pas transmettre de Contenu illégal, offensant, perturbant, menaçant, diffamatoire, obscène ou autrement répréhensible, notamment :</p>
+          <ul>
+            <li>Illégal ou promouvant des activités illégales.</li>
+            <li>Contenu diffamatoire, discriminatoire ou malveillant, notamment des références ou commentaires sur la religion, la race, l'orientation sexuelle, le genre, l'origine nationale/ethnique ou d'autres groupes ciblés.</li>
+            <li>Spam, publicités générées par des machines ou non autorisées, chaînes de lettres, toute autre forme de sollicitation non désirée, ou toute forme de loterie ou de jeu d'argent.</li>
+            <li>Contenant ou installant des virus, vers, logiciels malveillants, chevaux de Troie ou tout autre contenu conçu pour perturber, endommager ou limiter le fonctionnement de tout logiciel, matériel ou équipement de télécommunications.</li>
+            <li>Portant atteinte à des droits de propriété de toute partie, notamment les brevets, marques, secrets commerciaux, droits d'auteur, droits à la publicité ou autres droits.</li>
+            <li>Usurpant l'identité d'une personne ou d'une entité, notamment la Société et ses employés ou représentants.</li>
+            <li>Violant la vie privée d'un tiers.</li>
+            <li>Fausses informations et caractéristiques.</li>
+          </ul>
+          <h3>Sauvegardes de contenu</h3>
+          <p>Bien que des sauvegardes régulières du Contenu soient effectuées, la Société ne garantit pas qu'il n'y aura pas de perte ou de corruption de données. Vous acceptez de maintenir une copie complète et exacte de tout Contenu dans un emplacement indépendant du Service.</p>
+        </section>
+
+        <section id="conduct">
+          <h2>Comportement</h2>
+          <p>Le Service est destiné à votre usage personnel et non commercial. Vous ne pouvez pas modifier, copier, distribuer, transmettre, afficher, exécuter, reproduire, publier, concéder sous licence, créer des œuvres dérivées, transférer ou vendre à des fins commerciales toute partie du Service. Vous ne pouvez pas utiliser le Service pour vous engager dans l'une des activités interdites suivantes :</p>
+          <ul>
+            <li>Copier, encadrer ou reproduire toute partie du Service.</li>
+            <li>Accéder au Service pour surveiller sa disponibilité, ses performances ou ses fonctionnalités.</li>
+            <li>Permettre à des tiers d'accéder au Service.</li>
+            <li>Utiliser, copier, modifier, créer une œuvre dérivée de, décompiler ou tenter d'extraire le code source du logiciel sous-jacent au Service.</li>
+            <li>Publier, transmettre, distribuer ou stocker du contenu en violation de nos Restrictions de contenu.</li>
+            <li>Tenter de perturber, dégrader, altérer ou violer l'intégrité ou la sécurité du Service.</li>
+            <li>Commettre tout acte susceptible d'être préjudiciable aux mineurs.</li>
+            <li>Distribuer ou divulguer toute partie du Service dans tout média, notamment par tout « scraping » automatisé ou non automatisé.</li>
+            <li>Utiliser tout système automatisé pour accéder au Service d'une manière qui envoie plus de requêtes qu'un être humain ne peut raisonnablement en produire dans le même laps de temps.</li>
+            <li>Collecter ou récolter des informations relatives à une personne identifiée ou identifiable à partir du Service.</li>
+            <li>Utiliser le Service pour toute sollicitation commerciale inappropriée.</li>
+            <li>Contourner les mesures que nous pouvons utiliser pour prévenir ou restreindre l'accès au Service.</li>
+            <li>Violer toute loi, tout statut, ordonnance ou règlement applicable, ou encourager tout comportement pouvant constituer une infraction pénale ou engager une responsabilité civile.</li>
+          </ul>
+        </section>
+
+        <section id="interactions">
+          <h2>Interactions avec d'autres utilisateurs</h2>
+          <p>Le Service fonctionne comme un espace virtuel pour connecter les utilisateurs. À ce titre, la Société :</p>
+          <ul>
+            <li>N'est pas directement impliquée dans les interactions réelles entre les utilisateurs et n'a aucun contrôle sur la vérité, l'exactitude, la qualité, la légalité ou la sécurité des publications faites par d'autres utilisateurs du Service.</li>
+            <li>N'a aucune responsabilité de confirmer l'identité des utilisateurs.</li>
+            <li>N'a aucune responsabilité de confirmer ou vérifier les qualifications, les antécédents ou les capacités des utilisateurs utilisant le Service.</li>
+          </ul>
+        </section>
+
+        <section id="copyright">
+          <h2>Politique de droits d'auteur</h2>
+          <h3>Violation de la propriété intellectuelle</h3>
+          <p>Nous respectons les droits de propriété intellectuelle d'autrui. Notre politique est de répondre à toute réclamation selon laquelle le Contenu publié sur le Service enfreint un droit d'auteur ou tout autre droit de propriété intellectuelle d'une personne.</p>
+          <p>Si vous êtes titulaire d'un droit d'auteur, ou autorisé en son nom, et que vous estimez que l'œuvre protégée par le droit d'auteur a été copiée d'une manière constituant une violation du droit d'auteur via le Service, vous devez soumettre votre notification par écrit à notre agent des droits d'auteur par e-mail (<a href="mailto:support@sportshq.io">support@sportshq.io</a>) et inclure une description détaillée de la violation alléguée.</p>
+          <h3>Avis et procédure DMCA</h3>
+          <p>Vous pouvez soumettre une notification conformément à la loi sur les droits d'auteur du millénaire numérique (DMCA) en fournissant à notre Agent des droits d'auteur les informations suivantes :</p>
+          <ul>
+            <li>Une signature électronique ou physique de la personne autorisée à agir au nom du titulaire de l'intérêt protégé par le droit d'auteur.</li>
+            <li>Une description de l'œuvre protégée par le droit d'auteur que vous prétendez avoir été violée, y compris l'URL de l'emplacement où l'œuvre protégée existe.</li>
+            <li>L'identification de l'URL ou de tout autre emplacement spécifique sur le Service où se trouve le matériel que vous prétendez contrefaire.</li>
+            <li>Votre adresse, numéro de téléphone et adresse e-mail.</li>
+            <li>Une déclaration de votre part indiquant que vous croyez de bonne foi que l'utilisation contestée n'est pas autorisée par le titulaire du droit d'auteur, son agent ou la loi.</li>
+            <li>Une déclaration de votre part, faite sous peine de parjure, que les informations ci-dessus dans votre notification sont exactes et que vous êtes le titulaire du droit d'auteur ou autorisé à agir au nom du titulaire du droit d'auteur.</li>
+          </ul>
+        </section>
+
+        <section id="ip">
+          <h2>Propriété intellectuelle</h2>
+          <p>Le Service et son contenu original (à l'exclusion du Contenu fourni par vous ou d'autres utilisateurs), ses fonctionnalités et ses caractéristiques sont et resteront la propriété exclusive de la Société et de ses concédants.</p>
+          <p>Le Service est protégé par les droits d'auteur, les marques déposées et d'autres lois du Pays et des pays étrangers.</p>
+          <p>Nos marques déposées et notre image de marque ne peuvent pas être utilisées en rapport avec un produit ou service sans le consentement écrit préalable de la Société.</p>
+          <h3>Vos retours d'information</h3>
+          <p>Vous cédez tous les droits, titres et intérêts sur tout retour d'information que vous fournissez à la Société. Si pour une raison quelconque cette cession est inefficace, vous acceptez d'accorder à la Société un droit et une licence non exclusifs, perpétuels, irrévocables, libres de redevances, mondiaux pour utiliser, reproduire, divulguer, sous-licencier, distribuer, modifier et exploiter ce retour d'information sans restriction.</p>
+        </section>
+
+        <section id="links">
+          <h2>Liens vers d'autres sites web</h2>
+          <p>Notre Service peut contenir des liens vers des sites web ou des services tiers qui ne sont pas détenus ou contrôlés par la Société. La Société n'a aucun contrôle sur le contenu, les politiques de confidentialité ou les pratiques des sites web ou services tiers et n'assume aucune responsabilité à leur égard.</p>
+          <p>Nous vous conseillons vivement de lire les conditions générales et les politiques de confidentialité de tout site web ou service tiers que vous visitez.</p>
+        </section>
+
+        <section id="termination">
+          <h2>Résiliation</h2>
+          <p>Nous pouvons résilier ou suspendre votre Compte immédiatement, sans préavis ni responsabilité, pour quelque raison que ce soit, notamment si vous violez ces Conditions d'utilisation.</p>
+          <p>À la résiliation, votre droit d'utiliser le Service cessera immédiatement. Si vous souhaitez résilier votre Compte, vous pouvez simplement cesser d'utiliser le Service.</p>
+        </section>
+
+        <section id="liability">
+          <h2>Limitation de responsabilité</h2>
+          <p>Dans toute la mesure permise par la loi applicable, en aucun cas la Société ne sera responsable de tout dommage spécial, accessoire, indirect ou consécutif quel qu'il soit (notamment, sans s'y limiter, les dommages pour perte de bénéfices, perte de données ou d'autres informations, pour interruption d'activité, pour préjudice corporel, perte de vie privée découlant de ou de toute manière liée à l'utilisation ou à l'impossibilité d'utiliser le Service), même si la Société a été informée de la possibilité de tels dommages.</p>
+          <p>Certains États n'autorisent pas l'exclusion des garanties implicites ou la limitation de responsabilité pour les dommages accessoires ou consécutifs, ce qui signifie que certaines des limitations ci-dessus peuvent ne pas s'appliquer. Dans ces États, la responsabilité de chaque partie sera limitée dans toute la mesure permise par la loi.</p>
+        </section>
+
+        <section id="disclaimer">
+          <h2>Avertissement « EN L'ÉTAT » et « TEL QUE DISPONIBLE »</h2>
+          <p>Le Service vous est fourni « EN L'ÉTAT » et « TEL QUE DISPONIBLE » et avec tous les défauts sans garantie d'aucune sorte. Dans toute la mesure permise par la loi applicable, la Société décline expressément toutes les garanties, qu'elles soient expresses, implicites, légales ou autres, concernant le Service, y compris toutes les garanties implicites de qualité marchande, d'adéquation à un usage particulier, de titre et de non-contrefaçon.</p>
+          <p>Sans limiter ce qui précède, ni la Société ni aucun des fournisseurs de la Société ne fait de représentation ou de garantie quelconque que le Service répondra à vos exigences, atteindra les résultats escomptés, sera compatible ou fonctionnera avec tout autre logiciel, application, système ou service, fonctionnera sans interruption ou sera exempt d'erreurs.</p>
+        </section>
+
+        <section id="governing-law">
+          <h2>Droit applicable</h2>
+          <p>Les lois de Singapore, à l'exclusion de ses règles de conflit de lois, régiront ces Conditions et votre utilisation du Service. Votre utilisation de l'Application peut également être soumise à d'autres lois locales, étatiques, nationales ou internationales.</p>
+          <h3>Résolution des litiges</h3>
+          <p>Si vous avez une préoccupation ou un litige concernant le Service, vous acceptez de d'abord essayer de résoudre le litige à l'amiable en contactant la Société.</p>
+          <h3>Pour les utilisateurs de l'Union européenne (UE)</h3>
+          <p>Si vous êtes un consommateur de l'Union européenne, vous bénéficierez de toutes les dispositions obligatoires de la loi du pays dans lequel vous résidez.</p>
+          <h3>Divisibilité et renonciation</h3>
+          <p>Si une disposition de ces Conditions est jugée inapplicable ou invalide, cette disposition sera modifiée et interprétée pour accomplir les objectifs de cette disposition dans toute la mesure possible en vertu de la loi applicable et les dispositions restantes continueront à plein effet.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Modifications de ces Conditions</h2>
+          <p>Nous nous réservons le droit, à notre seule discrétion, de modifier ou de remplacer ces Conditions à tout moment. Si une révision est importante, nous ferons des efforts raisonnables pour fournir un préavis d'au moins 30 jours avant que les nouvelles conditions entrent en vigueur.</p>
+          <p>En continuant à accéder ou à utiliser notre Service après que ces révisions entrent en vigueur, vous acceptez d'être lié par les conditions révisées. Si vous n'acceptez pas les nouvelles conditions, veuillez cesser d'utiliser le Service.</p>
+        </section>
+
+        <section id="contact">
+          <h2>Nous contacter</h2>
+          <p>Si vous avez des questions concernant ces Conditions d'utilisation, vous pouvez nous contacter :</p>
+          <div class="legal-contact-box">
+            <p>Par e-mail : <a href="mailto:support@sportshq.io">support@sportshq.io</a></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
