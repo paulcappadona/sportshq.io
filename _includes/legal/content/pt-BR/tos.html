@@ -1,0 +1,217 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── PAGE HEADER ── -->
+  <div class="legal-hero">
+    <div class="container legal-hero__inner">
+      <div class="legal-hero__breadcrumb">
+        <a href="{{ _loc.path | default: '/' }}">Início</a><span>›</span>Termos de Serviço
+      </div>
+      <div class="legal-hero__badge">Jurídico</div>
+      <h1 class="legal-hero__title">Termos de <span>Serviço</span></h1>
+      <p class="legal-hero__meta">Última atualização: 5 de maio de 2026</p>
+    </div>
+  </div>
+
+  <!-- ── CONTENT ── -->
+  <main class="legal-main">
+    <div class="container legal-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="legal-toc">
+        <p class="legal-toc__heading">Conteúdo</p>
+        <nav class="legal-toc__list">
+          <a href="#definitions">Definições</a>
+          <a href="#acknowledgment">Reconhecimento</a>
+          <a href="#accounts">Contas de Usuário</a>
+          <a href="#content">Conteúdo</a>
+          <a href="#conduct">Conduta</a>
+          <a href="#interactions">Interações entre Usuários</a>
+          <a href="#copyright">Política de Direitos Autorais</a>
+          <a href="#ip">Propriedade Intelectual</a>
+          <a href="#links">Links</a>
+          <a href="#termination">Rescisão</a>
+          <a href="#liability">Limitação de Responsabilidade</a>
+          <a href="#disclaimer">Isenção de Responsabilidade</a>
+          <a href="#governing-law">Lei Aplicável</a>
+          <a href="#changes">Alterações</a>
+          <a href="#contact">Fale Conosco</a>
+        </nav>
+      </aside>
+
+      <!-- Body -->
+      <article class="legal-body">
+
+        <div class="legal-intro-card">
+          <p>Leia estes Termos de Serviço com atenção antes de usar o serviço Sports HQ. Ao acessar ou usar o Serviço, você concorda em estar vinculado a estes termos.</p>
+        </div>
+
+        <section id="definitions">
+          <h2>Interpretação e Definições</h2>
+          <h3>Interpretação</h3>
+          <p>As palavras cuja letra inicial é maiúscula têm significados definidos nas seguintes condições. As definições a seguir terão o mesmo significado independentemente de aparecerem no singular ou no plural.</p>
+          <h3>Definições</h3>
+          <p>Para os fins destes Termos de Serviço:</p>
+          <ul>
+            <li><strong>"Afiliada"</strong> significa uma entidade que controla, é controlada por ou está sob controle comum com uma parte, onde "controle" significa propriedade de 50% ou mais das ações, participação acionária ou outros títulos com direito a voto para eleição de diretores ou outra autoridade gestora.</li>
+            <li><strong>"Conta"</strong> significa uma conta exclusiva criada para você acessar nosso Serviço ou partes do nosso Serviço.</li>
+            <li><strong>"Empresa"</strong> (referida como "a Empresa", "Nós", "Nos" ou "Nosso" neste Contrato) refere-se ao Sports HQ.</li>
+            <li><strong>"País"</strong> refere-se a Singapore.</li>
+            <li><strong>"Conteúdo"</strong> refere-se a conteúdo como texto, imagens ou outras informações que podem ser postadas, carregadas, vinculadas ou de outra forma disponibilizadas por você, independentemente da forma desse conteúdo.</li>
+            <li><strong>"Dispositivo"</strong> significa qualquer dispositivo que possa acessar o Serviço, como um computador, celular ou tablet digital.</li>
+            <li><strong>"Feedback"</strong> significa feedback, inovações ou sugestões enviados por você em relação aos atributos, desempenho ou recursos do nosso Serviço.</li>
+            <li><strong>"Serviço"</strong> refere-se ao aplicativo, servidores backend, sistemas e processos.</li>
+            <li><strong>"Termos de Serviço"</strong> (também referidos como "Termos") significam estes Termos de Serviço que formam o acordo completo entre você e a Empresa em relação ao uso do Serviço.</li>
+            <li><strong>"Serviço de Mídia Social de Terceiros"</strong> significa quaisquer serviços ou conteúdo fornecidos por um terceiro que possam ser exibidos, incluídos ou disponibilizados pelo Serviço.</li>
+            <li><strong>"Você"</strong> significa o indivíduo que acessa ou usa o Serviço, ou a empresa, ou outra entidade legal em nome da qual esse indivíduo acessa ou usa o Serviço, conforme aplicável.</li>
+          </ul>
+        </section>
+
+        <section id="acknowledgment">
+          <h2>Reconhecimento</h2>
+          <p>Estes são os Termos de Serviço que regem o uso deste Serviço e o acordo que opera entre você e a Empresa. Estes Termos estabelecem os direitos e obrigações de todos os usuários em relação ao uso do Serviço.</p>
+          <p>Seu acesso e uso do Serviço está condicionado à sua aceitação e cumprimento destes Termos. Estes Termos se aplicam a todos os visitantes, usuários e outras pessoas que acessam ou usam o Serviço.</p>
+          <p>Ao acessar ou usar o Serviço, você concorda em estar vinculado a estes Termos. Se você discordar de qualquer parte destes Termos, não poderá acessar o Serviço.</p>
+          <p>Você declara que tem mais de 18 anos. A Empresa não permite que menores de 18 anos usem o Serviço.</p>
+          <p>Seu acesso e uso do Serviço também está condicionado à sua aceitação e cumprimento da <a href="{% if page.locale_id %}/{{ page.locale_id }}/pp.html{% else %}/about/pp.html{% endif %}">Política de Privacidade</a> da Empresa. Leia Nossa Política de Privacidade com atenção antes de usar Nosso Serviço.</p>
+        </section>
+
+        <section id="accounts">
+          <h2>Contas de Usuário</h2>
+          <p>Você deve ter no mínimo 13 anos para criar uma conta e usar o serviço.</p>
+          <p>Ao criar uma conta conosco, você deve nos fornecer informações precisas, completas e atuais o tempo todo. O não cumprimento disso constitui uma violação dos Termos, o que pode resultar no encerramento imediato de sua conta em Nosso Serviço.</p>
+          <p>Você é responsável por proteger a senha que usa para acessar o Serviço e por quaisquer atividades ou ações sob sua senha.</p>
+          <p>Você concorda em não divulgar sua senha a terceiros. Você deve nos notificar imediatamente ao tomar conhecimento de qualquer violação de segurança ou uso não autorizado de sua conta.</p>
+          <p>Você não pode usar como nome de usuário o nome de outra pessoa ou entidade que não esteja legalmente disponível para uso, um nome ou marca registrada sujeita a quaisquer direitos de outra pessoa ou entidade sem autorização adequada, ou um nome que seja de outra forma ofensivo, vulgar ou obsceno.</p>
+          <p>O Serviço não pode ser usado para fins comerciais sem o consentimento explícito da Empresa.</p>
+        </section>
+
+        <section id="content">
+          <h2>Conteúdo</h2>
+          <h3>Seu Direito de Publicar Conteúdo</h3>
+          <p>Nosso Serviço permite que você publique Conteúdo. Você é responsável pelo Conteúdo que publica no Serviço, incluindo sua legalidade, confiabilidade e adequação.</p>
+          <p>Ao publicar Conteúdo no Serviço, você nos concede o direito e a licença de usar, modificar, executar publicamente, exibir publicamente, reproduzir e distribuir tal Conteúdo no e através do Serviço. Você retém todos e quaisquer direitos sobre qualquer Conteúdo que você enviar, publicar ou exibir no ou através do Serviço e você é responsável por proteger esses direitos.</p>
+          <p>Você declara e garante que: (i) o Conteúdo é seu ou você tem o direito de usá-lo e nos conceder os direitos e a licença conforme previsto nestes Termos, e (ii) a publicação do seu Conteúdo no ou através do Serviço não viola os direitos de privacidade, direitos de publicidade, direitos autorais, direitos contratuais ou quaisquer outros direitos de qualquer pessoa.</p>
+          <h3>Restrições de Conteúdo</h3>
+          <p>A Empresa não é responsável pelo conteúdo dos usuários do Serviço. Você compreende e concorda expressamente que é o único responsável pelo Conteúdo e por todas as atividades que ocorrem sob sua conta.</p>
+          <p>Você não pode transmitir qualquer Conteúdo que seja ilegal, ofensivo, perturbador, ameaçador, difamatório, obsceno ou de outra forma questionável, incluindo:</p>
+          <ul>
+            <li>Ilegal ou promovendo atividades ilegais.</li>
+            <li>Conteúdo difamatório, discriminatório ou maldoso, incluindo referências ou comentários sobre religião, raça, orientação sexual, gênero, origem nacional/étnica ou outros grupos-alvo.</li>
+            <li>Spam, publicidade gerada por máquina ou não autorizada, correntes de cartas, qualquer outra forma de solicitação não solicitada ou qualquer forma de loteria ou jogo.</li>
+            <li>Contendo ou instalando vírus, worms, malware, cavalos de Tróia ou outro conteúdo projetado para interromper, danificar ou limitar o funcionamento de qualquer software, hardware ou equipamento de telecomunicações.</li>
+            <li>Violando quaisquer direitos de propriedade de qualquer parte, incluindo patente, marca registrada, segredo comercial, direitos autorais, direito de publicidade ou outros direitos.</li>
+            <li>Personificando qualquer pessoa ou entidade, incluindo a Empresa e seus funcionários ou representantes.</li>
+            <li>Violando a privacidade de qualquer terceiro.</li>
+            <li>Informações e recursos falsos.</li>
+          </ul>
+          <h3>Backups de Conteúdo</h3>
+          <p>Embora backups regulares de Conteúdo sejam realizados, a Empresa não garante que não haverá perda ou corrupção de dados. Você concorda em manter uma cópia completa e precisa de qualquer Conteúdo em um local independente do Serviço.</p>
+        </section>
+
+        <section id="conduct">
+          <h2>Conduta</h2>
+          <p>O Serviço é para seu uso pessoal e não comercial. Você não pode modificar, copiar, distribuir, transmitir, exibir, executar, reproduzir, publicar, licenciar, criar trabalhos derivados, transferir ou vender para quaisquer fins comerciais qualquer parte do Serviço. Você não pode usar o Serviço para se envolver em nenhuma das seguintes Atividades Proibidas:</p>
+          <ul>
+            <li>Copiar, enquadrar ou espelhar qualquer parte do Serviço.</li>
+            <li>Acessar o Serviço para monitorar sua disponibilidade, desempenho ou funcionalidade.</li>
+            <li>Permitir que terceiros acessem o Serviço.</li>
+            <li>Usar, copiar, modificar, criar um trabalho derivado, fazer engenharia reversa, descompilar ou tentar extrair o código-fonte do software subjacente ao Serviço.</li>
+            <li>Publicar, transmitir, distribuir ou armazenar conteúdo em violação às nossas Restrições de Conteúdo.</li>
+            <li>Tentar interromper, degradar, prejudicar ou violar a integridade ou segurança do Serviço.</li>
+            <li>Cometer qualquer ato que possa ser prejudicial a menores.</li>
+            <li>Distribuir ou divulgar qualquer parte do Serviço em qualquer mídia, incluindo por qualquer "scraping" automatizado ou não automatizado.</li>
+            <li>Usar qualquer sistema automatizado para acessar o Serviço de uma maneira que envie mais solicitações do que um humano pode razoavelmente produzir no mesmo período de tempo.</li>
+            <li>Coletar ou colher quaisquer informações relacionadas a um indivíduo identificado ou identificável do Serviço.</li>
+            <li>Usar o Serviço para qualquer solicitação comercial inadequada.</li>
+            <li>Ignorar as medidas que podemos usar para impedir ou restringir o acesso ao Serviço.</li>
+            <li>Violar qualquer lei, estatuto, portaria ou regulamento aplicável, ou encorajar qualquer conduta que possa constituir uma infração penal ou dar origem a responsabilidade civil.</li>
+          </ul>
+        </section>
+
+        <section id="interactions">
+          <h2>Interações com Outros Usuários</h2>
+          <p>O Serviço funciona como um espaço virtual para conectar usuários. Como tal, a Empresa:</p>
+          <ul>
+            <li>Não está diretamente envolvida nas interações reais entre usuários e não tem controle sobre a verdade, precisão, qualidade, legalidade ou segurança das postagens feitas por outros usando o Serviço.</li>
+            <li>Não tem responsabilidade de confirmar a identidade dos usuários.</li>
+            <li>Não tem responsabilidade de confirmar ou verificar as qualificações, antecedentes ou habilidades dos usuários que usam o Serviço.</li>
+          </ul>
+        </section>
+
+        <section id="copyright">
+          <h2>Política de Direitos Autorais</h2>
+          <h3>Violação de Propriedade Intelectual</h3>
+          <p>Respeitamos os direitos de propriedade intelectual de terceiros. É Nossa política responder a qualquer reclamação de que o Conteúdo publicado no Serviço viola direitos autorais ou outros direitos de propriedade intelectual de qualquer pessoa.</p>
+          <p>Se você é um proprietário de direitos autorais, ou autorizado em seu nome, e acredita que o trabalho protegido por direitos autorais foi copiado de uma forma que constitui violação de direitos autorais através do Serviço, você deve enviar seu aviso por escrito ao nosso agente de direitos autorais por e-mail (<a href="mailto:support@sportshq.io">support@sportshq.io</a>) e incluir uma descrição detalhada da suposta violação.</p>
+          <h3>Aviso e Procedimento DMCA</h3>
+          <p>Você pode enviar uma notificação de acordo com a Lei de Direitos Autorais do Milênio Digital (DMCA) fornecendo ao nosso Agente de Direitos Autorais as seguintes informações:</p>
+          <ul>
+            <li>Uma assinatura eletrônica ou física da pessoa autorizada a agir em nome do proprietário do interesse de direitos autorais.</li>
+            <li>Uma descrição do trabalho protegido por direitos autorais que você alega ter sido violado, incluindo a URL do local onde o trabalho protegido por direitos autorais existe.</li>
+            <li>Identificação da URL ou outro local específico no Serviço onde o material que você alega estar infringindo está localizado.</li>
+            <li>Seu endereço, número de telefone e endereço de e-mail.</li>
+            <li>Uma declaração sua de que você tem crença de boa-fé de que o uso disputado não é autorizado pelo proprietário dos direitos autorais, seu agente ou pela lei.</li>
+            <li>Uma declaração sua, feita sob pena de perjúrio, de que as informações acima em seu aviso são precisas e que você é o proprietário dos direitos autorais ou autorizado a agir em nome do proprietário dos direitos autorais.</li>
+          </ul>
+        </section>
+
+        <section id="ip">
+          <h2>Propriedade Intelectual</h2>
+          <p>O Serviço e seu conteúdo original (excluindo Conteúdo fornecido por você ou outros usuários), recursos e funcionalidade são e permanecerão propriedade exclusiva da Empresa e seus licenciadores.</p>
+          <p>O Serviço é protegido por direitos autorais, marcas registradas e outras leis tanto do País quanto de países estrangeiros.</p>
+          <p>Nossas marcas registradas e trade dress não podem ser usados em conexão com qualquer produto ou serviço sem o consentimento prévio por escrito da Empresa.</p>
+          <h3>Seu Feedback para Nós</h3>
+          <p>Você cede todos os direitos, títulos e interesses em qualquer Feedback que fornecer à Empresa. Se por qualquer razão tal cessão for ineficaz, você concorda em conceder à Empresa um direito e licença não exclusivos, perpétuos, irrevogáveis, livres de royalties, mundiais para usar, reproduzir, divulgar, sublicenciar, distribuir, modificar e explorar tal Feedback sem restrição.</p>
+        </section>
+
+        <section id="links">
+          <h2>Links para Outros Sites</h2>
+          <p>Nosso Serviço pode conter links para sites ou serviços de terceiros que não são de propriedade ou controlados pela Empresa. A Empresa não tem controle sobre, e não assume responsabilidade pelo conteúdo, políticas de privacidade ou práticas de quaisquer sites ou serviços de terceiros.</p>
+          <p>Recomendamos fortemente que você leia os termos e condições e as políticas de privacidade de quaisquer sites ou serviços de terceiros que você visitar.</p>
+        </section>
+
+        <section id="termination">
+          <h2>Rescisão</h2>
+          <p>Podemos encerrar ou suspender sua Conta imediatamente, sem aviso prévio ou responsabilidade, por qualquer motivo, incluindo sem limitação se você violar estes Termos de Serviço.</p>
+          <p>Após a rescisão, seu direito de usar o Serviço cessará imediatamente. Se você deseja encerrar sua Conta, pode simplesmente parar de usar o Serviço.</p>
+        </section>
+
+        <section id="liability">
+          <h2>Limitação de Responsabilidade</h2>
+          <p>Na extensão máxima permitida pela lei aplicável, em nenhum caso a Empresa será responsável por quaisquer danos especiais, incidentais, indiretos ou consequenciais (incluindo, mas não se limitando a danos por perda de lucros, perda de dados ou outras informações, por interrupção de negócios, por lesões pessoais, perda de privacidade decorrente de ou de qualquer forma relacionada ao uso ou incapacidade de usar o Serviço), mesmo que a Empresa tenha sido avisada da possibilidade de tais danos.</p>
+          <p>Alguns estados não permitem a exclusão de garantias implícitas ou limitação de responsabilidade por danos incidentais ou consequenciais, o que significa que algumas das limitações acima podem não se aplicar. Nesses estados, a responsabilidade de cada parte será limitada na maior medida permitida por lei.</p>
+        </section>
+
+        <section id="disclaimer">
+          <h2>Isenção de Responsabilidade "COMO ESTÁ" e "CONFORME DISPONÍVEL"</h2>
+          <p>O Serviço é fornecido a você "COMO ESTÁ" e "CONFORME DISPONÍVEL" e com todas as falhas e defeitos sem garantia de qualquer tipo. Na extensão máxima permitida pela lei aplicável, a Empresa expressamente se isenta de todas as garantias, sejam expressas, implícitas, estatutárias ou de outra forma, com relação ao Serviço, incluindo todas as garantias implícitas de comercialização, adequação a uma finalidade específica, título e não violação.</p>
+          <p>Sem limitar o exposto, nem a Empresa nem qualquer um dos fornecedores da Empresa faz qualquer representação ou garantia de qualquer tipo de que o Serviço atenderá aos seus requisitos, alcançará quaisquer resultados pretendidos, será compatível ou funcionará com qualquer outro software, aplicativos, sistemas ou serviços, operará sem interrupção ou será livre de erros.</p>
+        </section>
+
+        <section id="governing-law">
+          <h2>Lei Aplicável</h2>
+          <p>As leis de Singapore, excluindo suas regras de conflito de leis, regerão estes Termos e seu uso do Serviço. O uso do Aplicativo também pode estar sujeito a outras leis locais, estaduais, nacionais ou internacionais.</p>
+          <h3>Resolução de Disputas</h3>
+          <p>Se você tiver alguma preocupação ou disputa sobre o Serviço, você concorda em primeiro tentar resolver a disputa informalmente entrando em contato com a Empresa.</p>
+          <h3>Para Usuários da União Europeia (UE)</h3>
+          <p>Se você for um consumidor da União Europeia, se beneficiará de quaisquer disposições obrigatórias da lei do país em que reside.</p>
+          <h3>Divisibilidade e Renúncia</h3>
+          <p>Se qualquer disposição destes Termos for considerada inaplicável ou inválida, tal disposição será alterada e interpretada para cumprir os objetivos de tal disposição na maior extensão possível sob a lei aplicável e as disposições restantes continuarão em plena força e efeito.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Alterações nestes Termos</h2>
+          <p>Reservamo-nos o direito, a Nosso único critério, de modificar ou substituir estes Termos a qualquer momento. Se uma revisão for material, faremos esforços razoáveis para fornecer pelo menos 30 dias de aviso antes que quaisquer novos termos entrem em vigor.</p>
+          <p>Ao continuar a acessar ou usar Nosso Serviço após essas revisões entrarem em vigor, você concorda em estar vinculado pelos termos revisados. Se você não concordar com os novos termos, pare de usar o Serviço.</p>
+        </section>
+
+        <section id="contact">
+          <h2>Fale Conosco</h2>
+          <p>Se você tiver alguma dúvida sobre estes Termos de Serviço, pode entrar em contato conosco:</p>
+          <div class="legal-contact-box">
+            <p>Por e-mail: <a href="mailto:support@sportshq.io">support@sportshq.io</a></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>

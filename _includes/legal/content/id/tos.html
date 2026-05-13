@@ -1,0 +1,217 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+  <!-- ── PAGE HEADER ── -->
+  <div class="legal-hero">
+    <div class="container legal-hero__inner">
+      <div class="legal-hero__breadcrumb">
+        <a href="{{ _loc.path | default: '/' }}">Beranda</a><span>›</span>Ketentuan Layanan
+      </div>
+      <div class="legal-hero__badge">Hukum</div>
+      <h1 class="legal-hero__title">Ketentuan <span>Layanan</span></h1>
+      <p class="legal-hero__meta">Terakhir diperbarui: 5 Mei 2026</p>
+    </div>
+  </div>
+
+  <!-- ── CONTENT ── -->
+  <main class="legal-main">
+    <div class="container legal-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="legal-toc">
+        <p class="legal-toc__heading">Daftar Isi</p>
+        <nav class="legal-toc__list">
+          <a href="#definitions">Definisi</a>
+          <a href="#acknowledgment">Pengakuan</a>
+          <a href="#accounts">Akun Pengguna</a>
+          <a href="#content">Konten</a>
+          <a href="#conduct">Perilaku</a>
+          <a href="#interactions">Interaksi Pengguna</a>
+          <a href="#copyright">Kebijakan Hak Cipta</a>
+          <a href="#ip">Kekayaan Intelektual</a>
+          <a href="#links">Tautan</a>
+          <a href="#termination">Penghentian</a>
+          <a href="#liability">Batasan Tanggung Jawab</a>
+          <a href="#disclaimer">Penafian</a>
+          <a href="#governing-law">Hukum yang Berlaku</a>
+          <a href="#changes">Perubahan</a>
+          <a href="#contact">Hubungi Kami</a>
+        </nav>
+      </aside>
+
+      <!-- Body -->
+      <article class="legal-body">
+
+        <div class="legal-intro-card">
+          <p>Harap baca Ketentuan Layanan ini dengan saksama sebelum menggunakan layanan Sports HQ. Dengan mengakses atau menggunakan Layanan, Anda setuju untuk terikat dengan ketentuan ini.</p>
+        </div>
+
+        <section id="definitions">
+          <h2>Interpretasi dan Definisi</h2>
+          <h3>Interpretasi</h3>
+          <p>Kata-kata yang huruf pertamanya ditulis kapital memiliki arti yang didefinisikan dalam kondisi berikut. Definisi berikut berlaku dengan makna yang sama terlepas dari apakah kata tersebut muncul dalam bentuk tunggal atau jamak.</p>
+          <h3>Definisi</h3>
+          <p>Untuk keperluan Ketentuan Layanan ini:</p>
+          <ul>
+            <li><strong>"Afiliasi"</strong> berarti entitas yang mengendalikan, dikendalikan oleh, atau berada di bawah kendali bersama dengan suatu pihak, di mana "kendali" berarti kepemilikan 50% atau lebih saham, ekuitas, atau efek lain yang berhak memberikan suara dalam pemilihan direktur atau otoritas manajemen lainnya.</li>
+            <li><strong>"Akun"</strong> berarti akun unik yang dibuat untuk Anda mengakses Layanan kami atau bagian dari Layanan kami.</li>
+            <li><strong>"Perusahaan"</strong> (disebut sebagai "Perusahaan", "Kami", "Kita" atau "Milik Kami" dalam Perjanjian ini) mengacu pada Sports HQ.</li>
+            <li><strong>"Negara"</strong> mengacu pada Singapore.</li>
+            <li><strong>"Konten"</strong> mengacu pada konten seperti teks, gambar, atau informasi lain yang dapat diposting, diunggah, ditautkan, atau tersedia dengan cara lain oleh Anda, terlepas dari bentuk konten tersebut.</li>
+            <li><strong>"Perangkat"</strong> berarti perangkat apa pun yang dapat mengakses Layanan seperti komputer, ponsel, atau tablet digital.</li>
+            <li><strong>"Umpan Balik"</strong> berarti umpan balik, inovasi, atau saran yang dikirim oleh Anda mengenai atribut, kinerja, atau fitur Layanan kami.</li>
+            <li><strong>"Layanan"</strong> mengacu pada aplikasi, server backend, sistem, dan proses.</li>
+            <li><strong>"Ketentuan Layanan"</strong> (juga disebut sebagai "Ketentuan") berarti Ketentuan Layanan ini yang membentuk keseluruhan perjanjian antara Anda dan Perusahaan mengenai penggunaan Layanan.</li>
+            <li><strong>"Layanan Media Sosial Pihak Ketiga"</strong> berarti layanan atau konten apa pun yang disediakan oleh pihak ketiga yang mungkin ditampilkan, disertakan, atau tersedia oleh Layanan.</li>
+            <li><strong>"Anda"</strong> berarti individu yang mengakses atau menggunakan Layanan, atau perusahaan, atau entitas hukum lain atas nama individu tersebut mengakses atau menggunakan Layanan, sebagaimana berlaku.</li>
+          </ul>
+        </section>
+
+        <section id="acknowledgment">
+          <h2>Pengakuan</h2>
+          <p>Ini adalah Ketentuan Layanan yang mengatur penggunaan Layanan ini dan perjanjian yang berlaku antara Anda dan Perusahaan. Ketentuan ini menetapkan hak dan kewajiban semua pengguna mengenai penggunaan Layanan.</p>
+          <p>Akses dan penggunaan Layanan Anda bergantung pada penerimaan dan kepatuhan Anda terhadap Ketentuan ini. Ketentuan ini berlaku untuk semua pengunjung, pengguna, dan orang lain yang mengakses atau menggunakan Layanan.</p>
+          <p>Dengan mengakses atau menggunakan Layanan, Anda setuju untuk terikat dengan Ketentuan ini. Jika Anda tidak setuju dengan bagian mana pun dari Ketentuan ini, Anda tidak dapat mengakses Layanan.</p>
+          <p>Anda menyatakan bahwa Anda berusia di atas 18 tahun. Perusahaan tidak mengizinkan mereka yang berusia di bawah 18 tahun untuk menggunakan Layanan.</p>
+          <p>Akses dan penggunaan Layanan Anda juga bergantung pada penerimaan dan kepatuhan Anda terhadap <a href="{% if page.locale_id %}/{{ page.locale_id }}/pp.html{% else %}/about/pp.html{% endif %}">Kebijakan Privasi</a> Perusahaan. Harap baca Kebijakan Privasi Kami dengan saksama sebelum menggunakan Layanan Kami.</p>
+        </section>
+
+        <section id="accounts">
+          <h2>Akun Pengguna</h2>
+          <p>Anda harus berusia minimal 13 tahun untuk membuat akun dan menggunakan layanan.</p>
+          <p>Saat Anda membuat akun dengan Kami, Anda harus memberikan informasi yang akurat, lengkap, dan terkini kepada Kami setiap saat. Kegagalan untuk melakukannya merupakan pelanggaran Ketentuan, yang dapat mengakibatkan penghentian segera akun Anda di Layanan Kami.</p>
+          <p>Anda bertanggung jawab untuk menjaga keamanan kata sandi yang Anda gunakan untuk mengakses Layanan dan atas aktivitas atau tindakan apa pun di bawah kata sandi Anda, baik kata sandi Anda ada di Layanan Kami maupun Layanan Media Sosial Pihak Ketiga.</p>
+          <p>Anda setuju untuk tidak mengungkapkan kata sandi Anda kepada pihak ketiga mana pun. Anda harus segera memberitahu Kami setelah mengetahui adanya pelanggaran keamanan atau penggunaan akun Anda yang tidak sah.</p>
+          <p>Anda tidak boleh menggunakan nama orang atau entitas lain sebagai nama pengguna atau yang tidak tersedia secara sah untuk digunakan, nama atau merek dagang yang tunduk pada hak orang atau entitas lain selain Anda tanpa otorisasi yang sesuai, atau nama yang menurut hukum tidak pantas, vulgar, atau cabul.</p>
+          <p>Layanan tidak boleh digunakan untuk tujuan komersial tanpa persetujuan eksplisit dari Perusahaan.</p>
+        </section>
+
+        <section id="content">
+          <h2>Konten</h2>
+          <h3>Hak Anda untuk Memposting Konten</h3>
+          <p>Layanan Kami memungkinkan Anda untuk memposting Konten. Anda bertanggung jawab atas Konten yang Anda posting ke Layanan, termasuk legalitas, keandalan, dan kesesuaiannya.</p>
+          <p>Dengan memposting Konten ke Layanan, Anda memberi Kami hak dan lisensi untuk menggunakan, memodifikasi, menampilkan secara publik, mempertunjukkan secara publik, mereproduksi, dan mendistribusikan Konten tersebut di dan melalui Layanan. Anda mempertahankan semua hak Anda atas Konten apa pun yang Anda kirimkan, posting, atau tampilkan di atau melalui Layanan dan Anda bertanggung jawab untuk melindungi hak-hak tersebut.</p>
+          <p>Anda menyatakan dan menjamin bahwa: (i) Konten adalah milik Anda atau Anda memiliki hak untuk menggunakannya dan memberi Kami hak dan lisensi sebagaimana diatur dalam Ketentuan ini, dan (ii) posting Konten Anda di atau melalui Layanan tidak melanggar hak privasi, hak publisitas, hak cipta, hak kontrak, atau hak lain dari siapa pun.</p>
+          <h3>Pembatasan Konten</h3>
+          <p>Perusahaan tidak bertanggung jawab atas konten pengguna Layanan. Anda secara tegas memahami dan setuju bahwa Anda sepenuhnya bertanggung jawab atas Konten dan semua aktivitas yang terjadi di bawah akun Anda.</p>
+          <p>Anda tidak boleh mengirimkan Konten apa pun yang melanggar hukum, menyinggung, mengganggu, mengancam, mencemarkan nama baik, memfitnah, cabul, atau sebaliknya tidak pantas, termasuk:</p>
+          <ul>
+            <li>Melanggar hukum atau mempromosikan aktivitas melanggar hukum.</li>
+            <li>Konten yang mencemarkan nama baik, diskriminatif, atau jahat, termasuk referensi atau komentar tentang agama, ras, orientasi seksual, gender, asal nasional/etnis, atau kelompok yang ditargetkan lainnya.</li>
+            <li>Spam, iklan yang dihasilkan mesin atau tidak sah, surat berantai, bentuk permintaan tidak diminta lainnya, atau bentuk lotere atau perjudian apa pun.</li>
+            <li>Mengandung atau memasang virus, worm, malware, kuda troya, atau konten lain yang dirancang untuk mengganggu, merusak, atau membatasi fungsi perangkat lunak, perangkat keras, atau peralatan telekomunikasi apa pun.</li>
+            <li>Melanggar hak kepemilikan pihak mana pun, termasuk paten, merek dagang, rahasia dagang, hak cipta, hak publisitas, atau hak lainnya.</li>
+            <li>Menyamar sebagai orang atau entitas mana pun termasuk Perusahaan dan karyawan atau perwakilannya.</li>
+            <li>Melanggar privasi pihak ketiga mana pun.</li>
+            <li>Informasi dan fitur palsu.</li>
+          </ul>
+          <h3>Cadangan Konten</h3>
+          <p>Meskipun cadangan Konten dilakukan secara rutin, Perusahaan tidak menjamin tidak akan ada kehilangan atau kerusakan data. Anda setuju untuk menyimpan salinan lengkap dan akurat dari Konten apa pun di lokasi yang independen dari Layanan.</p>
+        </section>
+
+        <section id="conduct">
+          <h2>Perilaku</h2>
+          <p>Layanan ini untuk penggunaan pribadi dan nonkomersial Anda. Anda tidak boleh memodifikasi, menyalin, mendistribusikan, mengirimkan, menampilkan, melakukan, mereproduksi, menerbitkan, melisensikan, membuat karya turunan, mentransfer, atau menjual untuk tujuan komersial apa pun bagian mana pun dari Layanan. Anda tidak boleh menggunakan Layanan untuk terlibat dalam Kegiatan Terlarang berikut:</p>
+          <ul>
+            <li>Menyalin, membingkai, atau mencerminkan bagian mana pun dari Layanan.</li>
+            <li>Mengakses Layanan untuk memantau ketersediaan, kinerja, atau fungsionalitasnya.</li>
+            <li>Mengizinkan pihak ketiga mana pun untuk mengakses Layanan.</li>
+            <li>Menggunakan, menyalin, memodifikasi, membuat karya turunan, merekayasa balik, mendekompilasi, atau mencoba mengekstrak kode sumber perangkat lunak yang mendasari Layanan.</li>
+            <li>Menerbitkan, mengirimkan, mendistribusikan, atau menyimpan konten yang melanggar Pembatasan Konten kami.</li>
+            <li>Mencoba mengganggu, menurunkan kualitas, merusak, atau melanggar integritas atau keamanan Layanan.</li>
+            <li>Melakukan tindakan apa pun yang dapat membahayakan anak di bawah umur.</li>
+            <li>Mendistribusikan atau mengungkapkan bagian mana pun dari Layanan dalam media apa pun, termasuk melalui "scraping" otomatis atau non-otomatis apa pun.</li>
+            <li>Menggunakan sistem otomatis apa pun untuk mengakses Layanan dengan cara yang mengirimkan lebih banyak permintaan daripada yang dapat dihasilkan manusia secara wajar dalam periode waktu yang sama.</li>
+            <li>Mengumpulkan atau memanen informasi apa pun yang berkaitan dengan individu yang teridentifikasi atau dapat diidentifikasi dari Layanan.</li>
+            <li>Menggunakan Layanan untuk permintaan komersial yang tidak sesuai.</li>
+            <li>Melewati tindakan yang mungkin kami gunakan untuk mencegah atau membatasi akses ke Layanan.</li>
+            <li>Melanggar hukum, undang-undang, peraturan daerah, atau regulasi yang berlaku, atau mendorong perilaku yang dapat merupakan pelanggaran pidana atau menimbulkan tanggung jawab perdata.</li>
+          </ul>
+        </section>
+
+        <section id="interactions">
+          <h2>Interaksi dengan Pengguna Lain</h2>
+          <p>Layanan berfungsi sebagai ruang virtual untuk menghubungkan pengguna. Dengan demikian Perusahaan:</p>
+          <ul>
+            <li>Tidak terlibat langsung dalam interaksi aktual antar pengguna, dan tidak memiliki kendali atas kebenaran, keakuratan, kualitas, legalitas, atau keamanan postingan yang dibuat oleh orang lain menggunakan Layanan.</li>
+            <li>Tidak bertanggung jawab untuk mengkonfirmasi identitas pengguna.</li>
+            <li>Tidak bertanggung jawab untuk mengkonfirmasi atau memverifikasi kualifikasi, latar belakang, atau kemampuan pengguna yang menggunakan Layanan.</li>
+          </ul>
+        </section>
+
+        <section id="copyright">
+          <h2>Kebijakan Hak Cipta</h2>
+          <h3>Pelanggaran Kekayaan Intelektual</h3>
+          <p>Kami menghormati hak kekayaan intelektual orang lain. Kebijakan Kami adalah menanggapi klaim apa pun bahwa Konten yang diposting di Layanan melanggar hak cipta atau pelanggaran kekayaan intelektual lainnya dari siapa pun.</p>
+          <p>Jika Anda adalah pemilik hak cipta, atau berwenang atas namanya, dan Anda percaya bahwa karya berhak cipta telah disalin dengan cara yang merupakan pelanggaran hak cipta melalui Layanan, Anda harus mengirimkan pemberitahuan Anda secara tertulis ke agen hak cipta kami melalui email (<a href="mailto:support@sportshq.io">support@sportshq.io</a>) dan menyertakan deskripsi terperinci tentang dugaan pelanggaran tersebut.</p>
+          <h3>Pemberitahuan dan Prosedur DMCA</h3>
+          <p>Anda dapat mengajukan pemberitahuan sesuai dengan Digital Millennium Copyright Act (DMCA) dengan memberikan Agen Hak Cipta kami informasi berikut:</p>
+          <ul>
+            <li>Tanda tangan elektronik atau fisik dari orang yang berwenang bertindak atas nama pemilik kepentingan hak cipta.</li>
+            <li>Deskripsi karya berhak cipta yang Anda klaim telah dilanggar, termasuk URL lokasi di mana karya berhak cipta tersebut berada.</li>
+            <li>Identifikasi URL atau lokasi spesifik lainnya di Layanan tempat materi yang Anda klaim melanggar berada.</li>
+            <li>Alamat, nomor telepon, dan alamat email Anda.</li>
+            <li>Pernyataan dari Anda bahwa Anda memiliki keyakinan itikad baik bahwa penggunaan yang disengketakan tidak sah oleh pemilik hak cipta, agennya, atau hukum.</li>
+            <li>Pernyataan dari Anda, di bawah ancaman hukuman sumpah palsu, bahwa informasi di atas dalam pemberitahuan Anda akurat dan bahwa Anda adalah pemilik hak cipta atau berwenang untuk bertindak atas nama pemilik hak cipta.</li>
+          </ul>
+        </section>
+
+        <section id="ip">
+          <h2>Kekayaan Intelektual</h2>
+          <p>Layanan dan konten aslinya (tidak termasuk Konten yang disediakan oleh Anda atau pengguna lain), fitur, dan fungsionalitas adalah dan akan tetap menjadi milik eksklusif Perusahaan dan pemberi lisensinya.</p>
+          <p>Layanan dilindungi oleh hak cipta, merek dagang, dan undang-undang lain di Negara maupun negara asing.</p>
+          <p>Merek dagang dan tampilan dagang Kami tidak boleh digunakan sehubungan dengan produk atau layanan apa pun tanpa persetujuan tertulis sebelumnya dari Perusahaan.</p>
+          <h3>Umpan Balik Anda kepada Kami</h3>
+          <p>Anda mengalihkan semua hak, judul, dan kepentingan dalam Umpan Balik apa pun yang Anda berikan kepada Perusahaan. Jika karena alasan apa pun pengalihan tersebut tidak efektif, Anda setuju untuk memberi Perusahaan hak dan lisensi non-eksklusif, abadi, tidak dapat dicabut, bebas royalti, di seluruh dunia untuk menggunakan, mereproduksi, mengungkapkan, mensublisensikan, mendistribusikan, memodifikasi, dan mengeksploitasi Umpan Balik tersebut tanpa batasan.</p>
+        </section>
+
+        <section id="links">
+          <h2>Tautan ke Situs Web Lain</h2>
+          <p>Layanan Kami mungkin berisi tautan ke situs web atau layanan pihak ketiga yang tidak dimiliki atau dikendalikan oleh Perusahaan. Perusahaan tidak memiliki kendali atas, dan tidak bertanggung jawab atas konten, kebijakan privasi, atau praktik situs web atau layanan pihak ketiga mana pun.</p>
+          <p>Kami sangat menyarankan Anda untuk membaca syarat dan ketentuan serta kebijakan privasi situs web atau layanan pihak ketiga mana pun yang Anda kunjungi.</p>
+        </section>
+
+        <section id="termination">
+          <h2>Penghentian</h2>
+          <p>Kami dapat menghentikan atau menangguhkan Akun Anda segera, tanpa pemberitahuan atau tanggung jawab sebelumnya, karena alasan apa pun, termasuk tanpa batas jika Anda melanggar Ketentuan Layanan ini.</p>
+          <p>Setelah penghentian, hak Anda untuk menggunakan Layanan akan segera berakhir. Jika Anda ingin menghentikan Akun Anda, Anda dapat berhenti menggunakan Layanan.</p>
+        </section>
+
+        <section id="liability">
+          <h2>Batasan Tanggung Jawab</h2>
+          <p>Sejauh yang diizinkan oleh hukum yang berlaku, dalam keadaan apa pun Perusahaan tidak bertanggung jawab atas kerusakan khusus, insidental, tidak langsung, atau konsekuensial apa pun (termasuk, namun tidak terbatas pada, kerusakan akibat kehilangan keuntungan, kehilangan data atau informasi lain, untuk gangguan bisnis, cedera pribadi, kehilangan privasi yang timbul dari atau dengan cara apa pun terkait dengan penggunaan atau ketidakmampuan untuk menggunakan Layanan), bahkan jika Perusahaan telah diberitahu tentang kemungkinan kerusakan tersebut.</p>
+          <p>Beberapa negara bagian tidak mengizinkan pengecualian jaminan tersirat atau pembatasan tanggung jawab atas kerusakan insidental atau konsekuensial, yang berarti beberapa batasan di atas mungkin tidak berlaku. Di negara bagian tersebut, tanggung jawab masing-masing pihak akan dibatasi sejauh yang diizinkan oleh hukum.</p>
+        </section>
+
+        <section id="disclaimer">
+          <h2>Penafian "SEBAGAIMANA ADANYA" dan "SEBAGAIMANA TERSEDIA"</h2>
+          <p>Layanan disediakan kepada Anda "SEBAGAIMANA ADANYA" dan "SEBAGAIMANA TERSEDIA" dan dengan semua kesalahan dan cacat tanpa jaminan jenis apa pun. Sejauh yang diizinkan berdasarkan hukum yang berlaku, Perusahaan secara tegas menolak semua jaminan, baik tersurat, tersirat, undang-undang, atau lainnya, sehubungan dengan Layanan, termasuk semua jaminan tersirat atas kelayakan jual, kesesuaian untuk tujuan tertentu, judul, dan non-pelanggaran.</p>
+          <p>Tanpa membatasi hal di atas, baik Perusahaan maupun penyedia Perusahaan mana pun tidak membuat representasi atau jaminan jenis apa pun bahwa Layanan akan memenuhi persyaratan Anda, mencapai hasil yang diinginkan, kompatibel atau bekerja dengan perangkat lunak, aplikasi, sistem, atau layanan lain, beroperasi tanpa gangguan, atau bebas dari kesalahan.</p>
+        </section>
+
+        <section id="governing-law">
+          <h2>Hukum yang Berlaku</h2>
+          <p>Hukum Singapore, tidak termasuk aturan konflik hukumnya, akan mengatur Ketentuan ini dan penggunaan Layanan Anda. Penggunaan Aplikasi Anda juga dapat tunduk pada hukum lokal, negara bagian, nasional, atau internasional lainnya.</p>
+          <h3>Penyelesaian Sengketa</h3>
+          <p>Jika Anda memiliki kekhawatiran atau sengketa tentang Layanan, Anda setuju untuk pertama kali mencoba menyelesaikan sengketa secara informal dengan menghubungi Perusahaan.</p>
+          <h3>Untuk Pengguna Uni Eropa (UE)</h3>
+          <p>Jika Anda adalah konsumen Uni Eropa, Anda akan mendapat manfaat dari ketentuan wajib hukum negara tempat Anda tinggal.</p>
+          <h3>Pemisahan dan Pengabaian</h3>
+          <p>Jika ketentuan apa pun dari Ketentuan ini dianggap tidak dapat dilaksanakan atau tidak valid, ketentuan tersebut akan diubah dan ditafsirkan untuk mencapai tujuan ketentuan tersebut semaksimal mungkin berdasarkan hukum yang berlaku dan ketentuan lainnya akan terus berlaku penuh.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Perubahan pada Ketentuan Ini</h2>
+          <p>Kami berhak, atas kebijakan kami sendiri, untuk mengubah atau mengganti Ketentuan ini kapan saja. Jika revisi bersifat material, Kami akan berupaya memberikan pemberitahuan setidaknya 30 hari sebelum ketentuan baru berlaku.</p>
+          <p>Dengan terus mengakses atau menggunakan Layanan Kami setelah revisi tersebut berlaku, Anda setuju untuk terikat dengan ketentuan yang direvisi. Jika Anda tidak setuju dengan ketentuan baru, harap berhenti menggunakan Layanan.</p>
+        </section>
+
+        <section id="contact">
+          <h2>Hubungi Kami</h2>
+          <p>Jika Anda memiliki pertanyaan tentang Ketentuan Layanan ini, Anda dapat menghubungi kami:</p>
+          <div class="legal-contact-box">
+            <p>Melalui email: <a href="mailto:support@sportshq.io">support@sportshq.io</a></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>

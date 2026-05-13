@@ -1,0 +1,20 @@
+{%- assign _lid = page.locale_id | default: "" -%}
+{%- if _lid == "ar" -%}{% include legal/content/ar/tos.html %}
+{%- elsif _lid == "de" -%}{% include legal/content/de/tos.html %}
+{%- elsif _lid == "el" -%}{% include legal/content/el/tos.html %}
+{%- elsif _lid == "es" or _lid == "es-419" -%}{% include legal/content/es/tos.html %}
+{%- elsif _lid == "fr" -%}{% include legal/content/fr/tos.html %}
+{%- elsif _lid == "hi" -%}{% include legal/content/hi/tos.html %}
+{%- elsif _lid == "id" -%}{% include legal/content/id/tos.html %}
+{%- elsif _lid == "it" -%}{% include legal/content/it/tos.html %}
+{%- elsif _lid == "ja" -%}{% include legal/content/ja/tos.html %}
+{%- elsif _lid == "ko" -%}{% include legal/content/ko/tos.html %}
+{%- elsif _lid == "nl" -%}{% include legal/content/nl/tos.html %}
+{%- elsif _lid == "pt-BR" -%}{% include legal/content/pt-BR/tos.html %}
+{%- elsif _lid == "pt-PT" -%}{% include legal/content/pt-PT/tos.html %}
+{%- elsif _lid == "ru" -%}{% include legal/content/ru/tos.html %}
+{%- elsif _lid == "sv" -%}{% include legal/content/sv/tos.html %}
+{%- elsif _lid == "zh-Hans" -%}{% include legal/content/zh-Hans/tos.html %}
+{%- elsif _lid == "zh-Hant" or _lid == "zh-HK" -%}{% include legal/content/zh-Hant/tos.html %}
+{%- else -%}{% include legal/content/en/tos.html %}
+{%- endif -%}
