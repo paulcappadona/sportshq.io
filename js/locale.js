@@ -13,13 +13,19 @@
   // Normalise current pathname to always have trailing slash
   var currentPath = window.location.pathname.replace(/\/?$/, '/');
 
+  // For sub-pages (e.g. /fr/pp.html/), derive the locale root path (/fr/)
+  var localePath = LABELS[currentPath] ? currentPath : (function () {
+    var m = currentPath.match(/^(\/[^/]+\/)/);
+    return (m && LABELS[m[1]]) ? m[1] : '/';
+  }());
+
   // Set current label in nav button
   var labelEl = document.getElementById('navLocaleLabel');
-  if (labelEl) labelEl.textContent = LABELS[currentPath] || 'EN';
+  if (labelEl) labelEl.textContent = LABELS[localePath] || 'EN';
 
   // Mark active option in dropdown
   document.querySelectorAll('.locale-opt').forEach(function (opt) {
-    if (opt.dataset.localePath === currentPath) {
+    if (opt.dataset.localePath === localePath) {
       opt.classList.add('locale-opt--active');
       opt.setAttribute('aria-selected', 'true');
     }
