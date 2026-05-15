@@ -25,7 +25,7 @@ function getMobileOperatingSystem() {
 }
 
 function isDeeplinkPath() {
-  var paths = [ '/event', '/venue' ];
+  var paths = [ '/event', '/venue', '/profile' ];
   var l = window.location;
   // alert(l.pathname);
   for (var i = 0; i < paths.length; i++) {
