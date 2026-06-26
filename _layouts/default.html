@@ -49,7 +49,7 @@
   {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/about/tos.html" />
   <link rel="alternate" hreflang="en" href="{{ site.url }}/about/tos.html" />
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}/about/tos.html" />
-  {% else %}
+  {% elsif page.url == "/" or page.locale_id %}
   {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}{{ loc.path }}" />
   {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/" />
   <link rel="alternate" hreflang="en" href="{{ site.url }}/" />

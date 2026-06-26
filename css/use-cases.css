@@ -1,0 +1,181 @@
+/* ─────────────────────────────────────────────
+   Sports HQ — use-cases.css
+   Shared styles for the Use Cases hub + detail pages
+───────────────────────────────────────────── */
+
+/* ── Hero (dark banner, same family as legal-hero) ── */
+.uc-hero {
+  background: #00113a;
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+html.dark .uc-hero { background: #0d0e13; }
+
+.uc-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.uc-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 80% 30%, rgba(190,245,0,.08) 0%, transparent 60%);
+}
+
+.uc-hero__inner {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1.1fr .9fr;
+  gap: 56px; align-items: center;
+}
+
+.uc-hero__breadcrumb {
+  font-family: 'Lexend', sans-serif;
+  font-size: .75rem; font-weight: 500;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 24px;
+}
+.uc-hero__breadcrumb a { color: var(--lime); text-decoration: none; transition: opacity .2s; }
+.uc-hero__breadcrumb a:hover { opacity: .75; }
+.uc-hero__breadcrumb span { margin: 0 8px; }
+
+.uc-hero__badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(190,245,0,.12); border: 1px solid rgba(190,245,0,.25);
+  color: var(--lime); padding: 5px 14px; border-radius: 100px;
+  font-size: .7rem; font-weight: 700; font-family: 'Lexend', sans-serif;
+  letter-spacing: .12em; text-transform: uppercase; margin-bottom: 22px;
+}
+
+.uc-hero__title {
+  font-family: 'Lexend', sans-serif;
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-weight: 900; font-style: italic;
+  text-transform: uppercase; letter-spacing: -.03em; line-height: 1;
+  color: #ffffff; margin-bottom: 20px;
+}
+.uc-hero__title span { color: var(--lime); }
+
+.uc-hero__sub {
+  font-size: 1.05rem; line-height: 1.7;
+  color: rgba(255,255,255,.65); max-width: 520px; margin-bottom: 32px;
+}
+
+.uc-hero__ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.uc-hero__visual { display: flex; justify-content: center; }
+.uc-hero__visual img { width: 100%; max-width: 420px; height: auto; display: block; }
+
+/* ── Intro / "who this is for" strip ── */
+.uc-intro {
+  background: var(--bg);
+  padding: 56px 0;
+}
+.uc-intro__card {
+  display: flex; align-items: flex-start; gap: 20px;
+  background: var(--surface-low);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--lime);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+}
+.uc-intro__icon { font-size: 1.8rem; line-height: 1; flex-shrink: 0; }
+.uc-intro__card p { margin: 0; font-size: .98rem; line-height: 1.75; color: var(--text-muted); }
+.uc-intro__card strong { color: var(--on-surface); }
+
+/* ── Alternating feature rows ── */
+.uc-rows { background: var(--bg); padding: 32px 0 80px; }
+
+.uc-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: center;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.uc-row:last-child { border-bottom: none; }
+.uc-row--reverse .uc-row__visual { order: 2; }
+.uc-row--reverse .uc-row__copy { order: 1; }
+
+.uc-row__copy h2 { margin-bottom: 14px; }
+.uc-row__copy > p { font-size: .98rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 20px; max-width: 480px; }
+
+.uc-row__visual { display: flex; justify-content: center; }
+.uc-row__visual img {
+  width: 100%; max-width: 380px; height: auto; display: block;
+  border-radius: var(--radius-lg);
+}
+.uc-row__visual--wide img { max-width: 460px; }
+
+/* ── Numbered "how it works" mini steps (reused inside rows) ── */
+.uc-steps { display: flex; flex-direction: column; gap: 18px; margin-bottom: 8px; }
+.uc-steps li { display: flex; gap: 14px; align-items: flex-start; list-style: none; }
+.uc-steps .uc-step__num {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--lime); color: #1a2e00; font-weight: 800; font-size: .82rem;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Lexend', sans-serif;
+}
+.uc-steps .uc-step__body strong { display: block; color: var(--on-surface); font-size: .92rem; margin-bottom: 2px; }
+.uc-steps .uc-step__body p { margin: 0; font-size: .86rem; color: var(--text-muted); line-height: 1.6; }
+
+/* ── Related use cases ── */
+.uc-related { background: var(--bg); padding: 64px 0 96px; }
+.uc-related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+
+/* ── Hub page card grid ── */
+.uc-hub { background: var(--bg); padding: 32px 0 100px; }
+.uc-hub__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 48px; }
+
+.uc-card {
+  display: flex; flex-direction: column;
+  background: var(--surface); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg); padding: 32px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+}
+.uc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.uc-card__icon {
+  width: 52px; height: 52px; border-radius: var(--radius-md);
+  background: var(--lime-pale); color: var(--lime-on);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; margin-bottom: 20px;
+}
+html.dark .uc-card__icon { background: rgba(190,245,0,.12); color: var(--lime); }
+.uc-card h3 {
+  font-family: 'Lexend', sans-serif; font-size: 1.15rem; font-weight: 800;
+  color: var(--on-surface); margin-bottom: 10px;
+}
+.uc-card p { font-size: .9rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; flex-grow: 1; }
+.uc-card__link { font-size: .85rem; font-weight: 700; color: var(--lime-on); display: inline-flex; align-items: center; gap: 6px; }
+html.dark .uc-card__link { color: var(--lime); }
+.uc-card:hover .uc-card__link { text-decoration: underline; }
+
+/* ── Download CTA spacing (use-case pages only — homepage has its own balance) ── */
+.uc-related + .download .store-badges,
+.uc-hub + .download .store-badges {
+  margin-top: 12px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .uc-hero__inner { grid-template-columns: 1fr; text-align: center; }
+  .uc-hero__sub { margin-left: auto; margin-right: auto; }
+  .uc-hero__ctas { justify-content: center; }
+  .uc-row { grid-template-columns: 1fr; gap: 32px; padding: 40px 0; }
+  .uc-row--reverse .uc-row__visual,
+  .uc-row--reverse .uc-row__copy { order: initial; }
+  .uc-row__copy { text-align: center; }
+  .uc-row__copy > p { margin-left: auto; margin-right: auto; }
+  .uc-steps { text-align: left; }
+  .uc-related__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .uc-hero { padding: 96px 0 64px; }
+  .uc-hub__grid { grid-template-columns: 1fr; }
+  .uc-intro__card { flex-direction: column; }
+}
