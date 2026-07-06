@@ -1,0 +1,140 @@
+{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
+{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}
+{%- assign cfc = uc.communal_field_community -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span><a href="{{ _base }}">{{ _loc.nav_use_cases | default: "Use Cases" }}</a><span>›</span>{{ cfc.crumb | default: "Communal Field Communities" }}</div>
+        <div class="uc-hero__badge">{{ cfc.badge | default: "For Communal Field &amp; Facility Communities" }}</div>
+        <h1 class="uc-hero__title">{{ cfc.title | default: "Same Field. Same Faces. <span>Now a Community.</span>" }}</h1>
+        <p class="uc-hero__sub">{{ cfc.sub | default: "You and a few regulars share the same public court, park pitch, or community field — but you've never actually met everyone who plays there. Sports HQ turns that shared space into a real, organised community, no ownership of the venue required." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="{{ _home }}#download" class="btn btn--lime btn--lg">{{ _loc.cta_download | default: "Download Free" }}</a>
+          <a href="#how" class="btn btn--outline-light btn--lg">{{ _loc.uc_cta_how | default: "See How It Works" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <img src="/assets/screenshots/{{ _shots }}/communal-field-community/01.webp" alt="Sports HQ QR code printout for venue registration" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ── -->
+  <section class="uc-intro">
+    <div class="container">
+      <div class="uc-intro__card">
+        <div class="uc-intro__icon">📍</div>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ cfc.intro | default: "you regularly play at the same communal field, court, or park — and you don't need to own the venue to build a community there. You just need a way for the people who show up to find each other." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="uc-rows" id="how">
+    <div class="container">
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ cfc.row1_tag | default: "Get Started" }}</div>
+          <h2 class="section-title">{{ cfc.row1_title | default: "Create your event, then pick how you share it" }}</h2>
+          <p>{{ cfc.row1_body | default: "Create your event in Sports HQ and you get a QR code and a join link for the same page. Print the QR code and leave a copy or two at the field — taped to a fence post, a bench, or a noticeboard — or drop the link into the group chat for anyone who's not on-site yet." }}</p>
+          <ul class="feature-list">
+            <li>{{ cfc.row1_li1 | default: "No venue ownership or sign-up process required to get started" }}</li>
+            <li>{{ cfc.row1_li2 | default: "QR code for the field itself; link for the group chat — use either, or both" }}</li>
+            <li>{{ cfc.row1_li3 | default: "New players join the moment they scan or tap — no waiting on an admin" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/communal-field-community/02.webp" alt="Sports HQ printable QR code for venue registration" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/communal-field-community/03.webp" alt="Sports HQ location-based search results on a map" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ cfc.row2_tag | default: "Discoverability" }}</div>
+          <h2 class="section-title">{{ cfc.row2_title | default: "Found by anyone searching nearby" }}</h2>
+          <p>{{ cfc.row2_body | default: "Beyond the QR code, your event is discoverable through location-based search — so a runner, footballer, or basketballer passing through the area can find your community and turn up to play." }}</p>
+          <ul class="feature-list">
+            <li>{{ cfc.row2_li1 | default: "Appear in map search results for your sport and location" }}</li>
+            <li>{{ cfc.row2_li2 | default: "Grows your regulars beyond the people who happened to see the sign" }}</li>
+            <li>{{ cfc.row2_li3 | default: "Works alongside the QR code, not instead of it" }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ cfc.row3_tag | default: "Real Community" }}</div>
+          <h2 class="section-title">{{ cfc.row3_title | default: "Put names to the faces you see every week" }}</h2>
+          <p>{{ cfc.row3_body | default: "Once people are registered to your field's event, they can browse each other's profiles, follow regulars, and message directly — turning “the people who play at the park” into an actual network." }}</p>
+          <ul class="feature-list">
+            <li>{{ cfc.row3_li1 | default: "Member directory shows everyone registered to the event" }}</li>
+            <li>{{ cfc.row3_li2 | default: "Built-in messaging removes the need for a separate group chat" }}</li>
+            <li>{{ cfc.row3_li3 | default: "Encourages people to organise their own pickup sessions independently" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/communal-field-community/04.webp" alt="Sports HQ member directory and people search results" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/communal-field-community/05.webp" alt="Sports HQ recurring activity scheduling screens" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ cfc.row4_tag | default: "Coordination" }}</div>
+          <h2 class="section-title">{{ cfc.row4_title | default: "Easy activity coordination, no admin overhead" }}</h2>
+          <p>{{ cfc.row4_body | default: "Schedule a recurring weekly run, set up one-off sessions, or let any confirmed member propose a new activity — attendance, reminders, and updates are all handled automatically." }}</p>
+          <ul class="feature-list">
+            <li>{{ cfc.row4_li1 | default: "Recurring schedules keep your regular slot running without manual upkeep" }}</li>
+            <li>{{ cfc.row4_li2 | default: "Push notifications tell everyone about new sessions or changes immediately" }}</li>
+            <li>{{ cfc.row4_li3 | default: "One-tap confirm/decline keeps headcounts accurate" }}</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── RELATED USE CASES ── -->
+  <section class="uc-related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_related_tag | default: "More Use Cases" }}</div>
+        <h2 class="section-title">{{ _loc.uc_related_title | default: "Running a different kind of community?" }}</h2>
+      </div>
+      <div class="uc-related__grid">
+        <a href="{{ _base }}venue-owners/" class="uc-card">
+          <div class="uc-card__icon">🏟️</div>
+          <h3>{{ _loc.uc_card_venue_owners_title | default: "Venue &amp; Facility Owners" }}</h3>
+          <p>{{ _loc.uc_card_venue_owners_desc | default: "Build a community of patrons around your facility with QR registration and venue discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}run-club/" class="uc-card">
+          <div class="uc-card__icon">🏃</div>
+          <h3>{{ _loc.uc_card_run_club_title | default: "Ad-Hoc Run Clubs" }}</h3>
+          <p>{{ _loc.uc_card_run_club_desc | default: "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}social-sports-group/" class="uc-card">
+          <div class="uc-card__icon">👥</div>
+          <h3>{{ _loc.uc_card_social_sports_group_title | default: "Large Social Sports Groups" }}</h3>
+          <p>{{ _loc.uc_card_social_sports_group_desc | default: "Public or private membership, shareable links, and waitlists for big recurring social groups." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {%- assign _dl_headline = cfc.download_headline | default: 'Build a community around your <span class="download__accent">field.</span>' -%}
+  {%- assign _dl_sub = cfc.download_sub | default: "Download Sports HQ for free, create your event, and print your first QR code today." -%}
+  {% include sections/download.html headline=_dl_headline sub=_dl_sub %}

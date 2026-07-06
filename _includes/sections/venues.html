@@ -39,7 +39,8 @@
         <a href="#download" class="btn btn--navy btn--lg">{{ _loc.venues_cta | default: "Register Your Venue" }}</a>
       </div>
       <div class="venues__visual">
-        {% if page.locale_id %}<img src="/assets/screenshots/{{ page.locale_id }}/03.png" alt="Venue details screen" style="width:100%;max-width:320px;height:auto;display:block;">{% else %}<img src="/images/venue-details.png" alt="Venue details screen" style="width:100%;max-width:320px;height:auto;display:block;">{% endif %}
+        {%- assign _shots = page.locale_id | default: "en-US" -%}
+        <img src="/assets/screenshots/{{ _shots }}/home/03.webp" alt="Venue details screen" width="512" height="768" loading="lazy" style="width:100%;max-width:320px;height:auto;display:block;">
       </div>
     </div>
   </section>

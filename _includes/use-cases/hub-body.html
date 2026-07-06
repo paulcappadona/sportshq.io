@@ -1,0 +1,73 @@
+{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span>{{ _loc.nav_use_cases | default: "Use Cases" }}</div>
+        <div class="uc-hero__badge">{{ _loc.nav_use_cases | default: "Use Cases" }}</div>
+        <h1 class="uc-hero__title">{{ _loc.uc_hub_title | default: "Real Problems. <span>Real Solutions.</span>" }}</h1>
+        <p class="uc-hero__sub">{{ _loc.uc_hub_sub | default: "Whether you're running a tennis club, organising an office league, holding a social group together, or just trying to get a run club out the door on time — Sports HQ replaces the spreadsheets, group chats, and email threads with one app built for sports communities." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="#use-cases" class="btn btn--lime btn--lg">{{ _loc.uc_hub_cta_browse | default: "Browse Use Cases" }}</a>
+          <a href="{{ _home }}#download" class="btn btn--outline-light btn--lg">{{ _loc.cta_download | default: "Download Free" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <img src="/assets/screenshots/{{ _shots }}/home/01.webp" alt="Sports HQ event scheduling and attendance screens" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── USE CASE GRID ── -->
+  <section class="uc-hub" id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_hub_section_tag | default: "Find Your Fit" }}</div>
+        <h2 class="section-title">{{ _loc.uc_hub_section_title | default: 'Built for every kind of <em class="features__title-accent">sports community</em>' }}</h2>
+        <p class="section-sub">{{ _loc.uc_hub_section_sub | default: "Pick the scenario closest to yours to see exactly how Sports HQ helps." }}</p>
+      </div>
+
+      <div class="uc-hub__grid">
+        <a href="{{ _base }}venue-owners/" class="uc-card">
+          <div class="uc-card__icon">🏟️</div>
+          <h3>{{ _loc.uc_card_venue_owners_title | default: "Venue &amp; Facility Owners" }}</h3>
+          <p>{{ _loc.uc_card_venue_owners_desc | default: "Build a community of patrons around your facility with QR registration and venue discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+
+        <a href="{{ _base }}office-sports-organizer/" class="uc-card">
+          <div class="uc-card__icon">🏢</div>
+          <h3>{{ _loc.uc_card_office_sports_organizer_title | default: "Office Sports Organisers" }}</h3>
+          <p>{{ _loc.uc_card_office_sports_organizer_desc | default: "See how a single organiser manages attendance and scheduling for a workplace sports group." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+
+        <a href="{{ _base }}social-sports-group/" class="uc-card">
+          <div class="uc-card__icon">👥</div>
+          <h3>{{ _loc.uc_card_social_sports_group_title | default: "Large Social Sports Groups" }}</h3>
+          <p>{{ _loc.uc_card_social_sports_group_desc | default: "Public or private membership, shareable links, and waitlists for big recurring social groups." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+
+        <a href="{{ _base }}communal-field-community/" class="uc-card">
+          <div class="uc-card__icon">📍</div>
+          <h3>{{ _loc.uc_card_communal_field_community_title | default: "Communal Field &amp; Facility Communities" }}</h3>
+          <p>{{ _loc.uc_card_communal_field_community_desc | default: "Build a community around a shared park, court, or pitch with QR codes and location-based discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+
+        <a href="{{ _base }}run-club/" class="uc-card">
+          <div class="uc-card__icon">🏃</div>
+          <h3>{{ _loc.uc_card_run_club_title | default: "Ad-Hoc Run Clubs" }}</h3>
+          <p>{{ _loc.uc_card_run_club_desc | default: "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {% include sections/download.html %}

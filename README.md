@@ -92,10 +92,3 @@ Additional front matter options:
 
 Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/pages.yml`), which builds Jekyll and deploys directly to GitHub Pages. No manual build or `docs/` commit needed.
 
-## Tailwind (legacy pages)
-
-The older support pages (`faqs.html`, `howto.html`, etc.) still use the Tailwind-compiled `output.css`. To regenerate it after editing `src/input.css`:
-
-```bash
-npx tailwindcss -i ./src/input.css -o ./output.css --watch
-```

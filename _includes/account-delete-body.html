@@ -1,0 +1,62 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- assign _home = _loc.path | default: "/" -%}
+{%- if page.locale_id -%}{%- assign _faqs_link = "/" | append: page.locale_id | append: "/faqs.html" -%}{%- else -%}{%- assign _faqs_link = "/faqs.html" -%}{%- endif -%}
+
+  <!-- ── HERO ── -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <div class="legal-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span><a href="{{ _faqs_link }}">{{ _loc.faqs_label | default: "FAQs" }}</a><span>›</span>{{ _loc.footer_account_delete | default: "Account Deletion" }}</div>
+      <div class="legal-hero__badge">{{ _loc.ad_badge | default: "Account Management" }}</div>
+      <h1 class="legal-hero__title">{{ _loc.ad_headline | default: "Delete Your <span>Account</span>" }}</h1>
+      <p class="legal-hero__sub">{{ _loc.ad_sub | default: "Permanently remove your Sports HQ account and all associated data — profile, event memberships, chats, follow lists, and ratings. Here's exactly how the process works, in three steps." }}</p>
+    </div>
+  </section>
+
+  <!-- ── BODY ── -->
+  <section class="legal-main">
+    <div class="container">
+      <div class="legal-body" style="max-width: 820px; margin: 0 auto;">
+
+        <div class="legal-intro-card legal-intro-card--danger">
+          <p><strong>{{ _loc.ad_warning_lead | default: "This can't be undone." }}</strong> {{ _loc.ad_warning_body | default: "Deleting your account removes all of your data from our system — including follow lists and ratings, event memberships, chats, and profile data. Once the deletion is confirmed, there is no way to recover your account." }}</p>
+        </div>
+
+        <!-- 3-step screenshot walkthrough -->
+        <div class="step-gallery">
+          <div class="step-gallery__item">
+            <span class="step-gallery__num">1</span>
+            <img src="/assets/screenshots/{{ _shots }}/account-delete/01.webp" alt="Sports HQ Settings screen with the Delete Account option highlighted" loading="lazy">
+            <p class="step-gallery__caption">{{ _loc.ad_step1_caption | default: "Open <strong>Settings</strong> and select <strong>Delete Account</strong>" }}</p>
+          </div>
+          <div class="step-gallery__arrow">→</div>
+          <div class="step-gallery__item">
+            <span class="step-gallery__num">2</span>
+            <img src="/assets/screenshots/{{ _shots }}/account-delete/02.webp" alt="Sports HQ screen for entering a reason and confirming account deletion" loading="lazy">
+            <p class="step-gallery__caption">{{ _loc.ad_step2_caption | default: "Add a reason (optional) and tap <strong>Confirm Deletion</strong>" }}</p>
+          </div>
+          <div class="step-gallery__arrow">→</div>
+          <div class="step-gallery__item">
+            <span class="step-gallery__num">3</span>
+            <img src="/assets/screenshots/{{ _shots }}/account-delete/03.webp" alt="Sports HQ screen for entering the emailed confirmation code" loading="lazy">
+            <p class="step-gallery__caption">{{ _loc.ad_step3_caption | default: "Enter the emailed code to permanently delete your account" }}</p>
+          </div>
+        </div>
+
+        <section>
+          <h2>{{ _loc.ad_deleted_tag | default: "What gets deleted" }}</h2>
+          <ul>
+            <li>{{ _loc.ad_deleted_1 | default: "Your profile and account details" }}</li>
+            <li>{{ _loc.ad_deleted_2 | default: "Follow lists and skill ratings" }}</li>
+            <li>{{ _loc.ad_deleted_3 | default: "Event and activity memberships" }}</li>
+            <li>{{ _loc.ad_deleted_4 | default: "Chat history" }}</li>
+          </ul>
+        </section>
+
+        <div class="legal-contact-box">
+          <p>{{ _loc.ad_contact | default: 'Changed your mind? Close the confirmation window at any point before entering the emailed code and your account will stay active. Need a hand? <a href="mailto:support@sportshq.io">Contact support</a>.' }}</p>
+        </div>
+
+      </div>
+    </div>
+  </section>

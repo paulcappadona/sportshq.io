@@ -1,7 +1,53 @@
 {%- if page.locale_id -%}
   {%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
-  {%- assign _title = page.title | default: _loc.title -%}
-  {%- assign _desc = page.description | default: _loc.description -%}
+  {%- if page.legal_type == 'account-delete' -%}
+    {%- assign _name = _loc.footer_account_delete | default: "Delete Account" -%}
+    {%- assign _title = _name | append: " — Sports HQ" -%}
+    {%- assign _desc = _loc.ad_sub | default: "Step-by-step instructions for permanently deleting your Sports HQ account and data." -%}
+  {%- elsif page.legal_type == 'faqs' -%}
+    {%- assign _name = _loc.faqs_label | default: "FAQs" -%}
+    {%- assign _title = _name | append: " — Sports HQ" -%}
+    {%- assign _desc = _loc.faqs_sub | default: "Quick answers to the questions we hear most about Sports HQ." -%}
+  {%- elsif page.legal_type == 'pp' -%}
+    {%- assign _name = _loc.footer_privacy | default: "Privacy Policy" -%}
+    {%- assign _title = _name | append: " — Sports HQ" -%}
+    {%- assign _desc = page.description -%}
+  {%- elsif page.legal_type == 'tos' -%}
+    {%- assign _name = _loc.footer_tos | default: "Terms of Service" -%}
+    {%- assign _title = _name | append: " — Sports HQ" -%}
+    {%- assign _desc = page.description -%}
+  {%- elsif page.uc_type == 'hub' -%}
+    {%- assign _name = _loc.nav_use_cases | default: "Use Cases" -%}
+    {%- assign _title = _name | append: " — Sports HQ" -%}
+    {%- assign _desc = _loc.uc_hub_section_sub | default: "Pick the scenario closest to yours to see exactly how Sports HQ helps." -%}
+  {%- elsif page.uc_type -%}
+    {%- assign _key_base = page.uc_type | replace: "-", "_" -%}
+    {%- assign _title_key = "uc_card_" | append: _key_base | append: "_title" -%}
+    {%- assign _desc_key = "uc_card_" | append: _key_base | append: "_desc" -%}
+    {%- case page.uc_type -%}
+      {%- when 'run-club' -%}
+        {%- assign _en_title = "Ad-Hoc Run Clubs" -%}
+        {%- assign _en_desc = "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." -%}
+      {%- when 'venue-owners' -%}
+        {%- assign _en_title = "Venue & Facility Owners" -%}
+        {%- assign _en_desc = "Build a community of patrons around your facility with QR registration and venue discovery." -%}
+      {%- when 'office-sports-organizer' -%}
+        {%- assign _en_title = "Office Sports Organisers" -%}
+        {%- assign _en_desc = "See how a single organiser manages attendance and scheduling for a workplace sports group." -%}
+      {%- when 'social-sports-group' -%}
+        {%- assign _en_title = "Large Social Sports Groups" -%}
+        {%- assign _en_desc = "Public or private membership, shareable links, and waitlists for big recurring social groups." -%}
+      {%- when 'communal-field-community' -%}
+        {%- assign _en_title = "Communal Field Communities" -%}
+        {%- assign _en_desc = "Build a community around a shared park, court, or pitch with QR codes and location-based discovery." -%}
+    {%- endcase -%}
+    {%- assign _name = _loc[_title_key] | default: _en_title -%}
+    {%- assign _title = _name | append: " — Sports HQ" -%}
+    {%- assign _desc = _loc[_desc_key] | default: _en_desc -%}
+  {%- else -%}
+    {%- assign _title = page.title | default: _loc.title -%}
+    {%- assign _desc = page.description | default: _loc.description -%}
+  {%- endif -%}
   {%- assign _keywords = page.keywords | default: _loc.keywords -%}
   {%- assign _lang = _loc.lang -%}
   {%- assign _dir = _loc.dir | default: "ltr" -%}
@@ -49,7 +95,27 @@
   {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/about/tos.html" />
   <link rel="alternate" hreflang="en" href="{{ site.url }}/about/tos.html" />
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}/about/tos.html" />
-  {% else %}
+  {% elsif page.legal_type == 'account-delete' %}
+  {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}/{{ loc.id }}/account-delete.html" />
+  {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/faq/account-delete.html" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/faq/account-delete.html" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/faq/account-delete.html" />
+  {% elsif page.legal_type == 'faqs' %}
+  {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}/{{ loc.id }}/faqs.html" />
+  {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/faqs.html" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/faqs.html" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/faqs.html" />
+  {% elsif page.uc_type == 'hub' %}
+  {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}/{{ loc.id }}/use-cases/" />
+  {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/use-cases/" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/use-cases/" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/use-cases/" />
+  {% elsif page.uc_type %}
+  {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}/{{ loc.id }}/use-cases/{{ page.uc_type }}/" />
+  {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/use-cases/{{ page.uc_type }}/" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/use-cases/{{ page.uc_type }}/" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/use-cases/{{ page.uc_type }}/" />
+  {% elsif page.url == "/" or page.locale_id %}
   {% for loc in site.data.locales %}<link rel="alternate" hreflang="{{ loc.hreflang }}" href="{{ site.url }}{{ loc.path }}" />
   {% endfor %}<link rel="alternate" hreflang="en-US" href="{{ site.url }}/" />
   <link rel="alternate" hreflang="en" href="{{ site.url }}/" />
@@ -69,8 +135,8 @@
   (function(){
     var p=window.location.pathname;
     if(p!=='/'&&p!=='/index.html')return;
-    var PATHS={'ar':'/ar/','de':'/de/','el':'/el/','en-AU':'/en-AU/','en-CA':'/en-CA/','en-GB':'/en-GB/','en-IN':'/en-IN/','en-SG':'/en-SG/','es':'/es/','es-419':'/es-419/','fr':'/fr/','hi':'/hi/','id':'/id/','it':'/it/','ja':'/ja/','ko':'/ko/','nl':'/nl/','pt':'/pt-PT/','pt-BR':'/pt-BR/','pt-PT':'/pt-PT/','ru':'/ru/','sv':'/sv/','zh-HK':'/zh-HK/','zh-Hant':'/zh-Hant/','zh-Hans':'/zh-Hans/'};
-    var LATAM=['MX','AR','CO','CL','PE','VE','EC','BO','PY','UY','CR','PA','DO','GT','HN','NI','SV','CU','PR'];
+    var PATHS={'ar':'/ar/','de':'/de/','el':'/el/','en-AU':'/en-AU/','en-CA':'/en-CA/','en-GB':'/en-GB/','en-IN':'/en-IN/','en-SG':'/en-SG/','es':'/es/','es-419':'/es-419/','es-MX':'/es-MX/','fr':'/fr/','hi':'/hi/','id':'/id/','it':'/it/','ja':'/ja/','ko':'/ko/','nl':'/nl/','pt':'/pt-PT/','pt-BR':'/pt-BR/','pt-PT':'/pt-PT/','ru':'/ru/','sv':'/sv/','zh-HK':'/zh-HK/','zh-Hant':'/zh-Hant/','zh-Hans':'/zh-Hans/'};
+    var LATAM=['AR','CO','CL','PE','VE','EC','BO','PY','UY','CR','PA','DO','GT','HN','NI','SV','CU','PR'];
     function toPath(lang){
       if(PATHS[lang])return PATHS[lang];
       if(lang.startsWith('es-')){var r=lang.slice(3).toUpperCase();return LATAM.indexOf(r)>=0?'/es-419/':'/es/';}

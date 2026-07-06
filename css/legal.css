@@ -66,6 +66,11 @@ html.dark .legal-hero { background: #0d0e13; }
   font-family: 'Inter', sans-serif;
 }
 
+.legal-hero__sub {
+  font-size: 1rem; line-height: 1.7;
+  color: rgba(255,255,255,.65); max-width: 620px;
+}
+
 /* ── Main content area ── */
 .legal-main {
   background: var(--bg);
@@ -152,7 +157,7 @@ html.dark .legal-hero { background: #0d0e13; }
   width: 6px; height: 6px; border-radius: 50%;
   background: var(--lime); flex-shrink: 0;
 }
-.legal-body ol { counter-reset: legal-counter; }
+.legal-body ol { counter-reset: legal-counter; list-style: none; }
 .legal-body ol li { counter-increment: legal-counter; }
 .legal-body ol li::before {
   content: counter(legal-counter) '.';
@@ -185,6 +190,80 @@ html.dark .legal-body a { color: var(--lime); }
 }
 .legal-intro-card p {
   font-size: .9rem; margin: 0; color: var(--text-muted);
+}
+
+/* Danger variant of the intro card (irreversible-action warnings) */
+.legal-intro-card--danger {
+  background: rgba(220,38,38,.06);
+  border-color: rgba(220,38,38,.2);
+  border-left-color: #dc2626;
+}
+html.dark .legal-intro-card--danger { background: rgba(220,38,38,.1); }
+.legal-intro-card--danger p { color: var(--on-surface); }
+.legal-intro-card--danger strong { color: #dc2626; }
+
+/* ── FAQ list (clickable question cards) ── */
+.faq-list { display: flex; flex-direction: column; gap: 14px; margin: 8px 0 40px; }
+.legal-body a.faq-item {
+  display: block;
+  background: var(--surface-low);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.legal-body a.faq-item:hover { border-color: var(--lime); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.faq-item__q {
+  font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 1rem;
+  color: var(--on-surface); margin: 0 0 6px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.faq-item__arrow { color: var(--lime-on); flex-shrink: 0; }
+html.dark .faq-item__arrow { color: var(--lime); }
+.faq-item__a { font-size: .9rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+/* ── Step-by-step screenshot gallery (e.g. account deletion flow) ── */
+.step-gallery {
+  display: flex; align-items: flex-start; justify-content: center;
+  gap: 20px; margin: 40px 0 48px;
+}
+.step-gallery__item {
+  position: relative;
+  flex: 1; min-width: 0; max-width: 240px;
+  text-align: center;
+}
+.step-gallery__item img {
+  width: 100%; height: auto; display: block;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 14px;
+}
+.step-gallery__num {
+  position: absolute; top: 10px; left: 10px;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--lime); color: #1a2e00;
+  font-family: 'Lexend', sans-serif; font-weight: 800; font-size: .82rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.step-gallery__caption {
+  font-size: .86rem; color: var(--text-muted); line-height: 1.6; margin: 0;
+}
+.step-gallery__caption strong { color: var(--on-surface); }
+.step-gallery__arrow {
+  flex-shrink: 0; align-self: center;
+  font-size: 1.4rem; color: var(--border-subtle);
+  margin-top: -34px;
+}
+
+@media (max-width: 760px) {
+  .step-gallery { flex-direction: column; align-items: center; gap: 32px; }
+  .step-gallery__item { max-width: 280px; }
+  .step-gallery__arrow { display: none; }
 }
 
 /* Contact highlight box */

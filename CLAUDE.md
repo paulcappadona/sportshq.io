@@ -19,11 +19,6 @@ docker-compose down
 
 First run pulls the Ruby image and installs gems into a named volume (takes a few minutes). Subsequent starts are fast.
 
-**Tailwind** (legacy pages only — `faqs.html`, `howto.html`):
-```bash
-npx tailwindcss -i ./src/input.css -o ./output.css --watch
-```
-
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/pages.yml`, which builds Jekyll and deploys to GitHub Pages automatically. No manual steps needed.

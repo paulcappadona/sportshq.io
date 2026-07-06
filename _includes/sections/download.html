@@ -1,5 +1,5 @@
   <!-- ── DOWNLOAD ── -->
-  {%- assign dl_headline = include.headline | default: "Ready to find your <span class=\"download__accent\">game?</span>" -%}
+  {%- assign dl_headline = include.headline | default: 'Ready to find your <span class="download__accent">game?</span>' -%}
   {%- assign dl_sub = include.sub | default: "Download Sports HQ for free on iOS and Android. No subscription required — just sign up and start playing." -%}
   <section class="download" id="download">
     <div class="container download__inner">
@@ -24,7 +24,8 @@
         </div>
       </div>
       <div class="download__visual">
-        {% if page.locale_id %}<img src="/assets/screenshots/{{ page.locale_id }}/04.png" alt="Sports HQ login screen" style="width:100%;max-width:320px;height:auto;display:block;">{% else %}<img src="/images/login.png" alt="Sports HQ login screen" style="width:100%;max-width:320px;height:auto;display:block;">{% endif %}
+        {%- assign _shots = page.locale_id | default: "en-US" -%}
+        <img src="/assets/screenshots/{{ _shots }}/home/04.webp" alt="Sports HQ login screen" width="512" height="768" loading="lazy" style="width:100%;max-width:320px;height:auto;display:block;">
       </div>
     </div>
   </section>

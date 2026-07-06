@@ -5,7 +5,7 @@
       <div class="section-header">
         <div>
           <div class="section-tag">{{ _loc.features_tag | default: "Features" }}</div>
-          <h2 class="section-title">{{ _loc.features_headline | default: "Engineered for<br /><em class=\"features__title-accent\">Excellence.</em>" }}</h2>
+          <h2 class="section-title">{{ _loc.features_headline | default: 'Engineered for<br /><em class="features__title-accent">Excellence.</em>' }}</h2>
           <p class="section-sub" style="margin:0">{{ _loc.features_sub | default: "Our features are built to bridge the gap between amateur play and professional organisation." }}</p>
         </div>
         <div class="features__counter">01–06</div>
@@ -30,7 +30,8 @@
             </ul>
           </div>
           <div class="feature-card__visual">
-            {% if page.locale_id %}<img src="/assets/screenshots/{{ page.locale_id }}/02.png" alt="Search results screen" style="width:100%;max-width:260px;height:auto;display:block;border-radius:1.5rem;">{% else %}<img src="/images/search-results-people.png" alt="Search results screen" style="width:100%;max-width:260px;height:auto;display:block;border-radius:1.5rem;">{% endif %}
+            {%- assign _shots = page.locale_id | default: "en-US" -%}
+            <img src="/assets/screenshots/{{ _shots }}/home/02.webp" alt="Search results screen" width="340" height="512" loading="lazy" style="width:100%;max-width:260px;height:auto;display:block;border-radius:1.5rem;">
           </div>
         </div>
 

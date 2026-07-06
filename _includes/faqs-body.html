@@ -1,0 +1,33 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+{%- if page.locale_id -%}{%- assign _ad_link = "/" | append: page.locale_id | append: "/account-delete.html" -%}{%- else -%}{%- assign _ad_link = "/faq/account-delete.html" -%}{%- endif -%}
+
+  <!-- ── HERO ── -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <div class="legal-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span>{{ _loc.faqs_label | default: "FAQs" }}</div>
+      <div class="legal-hero__badge">{{ _loc.faqs_label | default: "FAQs" }}</div>
+      <h1 class="legal-hero__title">{{ _loc.faqs_title | default: "Frequently Asked <span>Questions</span>" }}</h1>
+      <p class="legal-hero__sub">{{ _loc.faqs_sub | default: "Quick answers to the questions we hear most. Can't find what you're looking for? Reach out to support." }}</p>
+    </div>
+  </section>
+
+  <!-- ── BODY ── -->
+  <section class="legal-main">
+    <div class="container">
+      <div class="legal-body" style="max-width: 820px; margin: 0 auto;">
+
+        <div class="faq-list">
+          <a href="{{ _ad_link }}" class="faq-item">
+            <p class="faq-item__q">{{ _loc.faq_delete_account_q | default: "How do I delete my account?" }}<span class="faq-item__arrow">→</span></p>
+            <p class="faq-item__a">{{ _loc.faq_delete_account_a | default: "Step-by-step instructions for permanently deleting your Sports HQ account and data." }}</p>
+          </a>
+        </div>
+
+        <div class="legal-contact-box">
+          <p>{{ _loc.faqs_contact | default: 'Still have a question? <a href="mailto:support@sportshq.io">Contact support</a> and we will get back to you.' }}</p>
+        </div>
+
+      </div>
+    </div>
+  </section>

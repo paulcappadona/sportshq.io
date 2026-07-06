@@ -26,12 +26,12 @@
       <a href="{{ _loc.path | default: '/' }}#features">{{ _loc.nav_features | default: "Features" }}</a>
       <a href="{{ _loc.path | default: '/' }}#sports">{{ _loc.nav_sports | default: "Sports" }}</a>
       <a href="{{ _loc.path | default: '/' }}#venues">{{ _loc.footer_venues_link | default: "For Venues" }}</a>
+      {% if page.locale_id %}<a href="/{{ page.locale_id }}/use-cases/">{{ _loc.nav_use_cases | default: "Use Cases" }}</a>{% else %}<a href="/use-cases/">{{ _loc.nav_use_cases | default: "Use Cases" }}</a>{% endif %}
       <a href="{{ _loc.path | default: '/' }}#download">{{ _loc.nav_download | default: "Download" }}</a>
     </div>
     <div class="footer__col">
       <h5>{{ _loc.footer_support | default: "Support" }}</h5>
-      <!-- <a href="/howto.html">How Tos</a>
-      <a href="/faqs.html">FAQs</a> -->
+      {% if page.locale_id %}<a href="/{{ page.locale_id }}/faqs.html">{{ _loc.faqs_label | default: "FAQs" }}</a>{% else %}<a href="/faqs.html">{{ _loc.faqs_label | default: "FAQs" }}</a>{% endif %}
       <a href="mailto:support@sportshq.io">{{ _loc.footer_contact | default: "Contact Us" }}</a>
       <a href="https://twitter.com/SportsHQ_io" target="_blank" rel="noopener">Twitter</a>
     </div>
@@ -40,7 +40,7 @@
       {% if page.locale_id %}<a href="/{{ page.locale_id }}/pp.html">{{ _loc.footer_privacy | default: "Privacy Policy" }}</a>
       <a href="/{{ page.locale_id }}/tos.html">{{ _loc.footer_tos | default: "Terms of Service" }}</a>{% else %}<a href="/about/pp.html">{{ _loc.footer_privacy | default: "Privacy Policy" }}</a>
       <a href="/about/tos.html">{{ _loc.footer_tos | default: "Terms of Service" }}</a>{% endif %}
-      <a href="/faq/account-delete.html">{{ _loc.footer_account_delete | default: "Account Deletion" }}</a>
+      {% if page.locale_id %}<a href="/{{ page.locale_id }}/account-delete.html">{{ _loc.footer_account_delete | default: "Account Deletion" }}</a>{% else %}<a href="/faq/account-delete.html">{{ _loc.footer_account_delete | default: "Account Deletion" }}</a>{% endif %}
     </div>
   </div>
   <div class="footer__bottom">

@@ -1,0 +1,149 @@
+{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
+{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}
+{%- assign oso = uc.office_sports_organizer -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span><a href="{{ _base }}">{{ _loc.nav_use_cases | default: "Use Cases" }}</a><span>›</span>{{ oso.crumb | default: "Office Sports Organisers" }}</div>
+        <div class="uc-hero__badge">{{ oso.badge | default: "For Office Sports Organisers" }}</div>
+        <h1 class="uc-hero__title">{{ oso.title | default: "Stop Chasing RSVPs in <span>Slack.</span>" }}</h1>
+        <p class="uc-hero__sub">{{ oso.sub | default: "You volunteered to run the office five-a-side, the lunchtime run, or the Friday social — and somehow ended up managing it through three group chats and a spreadsheet. Sports HQ gives you one place to schedule, publicise, and track attendance, with push notifications doing the chasing for you." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="{{ _home }}#download" class="btn btn--lime btn--lg">{{ _loc.cta_download | default: "Download Free" }}</a>
+          <a href="#how" class="btn btn--outline-light btn--lg">{{ _loc.uc_cta_how | default: "See How It Works" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <img src="/assets/screenshots/{{ _shots }}/office-sports-organizer/01.webp" alt="Sports HQ activity detail screen with attendance confirm and decline buttons" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ── -->
+  <section class="uc-intro">
+    <div class="container">
+      <div class="uc-intro__card">
+        <div class="uc-intro__icon">🏢</div>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ oso.intro | default: "you're the unofficial organiser of a workplace sports activity — a lunchtime run, a five-a-side team, a badminton ladder, a softball league — and you're tired of manually publicising sessions and following up with colleagues who haven't replied." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="uc-rows" id="how">
+    <div class="container">
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ oso.row1_tag | default: "Easy Registration" }}</div>
+          <h2 class="section-title">{{ oso.row1_title | default: "Onboard the whole team in one scan" }}</h2>
+          <p>{{ oso.row1_body | default: "Post a join link in the team Slack channel or welcome email, or print the QR code for the office noticeboard — same registration page either way. New colleagues join your event instantly, no manual list building, no missed names." }}</p>
+          <ul class="feature-list">
+            <li>{{ oso.row1_li1 | default: "Link for Slack, Teams, or email — one tap to join from a desk" }}</li>
+            <li>{{ oso.row1_li2 | default: "QR code for the noticeboard or printed welcome pack" }}</li>
+            <li>{{ oso.row1_li3 | default: "Membership is managed entirely within the app — no separate spreadsheet" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/office-sports-organizer/02.webp" alt="Sports HQ event member management and add members screens" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/office-sports-organizer/03.webp" alt="Sports HQ recurring and manual activity scheduling screens" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ oso.row2_tag | default: "Flexible Scheduling" }}</div>
+          <h2 class="section-title">{{ oso.row2_title | default: "Recurring, one-off, or both" }}</h2>
+          <p>{{ oso.row2_body | default: "Set a recurring weekly slot for the regular session, then add manual one-off dates for tournaments, socials, or schedule changes around public holidays — all from the same event." }}</p>
+          <ul class="feature-list">
+            <li>{{ oso.row2_li1 | default: "Generate weeks of instances automatically from a rolling schedule" }}</li>
+            <li>{{ oso.row2_li2 | default: "Slot in manual one-off activities that don't fit the pattern" }}</li>
+            <li>{{ oso.row2_li3 | default: "Every creation or update triggers a push notification to the team" }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ oso.row3_tag | default: "Attendance Tracking" }}</div>
+          <h2 class="section-title">{{ oso.row3_title | default: "Know who's coming, without asking" }}</h2>
+          <p>{{ oso.row3_body | default: "Watch confirmations and declines roll in automatically as colleagues respond to push notifications. No more “who's in this week?” messages — the headcount is right there." }}</p>
+          <ol class="uc-steps">
+            <li>
+              <span class="uc-step__num">1</span>
+              <div class="uc-step__body"><strong>{{ oso.row3_step1_title | default: "Activity goes live" }}</strong><p>{{ oso.row3_step1_body | default: "Every member gets a push notification the moment a session is scheduled or updated." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">2</span>
+              <div class="uc-step__body"><strong>{{ oso.row3_step2_title | default: "Confirmations come in" }}</strong><p>{{ oso.row3_step2_body | default: "You see a live count and list of who's confirmed, declined, or still pending." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">3</span>
+              <div class="uc-step__body"><strong>{{ oso.row3_step3_title | default: "Follow up in one tap" }}</strong><p>{{ oso.row3_step3_body | default: "Send a reminder push notification to anyone still pending — directly from the app." }}</p></div>
+            </li>
+          </ol>
+        </div>
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/office-sports-organizer/04.webp" alt="Sports HQ attendance tracking with confirm, decline, and reminder controls" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/office-sports-organizer/05.webp" alt="Sports HQ managed events list with weekly attendance status" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ oso.row4_tag | default: "Waitlists" }}</div>
+          <h2 class="section-title">{{ oso.row4_title | default: "Full sessions handle themselves" }}</h2>
+          <p>{{ oso.row4_body | default: "Set a maximum capacity for your five-a-side or court booking. Once it's full, new sign-ups automatically join a waitlist — and move up the moment someone drops out." }}</p>
+          <ul class="feature-list">
+            <li>{{ oso.row4_li1 | default: "No more double-bookings or arguments about who has a spot" }}</li>
+            <li>{{ oso.row4_li2 | default: "Waitlisted members are notified the instant a place opens up" }}</li>
+            <li>{{ oso.row4_li3 | default: "Works automatically across every recurring instance" }}</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── RELATED USE CASES ── -->
+  <section class="uc-related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_related_tag | default: "More Use Cases" }}</div>
+        <h2 class="section-title">{{ _loc.uc_related_title | default: "Running a different kind of community?" }}</h2>
+      </div>
+      <div class="uc-related__grid">
+        <a href="{{ _base }}social-sports-group/" class="uc-card">
+          <div class="uc-card__icon">👥</div>
+          <h3>{{ _loc.uc_card_social_sports_group_title | default: "Large Social Sports Groups" }}</h3>
+          <p>{{ _loc.uc_card_social_sports_group_desc | default: "Public or private membership, shareable links, and waitlists for big recurring social groups." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}run-club/" class="uc-card">
+          <div class="uc-card__icon">🏃</div>
+          <h3>{{ _loc.uc_card_run_club_title | default: "Ad-Hoc Run Clubs" }}</h3>
+          <p>{{ _loc.uc_card_run_club_desc | default: "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}venue-owners/" class="uc-card">
+          <div class="uc-card__icon">🏟️</div>
+          <h3>{{ _loc.uc_card_venue_owners_title | default: "Venue &amp; Facility Owners" }}</h3>
+          <p>{{ _loc.uc_card_venue_owners_desc | default: "Build a community of patrons around your facility with QR registration and venue discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {%- assign _dl_headline = oso.download_headline | default: 'Run your team without the <span class="download__accent">spreadsheet.</span>' -%}
+  {%- assign _dl_sub = oso.download_sub | default: "Download Sports HQ for free and get your next session scheduled in minutes." -%}
+  {% include sections/download.html headline=_dl_headline sub=_dl_sub %}
