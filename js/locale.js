@@ -3,7 +3,7 @@
     '/': 'EN', '/ar/': 'AR', '/de/': 'DE', '/el/': 'EL',
     '/en-AU/': 'EN·AU', '/en-CA/': 'EN·CA', '/en-GB/': 'EN·GB',
     '/en-IN/': 'EN·IN', '/en-SG/': 'EN·SG',
-    '/es/': 'ES', '/es-419/': 'ES·LAT', '/fr/': 'FR',
+    '/es/': 'ES', '/es-419/': 'ES·LAT', '/es-MX/': 'ES·MX', '/fr/': 'FR',
     '/hi/': 'HI', '/id/': 'ID', '/it/': 'IT', '/ja/': 'JA',
     '/ko/': 'KO', '/nl/': 'NL', '/pt-BR/': 'PT·BR', '/pt-PT/': 'PT·PT',
     '/ru/': 'RU', '/sv/': 'SV', '/zh-HK/': 'ZH·HK',

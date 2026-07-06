@@ -107,8 +107,9 @@ html.dark .uc-hero { background: #0d0e13; }
 .uc-row__visual img {
   width: 100%; max-width: 380px; height: auto; display: block;
   border-radius: var(--radius-lg);
+  aspect-ratio: 2 / 3;
 }
-.uc-row__visual--wide img { max-width: 460px; }
+.uc-row__visual--wide img { max-width: 460px; aspect-ratio: 1 / 1; }
 
 /* ── Numbered "how it works" mini steps (reused inside rows) ── */
 .uc-steps { display: flex; flex-direction: column; gap: 18px; margin-bottom: 8px; }

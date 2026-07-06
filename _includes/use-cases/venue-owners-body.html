@@ -1,0 +1,149 @@
+{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
+{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}
+{%- assign vo = uc.venue_owners -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span><a href="{{ _base }}">{{ _loc.nav_use_cases | default: "Use Cases" }}</a><span>›</span>{{ vo.crumb | default: "Venue Owners" }}</div>
+        <div class="uc-hero__badge">{{ vo.badge | default: "For Venue &amp; Facility Owners" }}</div>
+        <h1 class="uc-hero__title">{{ vo.title | default: "Turn Patrons Into a <span>Community.</span>" }}</h1>
+        <p class="uc-hero__sub">{{ vo.sub | default: "You run a tennis club, a climbing gym, a multi-court complex, or a community pitch — and you know your members would play more, and stay longer, if they knew each other. Sports HQ gives every venue a built-in community layer: registration, discovery, scheduling, and communication, all in one app." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="{{ _home }}#download" class="btn btn--lime btn--lg">{{ vo.cta_primary | default: "Register Your Venue" }}</a>
+          <a href="#how" class="btn btn--outline-light btn--lg">{{ _loc.uc_cta_how | default: "See How It Works" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <img src="/assets/screenshots/{{ _shots }}/venue-owners/01.webp" alt="Sports HQ venue details screen showing registered members, amenities, and QR registration" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ── -->
+  <section class="uc-intro">
+    <div class="container">
+      <div class="uc-intro__card">
+        <div class="uc-intro__icon">🏟️</div>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ vo.intro | default: "you own or manage a facility, complex, or venue — a tennis club, gym, sports hall, climbing centre, or community field — and you want to build an active, returning community of patrons instead of one-off, anonymous bookings." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="uc-rows" id="how">
+    <div class="container">
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ vo.row1_tag | default: "Frictionless Onboarding" }}</div>
+          <h2 class="section-title">{{ vo.row1_title | default: "Registration in seconds, not paperwork" }}</h2>
+          <p>{{ vo.row1_body | default: "Every venue gets both a QR code and a shareable link to the same registration page — use whichever fits the medium. Print the QR code for reception, a noticeboard, or courtside; drop the link straight into a WhatsApp group, email, or social post. Either way, patrons land on the same page and register in seconds." }}</p>
+          <ul class="feature-list">
+            <li>{{ vo.row1_li1 | default: "QR code for print — posters, table tents, courtside signage" }}</li>
+            <li>{{ vo.row1_li2 | default: "Link for digital — WhatsApp, email, social, your website" }}</li>
+            <li>{{ vo.row1_li3 | default: "New members appear in your registered members list automatically, however they joined" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/venue-owners/02.webp" alt="Sports HQ QR code registration and venue share screens" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/venue-owners/03.webp" alt="Sports HQ location-based venue search results on a map" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ vo.row2_tag | default: "Discovery" }}</div>
+          <h2 class="section-title">{{ vo.row2_title | default: "Get found by athletes already nearby" }}</h2>
+          <p>{{ vo.row2_body | default: "Sports HQ surfaces your venue to athletes searching the map for somewhere to play. Every member you onboard, and every event you host, increases your venue's visibility to new patrons in your area." }}</p>
+          <ul class="feature-list">
+            <li>{{ vo.row2_li1 | default: "Appear in location-based search for your sport and area" }}</li>
+            <li>{{ vo.row2_li2 | default: "Showcase amenities — courts, showers, lockers, parking — on your venue page" }}</li>
+            <li>{{ vo.row2_li3 | default: "Hosted events at your venue are discoverable independently, bringing in attendees who've never visited before" }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ vo.row3_tag | default: "Community Building" }}</div>
+          <h2 class="section-title">{{ vo.row3_title | default: "Let your members find each other" }}</h2>
+          <p>{{ vo.row3_body | default: "A membership list isn't just an admin tool — it's the foundation of a community. Members can browse who else plays at your venue, follow each other, and organise their own games and socials, all anchored to your facility." }}</p>
+          <ul class="feature-list">
+            <li>{{ vo.row3_li1 | default: "Searchable directory of registered venue members" }}</li>
+            <li>{{ vo.row3_li2 | default: "Members can message, follow, and connect directly in-app" }}</li>
+            <li>{{ vo.row3_li3 | default: "Drives repeat visits and word-of-mouth growth, organically" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/venue-owners/04.webp" alt="Sports HQ member directory and people search results" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/venue-owners/05.webp" alt="Sports HQ recurring event schedule creation screens" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ vo.row4_tag | default: "Sanctioned Events" }}</div>
+          <h2 class="section-title">{{ vo.row4_title | default: "Host the events that keep people coming back" }}</h2>
+          <p>{{ vo.row4_body | default: "Run a weekly member social, a Sunday league, or a monthly tournament — create it once as a recurring schedule and let Sports HQ generate every future instance automatically." }}</p>
+          <ol class="uc-steps">
+            <li>
+              <span class="uc-step__num">1</span>
+              <div class="uc-step__body"><strong>{{ vo.row4_step1_title | default: "Create the recurring schedule" }}</strong><p>{{ vo.row4_step1_body | default: "Set the day, time, and how many weeks ahead instances should generate." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">2</span>
+              <div class="uc-step__body"><strong>{{ vo.row4_step2_title | default: "Members confirm or decline" }}</strong><p>{{ vo.row4_step2_body | default: "Push notifications go out automatically as each instance approaches." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">3</span>
+              <div class="uc-step__body"><strong>{{ vo.row4_step3_title | default: "Waitlists fill any last-minute gaps" }}</strong><p>{{ vo.row4_step3_body | default: "If a confirmed member drops out, the next person in line is notified instantly." }}</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── RELATED USE CASES ── -->
+  <section class="uc-related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_related_tag | default: "More Use Cases" }}</div>
+        <h2 class="section-title">{{ _loc.uc_related_title | default: "Running a different kind of community?" }}</h2>
+      </div>
+      <div class="uc-related__grid">
+        <a href="{{ _base }}communal-field-community/" class="uc-card">
+          <div class="uc-card__icon">📍</div>
+          <h3>{{ _loc.uc_card_communal_field_community_title | default: "Communal Field Communities" }}</h3>
+          <p>{{ _loc.uc_card_communal_field_community_desc | default: "Build a community around a shared park, court, or pitch with QR codes and location-based discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}office-sports-organizer/" class="uc-card">
+          <div class="uc-card__icon">🏢</div>
+          <h3>{{ _loc.uc_card_office_sports_organizer_title | default: "Office Sports Organisers" }}</h3>
+          <p>{{ _loc.uc_card_office_sports_organizer_desc | default: "See how a single organiser manages attendance and scheduling for a workplace sports group." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}social-sports-group/" class="uc-card">
+          <div class="uc-card__icon">👥</div>
+          <h3>{{ _loc.uc_card_social_sports_group_title | default: "Large Social Sports Groups" }}</h3>
+          <p>{{ _loc.uc_card_social_sports_group_desc | default: "Public or private membership, shareable links, and waitlists for big recurring social groups." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {%- assign _dl_headline = vo.download_headline | default: 'Put your venue on the <span class="download__accent">map.</span>' -%}
+  {%- assign _dl_sub = vo.download_sub | default: "Join venue owners already using Sports HQ to turn casual patrons into a loyal, active community." -%}
+  {% include sections/download.html headline=_dl_headline sub=_dl_sub %}

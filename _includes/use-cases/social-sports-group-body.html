@@ -1,0 +1,149 @@
+{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
+{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}
+{%- assign ssg = uc.social_sports_group -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span><a href="{{ _base }}">{{ _loc.nav_use_cases | default: "Use Cases" }}</a><span>›</span>{{ ssg.crumb | default: "Social Sports Groups" }}</div>
+        <div class="uc-hero__badge">{{ ssg.badge | default: "For Large Social Sports Groups" }}</div>
+        <h1 class="uc-hero__title">{{ ssg.title | default: "A Big Group, Run <span>Without Chaos.</span>" }}</h1>
+        <p class="uc-hero__sub">{{ ssg.sub | default: "Once a social sports group passes a few dozen members, group chats stop working — messages get buried, new members don't know how to join, and nobody's sure who's actually showing up. Sports HQ gives your group structure: controlled membership, capped sessions, and automatic reminders." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="{{ _home }}#download" class="btn btn--lime btn--lg">{{ _loc.cta_download | default: "Download Free" }}</a>
+          <a href="#how" class="btn btn--outline-light btn--lg">{{ _loc.uc_cta_how | default: "See How It Works" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <img src="/assets/screenshots/{{ _shots }}/social-sports-group/01.webp" alt="Sports HQ sharing an event invite link" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ── -->
+  <section class="uc-intro">
+    <div class="container">
+      <div class="uc-intro__card">
+        <div class="uc-intro__icon">👥</div>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ ssg.intro | default: "you admin a sports group that's grown past the point where a group chat can keep up — a social football crew, a touch rugby group, a netball league, a climbing meet-up — with dozens or hundreds of members across multiple regular sessions." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="uc-rows" id="how">
+    <div class="container">
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ ssg.row1_tag | default: "Membership Control" }}</div>
+          <h2 class="section-title">{{ ssg.row1_title | default: "Public, private, or somewhere in between" }}</h2>
+          <p>{{ ssg.row1_body | default: "Create your group's activity as an event template. Make it public and discoverable to grow organically, or private so membership is fully controlled — visible only to people you let in." }}</p>
+          <ul class="feature-list">
+            <li>{{ ssg.row1_li1 | default: "Private events are hidden from search and discovery entirely" }}</li>
+            <li>{{ ssg.row1_li2 | default: "Security and membership settings are configured per event" }}</li>
+            <li>{{ ssg.row1_li3 | default: "Switch a group from invite-only to open growth whenever you're ready" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/social-sports-group/02.webp" alt="Sports HQ event creation screens with privacy and capacity settings" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/social-sports-group/03.webp" alt="Sports HQ shareable event join link" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ ssg.row2_tag | default: "Effortless Onboarding" }}</div>
+          <h2 class="section-title">{{ ssg.row2_title | default: "One link does the whole job" }}</h2>
+          <p>{{ ssg.row2_body | default: "Share a single link in a WhatsApp group, an email signature, or a social post — or print the matching QR code for posters and noticeboards. Either gets a new member to the same join page in one tap or one scan." }}</p>
+          <ul class="feature-list">
+            <li>{{ ssg.row2_li1 | default: "No more explaining “how do I join” to every new member" }}</li>
+            <li>{{ ssg.row2_li2 | default: "Pick link or QR code to match wherever you're recruiting from" }}</li>
+            <li>{{ ssg.row2_li3 | default: "Works whether the recipient already has Sports HQ or not" }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ ssg.row3_tag | default: "Scheduling Your Way" }}</div>
+          <h2 class="section-title">{{ ssg.row3_title | default: "Manual control, recurring convenience" }}</h2>
+          <p>{{ ssg.row3_body | default: "Schedule activities manually for ad-hoc sessions, or set a recurring pattern for your regular weekly fixture — and switch between the two as your group's calendar demands." }}</p>
+          <ul class="feature-list">
+            <li>{{ ssg.row3_li1 | default: "Push notifications go out to every member the moment a session is created or changes" }}</li>
+            <li>{{ ssg.row3_li2 | default: "Members confirm or decline attendance with a single tap" }}</li>
+            <li>{{ ssg.row3_li3 | default: "Reminders go out automatically as the session approaches" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/social-sports-group/04.webp" alt="Sports HQ manual and recurring scheduling screens" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/social-sports-group/05.webp" alt="Sports HQ event members list and venue map location" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ ssg.row4_tag | default: "Capacity &amp; Waitlists" }}</div>
+          <h2 class="section-title">{{ ssg.row4_title | default: "Cap group size without turning people away" }}</h2>
+          <p>{{ ssg.row4_body | default: "Set a maximum number of attendees that matches your pitch, court, or venue capacity. Once a session is full, new sign-ups automatically join a waitlist instead of being lost." }}</p>
+          <ol class="uc-steps">
+            <li>
+              <span class="uc-step__num">1</span>
+              <div class="uc-step__body"><strong>{{ ssg.row4_step1_title | default: "Set your maximum group size" }}</strong><p>{{ ssg.row4_step1_body | default: "Sessions stop accepting confirmations once the cap is reached." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">2</span>
+              <div class="uc-step__body"><strong>{{ ssg.row4_step2_title | default: "Extra sign-ups join the waitlist" }}</strong><p>{{ ssg.row4_step2_body | default: "No one is turned away outright — they're queued automatically." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">3</span>
+              <div class="uc-step__body"><strong>{{ ssg.row4_step3_title | default: "Spots fill themselves" }}</strong><p>{{ ssg.row4_step3_body | default: "When a confirmed member declines, the next waitlisted member is notified instantly." }}</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── RELATED USE CASES ── -->
+  <section class="uc-related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_related_tag | default: "More Use Cases" }}</div>
+        <h2 class="section-title">{{ _loc.uc_related_title | default: "Running a different kind of community?" }}</h2>
+      </div>
+      <div class="uc-related__grid">
+        <a href="{{ _base }}communal-field-community/" class="uc-card">
+          <div class="uc-card__icon">📍</div>
+          <h3>{{ _loc.uc_card_communal_field_community_title | default: "Communal Field Communities" }}</h3>
+          <p>{{ _loc.uc_card_communal_field_community_desc | default: "Build a community around a shared park, court, or pitch with QR codes and location-based discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}run-club/" class="uc-card">
+          <div class="uc-card__icon">🏃</div>
+          <h3>{{ _loc.uc_card_run_club_title | default: "Ad-Hoc Run Clubs" }}</h3>
+          <p>{{ _loc.uc_card_run_club_desc | default: "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}office-sports-organizer/" class="uc-card">
+          <div class="uc-card__icon">🏢</div>
+          <h3>{{ _loc.uc_card_office_sports_organizer_title | default: "Office Sports Organisers" }}</h3>
+          <p>{{ _loc.uc_card_office_sports_organizer_desc | default: "See how a single organiser manages attendance and scheduling for a workplace sports group." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {%- assign _dl_headline = ssg.download_headline | default: 'Bring order to a <span class="download__accent">big group.</span>' -%}
+  {%- assign _dl_sub = ssg.download_sub | default: "Download Sports HQ for free and give your social sports group the structure it's outgrown a group chat for." -%}
+  {% include sections/download.html headline=_dl_headline sub=_dl_sub %}

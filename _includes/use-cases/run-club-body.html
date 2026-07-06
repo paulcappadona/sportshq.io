@@ -1,0 +1,133 @@
+{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
+{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}
+{%- assign rc = uc.run_club -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span><a href="{{ _base }}">{{ _loc.nav_use_cases | default: "Use Cases" }}</a><span>›</span>{{ rc.crumb | default: "Run Clubs" }}</div>
+        <div class="uc-hero__badge">{{ rc.badge | default: "For Ad-Hoc Run Clubs" }}</div>
+        <h1 class="uc-hero__title">{{ rc.title | default: "Less Texting. <span>More Running.</span>" }}</h1>
+        <p class="uc-hero__sub">{{ rc.sub | default: "Your run club doesn't run on a fixed schedule — it runs on whoever's free this evening. Sports HQ replaces the never-ending group chat with instant notifications and one-tap confirmations, so you spend less time coordinating and more time on the road." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="{{ _home }}#download" class="btn btn--lime btn--lg">{{ _loc.cta_download | default: "Download Free" }}</a>
+          <a href="#how" class="btn btn--outline-light btn--lg">{{ _loc.uc_cta_how | default: "See How It Works" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <img src="/assets/screenshots/{{ _shots }}/run-club/01.webp" alt="Sports HQ ad-hoc run activity creation screen" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ── -->
+  <section class="uc-intro">
+    <div class="container">
+      <div class="uc-intro__card">
+        <div class="uc-intro__icon">🏃</div>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ rc.intro | default: "you organise a run club, a training crew, or any group activity that gets proposed last-minute rather than scheduled weeks in advance — and you're sick of typing “who's in tonight?” into a group chat." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="uc-rows" id="how">
+    <div class="container">
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ rc.row1_tag | default: "Centralised Communication" }}</div>
+          <h2 class="section-title">{{ rc.row1_title | default: "One event, one crew, zero noise" }}</h2>
+          <p>{{ rc.row1_body | default: "Create your run club as an event in Sports HQ once, and add your crew. From then on, every activity, update, and reminder flows through the app — not through three different message threads." }}</p>
+          <ul class="feature-list">
+            <li>{{ rc.row1_li1 | default: "Set it up once; reuse it for every future run" }}</li>
+            <li>{{ rc.row1_li2 | default: "Works just as well for any sport or activity, not just running" }}</li>
+            <li>{{ rc.row1_li3 | default: "Add members with a link dropped into the group chat, or a QR code on a sign-up sheet — whichever's easier" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/run-club/02.webp" alt="Sports HQ sharing an event invite link" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/run-club/03.webp" alt="Sports HQ ad-hoc activity creation screens" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ rc.row2_tag | default: "Instant Notifications" }}</div>
+          <h2 class="section-title">{{ rc.row2_title | default: "Propose tonight's run, notify everyone instantly" }}</h2>
+          <p>{{ rc.row2_body | default: "Any member can create an activity instance for the crew — propose a date, time, and route, and every member gets a push notification immediately. No admin bottleneck, no waiting for someone to “see” the message." }}</p>
+          <ol class="uc-steps">
+            <li>
+              <span class="uc-step__num">1</span>
+              <div class="uc-step__body"><strong>{{ rc.row2_step1_title | default: "Someone proposes a run" }}</strong><p>{{ rc.row2_step1_body | default: "Any member can create the activity — it doesn't have to be the organiser." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">2</span>
+              <div class="uc-step__body"><strong>{{ rc.row2_step2_title | default: "Everyone is notified at once" }}</strong><p>{{ rc.row2_step2_body | default: "A push notification goes out the moment the activity is created." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">3</span>
+              <div class="uc-step__body"><strong>{{ rc.row2_step3_title | default: "Replies roll in immediately" }}</strong><p>{{ rc.row2_step3_body | default: "Confirm or decline in one tap — no typing required." }}</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ rc.row3_tag | default: "Instant Confirmation" }}</div>
+          <h2 class="section-title">{{ rc.row3_title | default: "Know who's running before you leave the house" }}</h2>
+          <p>{{ rc.row3_body | default: "See live attendance for tonight's run — who's confirmed, who's declined, and who hasn't replied yet — without sending a single follow-up message." }}</p>
+          <ul class="feature-list">
+            <li>{{ rc.row3_li1 | default: "One-tap confirm/decline removes the back-and-forth entirely" }}</li>
+            <li>{{ rc.row3_li2 | default: "Minimises overhead so the crew can focus on actually training" }}</li>
+            <li>{{ rc.row3_li3 | default: "The same flow works for any sport or activity managed in Sports HQ" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/run-club/04.webp" alt="Sports HQ activity attendance confirmation screen" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── RELATED USE CASES ── -->
+  <section class="uc-related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_related_tag | default: "More Use Cases" }}</div>
+        <h2 class="section-title">{{ _loc.uc_related_title | default: "Running a different kind of community?" }}</h2>
+      </div>
+      <div class="uc-related__grid">
+        <a href="{{ _base }}social-sports-group/" class="uc-card">
+          <div class="uc-card__icon">👥</div>
+          <h3>{{ _loc.uc_card_social_sports_group_title | default: "Large Social Sports Groups" }}</h3>
+          <p>{{ _loc.uc_card_social_sports_group_desc | default: "Public or private membership, shareable links, and waitlists for big recurring social groups." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}communal-field-community/" class="uc-card">
+          <div class="uc-card__icon">📍</div>
+          <h3>{{ _loc.uc_card_communal_field_community_title | default: "Communal Field Communities" }}</h3>
+          <p>{{ _loc.uc_card_communal_field_community_desc | default: "Build a community around a shared park, court, or pitch with QR codes and location-based discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}office-sports-organizer/" class="uc-card">
+          <div class="uc-card__icon">🏢</div>
+          <h3>{{ _loc.uc_card_office_sports_organizer_title | default: "Office Sports Organisers" }}</h3>
+          <p>{{ _loc.uc_card_office_sports_organizer_desc | default: "See how a single organiser manages attendance and scheduling for a workplace sports group." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {%- assign _dl_headline = rc.download_headline | default: 'Spend less time organising, <span class="download__accent">more time running.</span>' -%}
+  {%- assign _dl_sub = rc.download_sub | default: "Download Sports HQ for free and get tonight's run sorted in seconds." -%}
+  {% include sections/download.html headline=_dl_headline sub=_dl_sub %}
