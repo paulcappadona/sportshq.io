@@ -29,7 +29,14 @@ module Jekyll
           dates << git_date("_data/use_cases.yml") if use_case_page?(page)
         end
 
-        dates << git_date(legal_content_path(page.data["locale_id"], page.data["legal_type"])) if page.data["legal_type"]
+        case page.data["legal_type"]
+        when "pp", "tos"
+          dates << git_date(legal_content_path(page.data["locale_id"], page.data["legal_type"]))
+        when "account-delete"
+          dates << git_date("_includes/account-delete-body.html")
+        when "faqs"
+          dates << git_date("_includes/faqs-body.html")
+        end
 
         dates.compact!
         page.data["last_modified_at"] = dates.max unless dates.empty?
