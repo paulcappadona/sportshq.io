@@ -1,5 +1,4 @@
-{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}
-{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}{%- endif -%}
 {%- assign rc = uc.run_club -%}
 {%- assign _shots = page.locale_id | default: "en-US" -%}
 {%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
