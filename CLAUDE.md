@@ -31,6 +31,12 @@ The site serves 25 locales. The root `/` is canonical en-US; the other 24 live a
 
 **Single source of truth:** `_data/locales.yml` — one entry per locale with every translated UI string (`hero_badge`, `nav_features`, `footer_privacy`, etc.) plus metadata (`id`, `hreflang`, `path`, `lang`, `dir`, `screenshot_count`).
 
+**⚠️ Liquid `where` filter pitfall:** the canonical English pages have no `page.locale_id` (it's `nil`). Liquid's `where` filter treats a `nil` comparison value as a truthy-check on the field rather than an equality check — so `site.data.locales | where: "id", page.locale_id | first` with `locale_id` unset matches *every* locale entry and `| first` silently returns whichever locale is listed first in the YAML file (currently `ar`), leaking Arabic strings into English pages. **Always guard the assign:**
+```liquid
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- endif -%}
+```
+Never assign `_loc` (or any `where: "id", page.locale_id` lookup against `site.data.locales` / `site.data.use_cases`) unconditionally — every include that reads locale data must have this guard, and all content driven by `_loc`/`uc` must use `| default: "English text"` so it degrades correctly when `_loc` is nil. This bit `_includes/use-cases/*-body.html` (fixed in PR #17) because those includes were the only ones that skipped the guard.
+
 **Locale page pattern** — each locale has a minimal stub:
 ```yaml
 # fr/index.html
