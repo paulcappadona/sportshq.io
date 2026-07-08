@@ -151,7 +151,11 @@
       if(stored!==null){if(VALID_PATHS.indexOf(stored)>=0){if(stored!=='/')window.location.replace(stored);return;}}
     }catch(e){}
     var langs=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en'];
-    for(var i=0;i<langs.length;i++){var d=toPath(langs[i]);if(d&&d!=='/')return window.location.replace(d);}
+    for(var i=0;i<langs.length;i++){
+      var lang=langs[i];
+      if(lang==='en'||(lang.indexOf('en-')===0&&!PATHS[lang]))return;
+      var d=toPath(lang);if(d&&d!=='/')return window.location.replace(d);
+    }
   })();
   </script>
 
