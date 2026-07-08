@@ -109,4 +109,3 @@ dist
 _site/
 docs/
 .jekyll-cache/
-Gemfile.lock
