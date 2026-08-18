@@ -1,0 +1,186 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}{%- endif -%}
+{%- assign sg = uc.safe_group_runs -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+{%- assign _crumb = sg.crumb | default: "Safer Group Runs" -%}
+{%- assign _home_label = _loc.ad_breadcrumb_home | default: "Home" -%}
+{%- assign _uc_label = _loc.nav_use_cases | default: "Use Cases" -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _home_label }}</a><span>›</span><a href="{{ _base }}">{{ _uc_label }}</a><span>›</span>{{ _crumb }}</div>
+        <div class="uc-hero__badge">{{ sg.badge | default: "For Women and Anyone Who Prefers Not to Run Alone" }}</div>
+        <h1 class="uc-hero__title">{{ sg.title | default: "Safer Group Runs <span>With People You Trust</span>" }}</h1>
+        <p class="uc-hero__sub">{{ sg.sub | default: "Running should feel freeing, not frightening. You shouldn't have to change your routine because of harassment — but if you'd rather have company on early-morning, evening, or quieter-route runs, Sports HQ helps you create an event with the friends, family, and running partners you trust, mark it private if you'd rather keep it just between you, and see exactly who's confirmed before you leave the house." }}</p>
+        <p class="uc-hero__sub uc-hero__sub--secondary">{{ sg.sub2 | default: "Whether they run beside you or ride along on a bike, you'll know when someone you trust has committed to joining you." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="{{ _home }}#download" class="btn btn--lime btn--lg">{{ sg.cta_primary | default: "Create Your Running Event" }}</a>
+          <a href="#how" class="btn btn--outline-light btn--lg">{{ sg.cta_secondary | default: "See How Group Runs Work" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <img src="/assets/screenshots/{{ _shots }}/safe-group-runs/01.webp" alt="Sports HQ activity screen showing a trusted running event" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ── -->
+  <section class="uc-intro">
+    <div class="container">
+      <div class="uc-intro__card">
+        <div class="uc-intro__icon">🛡️</div>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ sg.intro | default: "you'd rather not run alone — especially early mornings, after dark, or on quieter routes — but your running partners' schedules never quite line up. Sports HQ coordinates people you already know and trust; it isn't a substitute for an emergency or live-location safety service." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="uc-rows" id="how">
+    <div class="container">
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ sg.row1_tag | default: "Your Trusted Circle" }}</div>
+          <h2 class="section-title">{{ sg.row1_title | default: "An event built around the people you already trust, ready whenever you need it" }}</h2>
+          <p>{{ sg.row1_body | default: "Create an event for the people you'd actually want beside you on a run — training partners, friends, family, or someone who rides alongside on a bike as company, the way one Gold Coast runner's partner does when he can't run with her himself. Add them as members, mark the event private if you'd rather keep it to just your circle, and it's ready to reuse for every future run." }}</p>
+          <ul class="feature-list">
+            <li>{{ sg.row1_li1 | default: "Mark your event private if you want it visible only to the members you invite" }}</li>
+            <li>{{ sg.row1_li2 | default: "Add members with a link or QR code, no separate account setup required" }}</li>
+            <li>{{ sg.row1_li3 | default: "Works for a dedicated running partner or a whole neighbourhood crew" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/safe-group-runs/02.webp" alt="Sports HQ sharing an event invite link" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/safe-group-runs/03.webp" alt="Sports HQ run notification and confirm/decline screens" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ sg.row2_tag | default: "Real-Time Confirmations" }}</div>
+          <h2 class="section-title">{{ sg.row2_title | default: "Is anyone free for your next run? Find out in seconds" }}</h2>
+          <p>{{ sg.row2_body | default: "Propose a run and your whole circle is notified at once. As replies come in, you watch them update live — no chasing people for a reply, and no leaving the house without knowing who, if anyone, is joining you." }}</p>
+          <ol class="uc-steps">
+            <li>
+              <span class="uc-step__num">1</span>
+              <div class="uc-step__body"><strong>{{ sg.row2_step1_title | default: "Propose your next run" }}</strong><p>{{ sg.row2_step1_body | default: "Set the time, meeting point, and route — any member can do it." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">2</span>
+              <div class="uc-step__body"><strong>{{ sg.row2_step2_title | default: "Your circle is notified instantly" }}</strong><p>{{ sg.row2_step2_body | default: "A push notification reaches everyone the moment it's posted." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">3</span>
+              <div class="uc-step__body"><strong>{{ sg.row2_step3_title | default: "Confirmations roll in live" }}</strong><p>{{ sg.row2_step3_body | default: "Watch who's in and who's out update in real time, right up until you leave." }}</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ sg.row3_tag | default: "Live Headcount" }}</div>
+          <h2 class="section-title">{{ sg.row3_title | default: "See who's in, and how many, before you commit" }}</h2>
+          <p>{{ sg.row3_body | default: "A running total of confirmed and declined attendees means you're not guessing. Heading out at dawn or after sunset, you can see at a glance whether it's a full turnout, a single partner, or nobody yet — so you can decide what to do next." }}</p>
+          <ul class="feature-list">
+            <li>{{ sg.row3_li1 | default: "One tap to confirm or decline — no back-and-forth messaging" }}</li>
+            <li>{{ sg.row3_li2 | default: "Live attendee count so you can make an informed call before you leave" }}</li>
+            <li>{{ sg.row3_li3 | default: "Reuse the same event for every future run — no need to start over" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/safe-group-runs/04.webp" alt="Sports HQ live attendance list showing confirmed and declined runners" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="uc-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ sg.faq_tag | default: "Common Questions" }}</div>
+        <h2 class="section-title">{{ sg.faq_title | default: "Questions about running with a group" }}</h2>
+      </div>
+      <div class="uc-faq__list">
+        <details class="uc-faq__item">
+          <summary>{{ sg.faq1_q | default: "How does Sports HQ help me organise a safer group run?" }}</summary>
+          <p>{{ sg.faq1_a | default: "Create an event with the people you already know and trust, mark it private if you'd rather keep it just between you, propose a time and route for your next run, and see in real time who has confirmed before you head out." }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ sg.faq2_q | default: "Can I mark my running event as private?" }}</summary>
+          <p>{{ sg.faq2_a | default: "Yes. Events are public by default, but you can mark yours private at any time so only the members you invite can see or join." }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ sg.faq3_q | default: "What happens if nobody confirms?" }}</summary>
+          <p>{{ sg.faq3_a | default: "You'll see that clearly before you leave, so you can decide whether to wait, invite someone directly, or choose a different time or route. Sports HQ can't guarantee that someone will always be free to join you." }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ sg.faq4_q | default: "Can a friend cycle beside me instead of running?" }}</summary>
+          <p>{{ sg.faq4_a | default: "Yes. Any member of your event can confirm for a run, whether they're running alongside you or riding a bike as company and an extra set of eyes." }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ sg.faq5_q | default: "Is Sports HQ an emergency or live-location safety app?" }}</summary>
+          <p>{{ sg.faq5_a | default: "No. Sports HQ helps you coordinate runs with people you already trust — it doesn't provide live location tracking, emergency alerts, or a guarantee of personal safety. Use a dedicated safety app or service alongside it if you need those features." }}</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RELATED USE CASES ── -->
+  <section class="uc-related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_related_tag | default: "More Use Cases" }}</div>
+        <h2 class="section-title">{{ _loc.uc_related_title | default: "Running a different kind of community?" }}</h2>
+      </div>
+      <div class="uc-related__grid">
+        <a href="{{ _base }}run-club/" class="uc-card">
+          <div class="uc-card__icon">🏃</div>
+          <h3>{{ _loc.uc_card_run_club_title | default: "Ad-Hoc Run Clubs" }}</h3>
+          <p>{{ _loc.uc_card_run_club_desc | default: "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}social-sports-group/" class="uc-card">
+          <div class="uc-card__icon">👥</div>
+          <h3>{{ _loc.uc_card_social_sports_group_title | default: "Large Social Sports Groups" }}</h3>
+          <p>{{ _loc.uc_card_social_sports_group_desc | default: "Public or private membership, shareable links, and waitlists for big recurring social groups." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}communal-field-community/" class="uc-card">
+          <div class="uc-card__icon">📍</div>
+          <h3>{{ _loc.uc_card_communal_field_community_title | default: "Communal Field Communities" }}</h3>
+          <p>{{ _loc.uc_card_communal_field_community_desc | default: "Build a community around a shared park, court, or pitch with QR codes and location-based discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {%- assign _dl_headline = sg.download_headline | default: 'Know who’s confirmed, <span class="download__accent">before you leave the house.</span>' -%}
+  {%- assign _dl_sub = sg.download_sub | default: "Download Sports HQ for free and build a trusted running circle you can call on." -%}
+  {% include sections/download.html headline=_dl_headline sub=_dl_sub %}
+
+  <!-- ── Structured data ── -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":{{ _home_label | jsonify }},"item":{{ site.url | append: _home | jsonify }}},
+    {"@type":"ListItem","position":2,"name":{{ _uc_label | jsonify }},"item":{{ site.url | append: _base | jsonify }}},
+    {"@type":"ListItem","position":3,"name":{{ _crumb | jsonify }},"item":{{ site.url | append: page.url | jsonify }}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":{{ sg.faq1_q | default: "How does Sports HQ help me organise a safer group run?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq1_a | default: "Create an event with the people you already know and trust, mark it private if you'd rather keep it just between you, propose a time and route for your next run, and see in real time who has confirmed before you head out." | jsonify }}}},
+    {"@type":"Question","name":{{ sg.faq2_q | default: "Can I mark my running event as private?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq2_a | default: "Yes. Events are public by default, but you can mark yours private at any time so only the members you invite can see or join." | jsonify }}}},
+    {"@type":"Question","name":{{ sg.faq3_q | default: "What happens if nobody confirms?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq3_a | default: "You'll see that clearly before you leave, so you can decide whether to wait, invite someone directly, or choose a different time or route. Sports HQ can't guarantee that someone will always be free to join you." | jsonify }}}},
+    {"@type":"Question","name":{{ sg.faq4_q | default: "Can a friend cycle beside me instead of running?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq4_a | default: "Yes. Any member of your event can confirm for a run, whether they're running alongside you or riding a bike as company and an extra set of eyes." | jsonify }}}},
+    {"@type":"Question","name":{{ sg.faq5_q | default: "Is Sports HQ an emergency or live-location safety app?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq5_a | default: "No. Sports HQ helps you coordinate runs with people you already trust — it doesn't provide live location tracking, emergency alerts, or a guarantee of personal safety. Use a dedicated safety app or service alongside it if you need those features." | jsonify }}}}
+  ]}
+  </script>
