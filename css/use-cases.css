@@ -123,6 +123,9 @@ html.dark .uc-hero { background: #0d0e13; }
 .uc-steps .uc-step__body strong { display: block; color: var(--on-surface); font-size: .92rem; margin-bottom: 2px; }
 .uc-steps .uc-step__body p { margin: 0; font-size: .86rem; color: var(--text-muted); line-height: 1.6; }
 
+/* ── Hero sub-line variant ── */
+.uc-hero__sub--secondary { margin-top: -20px; font-size: .92rem; }
+
 /* ── FAQ accordion ── */
 .uc-faq { background: var(--bg); padding: 24px 0 88px; }
 .uc-faq__list { max-width: 720px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 12px; }
@@ -140,6 +143,7 @@ html.dark .uc-hero { background: #0d0e13; }
   color: var(--on-surface);
 }
 .uc-faq__item summary::-webkit-details-marker { display: none; }
+.uc-faq__item summary::marker { content: ""; }
 .uc-faq__item summary::after {
   content: '+'; flex-shrink: 0; font-size: 1.3rem; line-height: 1;
   color: var(--lime-on);
