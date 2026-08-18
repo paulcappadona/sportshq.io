@@ -40,6 +40,9 @@
       {%- when 'communal-field-community' -%}
         {%- assign _en_title = "Communal Field Communities" -%}
         {%- assign _en_desc = "Build a community around a shared park, court, or pitch with QR codes and location-based discovery." -%}
+      {%- when 'safe-group-runs' -%}
+        {%- assign _en_title = "Safer Group Runs" -%}
+        {%- assign _en_desc = "Build a trusted running circle and see who's confirmed before you head out." -%}
     {%- endcase -%}
     {%- assign _name = _loc[_title_key] | default: _en_title -%}
     {%- assign _title = _name | append: " — Sports HQ" -%}
