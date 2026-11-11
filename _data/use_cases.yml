@@ -363,7 +363,7 @@
     download_sub: "Lade Sports HQ kostenlos herunter und hab den heutigen Lauf in Sekunden organisiert."
   venue_owners:
     meta_title: "Sportstätten-Community-App: QR-Anmeldung & Events | Sports HQ"
-    meta_desc: "Mach aus Gästen eine Community: QR-Anmeldung, Mitglieder entdecken, wiederkehrende Events und eine Liste deiner Stammspieler für Plätze, Hallen und Sportstätten."
+    meta_desc: "Mach aus Gästen eine Community: QR-Anmeldung, Mitglieder entdecken, wiederkehrende Events und eine Stammspieler-Liste für Plätze, Hallen und Sportstätten."
     crumb: "Sportstättenbetreiber"
     badge: "Für Sportstätten- & Anlagenbetreiber"
     title: "Mach aus Gästen eine <span>Community.</span>"
@@ -475,7 +475,7 @@
     download_sub: "Lade Sports HQ kostenlos herunter und gib deiner sozialen Sportgruppe die Struktur, die sie einem Gruppenchat entwachsen ist."
   communal_field_community:
     meta_title: "Community für Sportplatz & Court: QR oder Link | Sports HQ"
-    meta_desc: "Mach Park, Court oder Bolzplatz zur lokalen Community. Anmeldung per QR-Code oder Link, Suche in der Nähe und ein einfacher Weg für Stammspieler, sich zu finden."
+    meta_desc: "Mach Park, Court oder Bolzplatz zur lokalen Community: Anmeldung per QR-Code oder Link, Suche in der Nähe und einfaches Finden für Stammspieler."
     crumb: "Communitys an Gemeinschaftsplätzen"
     badge: "Für Communitys an Gemeinschaftsplätzen und -anlagen"
     title: "Gleicher Platz. Gleiche Gesichter. <span>Jetzt eine Community.</span>"
@@ -1013,7 +1013,7 @@
     download_sub: "Descarga Sports HQ gratis y organiza la carrera de esta noche en segundos."
   venue_owners:
     meta_title: "App de comunidad para instalaciones: QR y eventos | Sports HQ"
-    meta_desc: "Convierte a tus clientes en comunidad: registro con QR, descubrimiento de miembros, eventos recurrentes y lista de habituales para canchas y recintos deportivos."
+    meta_desc: "Convierte a tus clientes en comunidad: registro con QR, descubrimiento de miembros, eventos recurrentes y lista de habituales para canchas y recintos."
     crumb: "Propietarios de Instalaciones"
     badge: "Para Propietarios de Instalaciones"
     title: "Convierte a tus Clientes en una <span>Comunidad.</span>"
@@ -1088,7 +1088,7 @@
     download_sub: "Descarga Sports HQ gratis y programa tu próxima sesión en minutos."
   social_sports_group:
     meta_title: "App para grupo deportivo: miembros y asistencia | Sports HQ"
-    meta_desc: "Gestiona un gran grupo deportivo sin caos: eventos públicos o privados, enlaces de acceso, límite de jugadores, listas de espera, confirmaciones y recordatorios."
+    meta_desc: "Gestiona un gran grupo deportivo sin caos: eventos públicos o privados, enlaces de acceso, límite de jugadores, listas de espera y recordatorios."
     crumb: "Grupos Deportivos Sociales"
     badge: "Para Grandes Grupos Deportivos Sociales"
     title: "Un Grupo Grande, Sin <span>Caos.</span>"
@@ -1338,7 +1338,7 @@
     download_sub: "Descarga Sports HQ gratis y organiza la carrera de esta noche en segundos."
   venue_owners:
     meta_title: "App de comunidad para instalaciones: QR y eventos | Sports HQ"
-    meta_desc: "Convierte a tus clientes en comunidad: registro con QR, descubrimiento de miembros, eventos recurrentes y lista de habituales para canchas y recintos deportivos."
+    meta_desc: "Convierte a tus clientes en comunidad: registro con QR, descubrimiento de miembros, eventos recurrentes y lista de habituales para canchas y recintos."
     crumb: "Propietarios de Instalaciones"
     badge: "Para Propietarios de Instalaciones"
     title: "Convierte a tus Clientes en una <span>Comunidad.</span>"
@@ -1413,7 +1413,7 @@
     download_sub: "Descarga Sports HQ gratis y programa tu próxima sesión en minutos."
   social_sports_group:
     meta_title: "App para grupo deportivo: miembros y asistencia | Sports HQ"
-    meta_desc: "Gestiona un gran grupo deportivo sin caos: eventos públicos o privados, enlaces de acceso, límite de jugadores, listas de espera, confirmaciones y recordatorios."
+    meta_desc: "Gestiona un gran grupo deportivo sin caos: eventos públicos o privados, enlaces de acceso, límite de jugadores, listas de espera y recordatorios."
     crumb: "Grupos Deportivos Sociales"
     badge: "Para Grandes Grupos Deportivos Sociales"
     title: "Un Grupo Grande, Sin <span>Caos.</span>"
@@ -1663,7 +1663,7 @@
     download_sub: "Descarga Sports HQ gratis y organiza la carrera de esta noche en segundos."
   venue_owners:
     meta_title: "App de comunidad para instalaciones: QR y eventos | Sports HQ"
-    meta_desc: "Convierte a tus clientes en comunidad: registro con QR, descubrimiento de miembros, eventos recurrentes y lista de habituales para canchas y recintos deportivos."
+    meta_desc: "Convierte a tus clientes en comunidad: registro con QR, descubrimiento de miembros, eventos recurrentes y lista de habituales para canchas y recintos."
     crumb: "Propietarios de Instalaciones"
     badge: "Para Propietarios de Instalaciones"
     title: "Convierte a tus Clientes en una <span>Comunidad.</span>"
@@ -1738,7 +1738,7 @@
     download_sub: "Descarga Sports HQ gratis y programa tu próxima sesión en minutos."
   social_sports_group:
     meta_title: "App para grupo deportivo: miembros y asistencia | Sports HQ"
-    meta_desc: "Gestiona un gran grupo deportivo sin caos: eventos públicos o privados, enlaces de acceso, límite de jugadores, listas de espera, confirmaciones y recordatorios."
+    meta_desc: "Gestiona un gran grupo deportivo sin caos: eventos públicos o privados, enlaces de acceso, límite de jugadores, listas de espera y recordatorios."
     crumb: "Grupos Deportivos Sociales"
     badge: "Para Grandes Grupos Deportivos Sociales"
     title: "Un Grupo Grande, Sin <span>Caos.</span>"
@@ -2026,7 +2026,7 @@
     download_sub: "Rejoignez les propriétaires de lieux qui utilisent déjà Sports HQ pour transformer des clients occasionnels en une communauté fidèle et active."
   office_sports_organizer:
     meta_title: "Ligue sportive d'entreprise : présences, planning | Sports HQ"
-    meta_desc: "Gérez votre ligue sportive d'entreprise sans tableur : inscription facile, planning récurrent, confirmations de présence, effectifs et listes d'attente. Gratuit."
+    meta_desc: "Gérez votre ligue sportive d'entreprise sans tableur : inscription facile, planning récurrent, présences, effectifs et listes d'attente. Gratuit."
     crumb: "Organisateurs de Sport en Entreprise"
     badge: "Pour les Organisateurs de Sport en Entreprise"
     title: "Arrêtez de Relancer sur <span>Slack.</span>"
@@ -2607,7 +2607,7 @@
 - id: id
   run_club:
     meta_title: "Aplikasi Komunitas Lari — Atur Lari Grup Dadakan | Sports HQ"
-    meta_desc: "Bikin komunitas larimu berangkat lebih cepat: notifikasi instan, konfirmasi satu ketukan, tanpa kekacauan grup chat untuk lari dadakan. Gratis di iOS dan Android."
+    meta_desc: "Bikin komunitas larimu cepat berangkat: notifikasi instan, konfirmasi satu ketukan, tanpa kacau di grup chat saat lari dadakan. Gratis di iOS dan Android."
     crumb: "Klub Lari"
     badge: "Untuk Klub Lari Dadakan"
     title: "Lebih Sedikit Chat. <span>Lebih Banyak Lari.</span>"
@@ -4263,7 +4263,7 @@
     download_sub: "Baixe o Sports HQ grátis e organize a corrida de hoje em segundos."
   venue_owners:
     meta_title: "App de comunidade para quadras: QR e eventos | Sports HQ"
-    meta_desc: "Transforme frequentadores em comunidade: cadastro por QR code, descoberta de membros, eventos recorrentes e lista de habituais para quadras e espaços esportivos."
+    meta_desc: "Transforme frequentadores em comunidade: cadastro por QR code, descoberta de membros, eventos recorrentes e lista de habituais para quadras esportivas."
     crumb: "Donos de Locais"
     badge: "Para Donos de Locais e Instalações"
     title: "Transforme Clientes em <span>Comunidade.</span>"
@@ -4588,7 +4588,7 @@
     download_sub: "Descarrega o Sports HQ grátis e organize a corrida de hoje em segundos."
   venue_owners:
     meta_title: "App de comunidade para instalações: QR e eventos | Sports HQ"
-    meta_desc: "Transforma os clientes numa comunidade: registo por código QR, descoberta de membros, eventos recorrentes e lista de habituais para campos e espaços desportivos."
+    meta_desc: "Transforma clientes numa comunidade: registo por código QR, descoberta de membros, eventos recorrentes e lista de habituais para campos desportivos."
     crumb: "Donos de Locais"
     badge: "Para Donos de Locais e Instalações"
     title: "Transforme Clientes em <span>Comunidade.</span>"
