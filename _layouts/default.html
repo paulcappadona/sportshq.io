@@ -27,13 +27,13 @@
     {%- case page.uc_type -%}
       {%- when 'run-club' -%}
         {%- assign _en_title = "Ad-Hoc Run Clubs" -%}
-        {%- assign _en_desc = "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." -%}
+        {%- assign _en_desc = "Coordinate last-minute group activities with instant notifications and one-tap confirm/decline." -%}
       {%- when 'venue-owners' -%}
         {%- assign _en_title = "Venue & Facility Owners" -%}
         {%- assign _en_desc = "Build a community of patrons around your facility with QR registration and venue discovery." -%}
       {%- when 'office-sports-organizer' -%}
-        {%- assign _en_title = "Office Sports Organisers" -%}
-        {%- assign _en_desc = "See how a single organiser manages attendance and scheduling for a workplace sports group." -%}
+        {%- assign _en_title = "Office Sports Organizers" -%}
+        {%- assign _en_desc = "See how a single organizer manages attendance and scheduling for a workplace sports group." -%}
       {%- when 'social-sports-group' -%}
         {%- assign _en_title = "Large Social Sports Groups" -%}
         {%- assign _en_desc = "Public or private membership, shareable links, and waitlists for big recurring social groups." -%}
@@ -43,10 +43,30 @@
       {%- when 'safe-group-runs' -%}
         {%- assign _en_title = "Safer Group Runs" -%}
         {%- assign _en_desc = "Build a trusted running circle and see who's confirmed before you head out." -%}
+      {%- when 'youth-sports' -%}
+        {%- assign _en_title = "Youth & Junior Sports" -%}
+        {%- assign _en_desc = "Guardian-managed junior profiles, private teams and parent-friendly attendance." -%}
+      {%- when 'fill-the-last-spot' -%}
+        {%- assign _en_title = "Fill Every Spot" -%}
+        {%- assign _en_desc = "Need-one-more alerts, reminders and waitlists to help your game reach its numbers." -%}
     {%- endcase -%}
+    {%- comment -%} Search-facing meta: per-locale meta_title/meta_desc (use_cases.yml) win; English locales fall back to _data/uc_meta_en.yml; any other locale falls back to the short card strings. {%- endcomment -%}
+    {%- assign _ucd = site.data.use_cases | where: "id", page.locale_id | first -%}
+    {%- assign _meta = _ucd[_key_base] -%}
+    {%- assign _en_meta = site.data.uc_meta_en[_key_base] -%}
     {%- assign _name = _loc[_title_key] | default: _en_title -%}
     {%- assign _title = _name | append: " — Sports HQ" -%}
     {%- assign _desc = _loc[_desc_key] | default: _en_desc -%}
+    {%- if _meta.meta_title -%}
+      {%- assign _title = _meta.meta_title -%}
+    {%- elsif _loc.lang == "en" and _en_meta.title -%}
+      {%- assign _title = _en_meta.title -%}
+    {%- endif -%}
+    {%- if _meta.meta_desc -%}
+      {%- assign _desc = _meta.meta_desc -%}
+    {%- elsif _loc.lang == "en" and _en_meta.description -%}
+      {%- assign _desc = _en_meta.description -%}
+    {%- endif -%}
   {%- else -%}
     {%- assign _title = page.title | default: _loc.title -%}
     {%- assign _desc = page.description | default: _loc.description -%}
@@ -55,8 +75,10 @@
   {%- assign _lang = _loc.lang -%}
   {%- assign _dir = _loc.dir | default: "ltr" -%}
 {%- else -%}
-  {%- assign _title = page.title | default: site.title -%}
-  {%- assign _desc = page.description | default: site.description -%}
+  {%- assign _key_base = page.uc_type | replace: "-", "_" -%}
+  {%- assign _en_meta = site.data.uc_meta_en[_key_base] -%}
+  {%- assign _title = page.title | default: _en_meta.title | default: site.title -%}
+  {%- assign _desc = page.description | default: _en_meta.description | default: site.description -%}
   {%- assign _keywords = page.keywords -%}
   {%- assign _lang = page.lang | default: "en" -%}
   {%- assign _dir = "ltr" -%}
@@ -66,6 +88,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% if page.noindex %}<meta name="robots" content="noindex, follow" />{% endif %}
   <title>{{ _title }}</title>
   <meta name="description" content="{{ _desc }}" />
   {% if _keywords %}<meta name="keywords" content="{{ _keywords }}" />{% endif %}
@@ -125,12 +148,15 @@
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
   {% endif %}
 
-  <!-- Structured data (homepage only) -->
-  {% if page.url == "/" %}<script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"MobileApplication","name":"Sports HQ","description":"Find pickup games, join sports teams, and connect with athletes near you.","operatingSystem":["iOS","Android"],"applicationCategory":"SportsApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.sportshq.io"}
+  <!-- Structured data (home + locale home pages) -->
+  {% if page.url == "/" or page.layout == "locale" %}<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MobileApplication","name":"Sports HQ","description":{{ _desc | jsonify }},"inLanguage":{{ _lang | jsonify }},"operatingSystem":"iOS, Android","applicationCategory":"SportsApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"{{ site.url }}{{ page.url }}","image":"{{ site.url }}/images/og-image.png","downloadUrl":"https://play.google.com/store/apps/details?id=io.sportacle.app","installUrl":"https://apps.apple.com/us/app/sportacleio/id6444780403","featureList":["Map-based search for nearby games, athletes and venues","Filter by sport, skill level, age, gender and distance","Recurring and one-off events with capacity limits and waitlists","Confirm or decline attendance with one tap","Smart need-one-more-player and last-minute replacement alerts","Teammate ratings, reliability and no-show tracking","Direct messages, group chats and event chats","Venue registration with QR codes and shareable links","Guardian accounts for junior players","Safety contacts and live location sharing during activities","Pickleball, padel, soccer, basketball, tennis, volleyball, running, cycling, cricket, rugby and 60+ sports in total","Available in 15+ languages"]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Sports HQ","url":"{{ site.url }}","logo":"{{ site.url }}/images/og-image.png"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Sports HQ","url":"{{ site.url }}/","inLanguage":{{ _lang | jsonify }}}
   </script>{% endif %}
 
   <!-- Locale redirect — runs immediately on root / before any render -->

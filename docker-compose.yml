@@ -1,4 +1,3 @@
-version: '3'
 services:
   jekyll:
     image: ruby:3.3
@@ -15,6 +14,10 @@ services:
     volumes:
       - .:/srv/jekyll
       - bundle_cache:/usr/local/bundle
+      # Explicitly mount the exact absolute path of the current worktree
+      - ${WORKTREE_DIR:-.}:/workspace      
+      # Explicitly mount the absolute path of the main git repo metadata
+      - ${GIT_COMMON_DIR}:${GIT_COMMON_DIR}:ro
 
 volumes:
   bundle_cache:

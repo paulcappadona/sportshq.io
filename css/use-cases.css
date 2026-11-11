@@ -97,6 +97,8 @@ html.dark .uc-hero { background: #0d0e13; }
   border-bottom: 1px solid var(--border-subtle);
 }
 .uc-row:last-child { border-bottom: none; }
+.uc-row--no-visual { grid-template-columns: 1fr; }
+.uc-row--no-visual .uc-row__copy > p { max-width: 640px; }
 .uc-row--reverse .uc-row__visual { order: 2; }
 .uc-row--reverse .uc-row__copy { order: 1; }
 

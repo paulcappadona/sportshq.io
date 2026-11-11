@@ -1,0 +1,189 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}{%- endif -%}
+{%- assign ys = uc.youth_sports -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+{%- assign _crumb = _loc.uc_card_youth_sports_title | default: "Youth &amp; Junior Sports" -%}
+{%- assign _home_label = _loc.ad_breadcrumb_home | default: "Home" -%}
+{%- assign _uc_label = _loc.nav_use_cases | default: "Use Cases" -%}
+{%- assign _f1q = ys.faq1_q | default: "How do parents manage a child's profile on Sports HQ?" -%}
+{%- assign _f1a = ys.faq1_a | default: "Parents and carers add their child to their own account. They can then manage the child's event memberships and activity attendance and receive alerts on their behalf. A child added this way isn't visible to other users, except in events and activities where a guardian has added them." -%}
+{%- assign _f2q = ys.faq2_q | default: "Can I approve who joins my junior team?" -%}
+{%- assign _f2a = ys.faq2_a | default: "Yes. Make your event private and review membership requests before anyone joins. For junior sports, requests are managed by the child's guardian." -%}
+{%- assign _f3q = ys.faq3_q | default: "Can coaches and parents chat in the app?" -%}
+{%- assign _f3a = ys.faq3_a | default: "Yes. You can switch on an optional chat for any event, activity or venue, and admins control who can post and share photos." -%}
+{%- assign _f4q = ys.faq4_q | default: "Is Sports HQ suitable for children?" -%}
+{%- assign _f4a = ys.faq4_a | default: "Sports HQ supports guardian accounts, age filters and private events to help families play safely. As with any app, we recommend parents stay involved in the profiles and groups their children join." -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _home_label }}</a><span>›</span><a href="{{ _base }}">{{ _uc_label }}</a><span>›</span>{{ _crumb }}</div>
+        <div class="uc-hero__badge">{{ ys.badge | default: "For Junior Clubs, Coaches &amp; Parents" }}</div>
+        <h1 class="uc-hero__title">{{ ys.title | default: "Youth Sports, <span>Parent-Approved.</span>" }}</h1>
+        <p class="uc-hero__sub">{{ ys.sub | default: "Running a junior team means juggling parents, permissions and last-minute changes across a dozen group chats. Sports HQ lets guardians manage their child's event memberships and attendance, while coaches keep schedules and attendance in one place." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="#download" class="btn btn--lime btn--lg">{{ _loc.cta_download | default: "Download Free" }}</a>
+          <a href="#how" class="btn btn--outline-light btn--lg">{{ _loc.uc_cta_how | default: "See How It Works" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <!-- TODO: swap for /assets/screenshots/{{ _shots }}/youth-sports/01.webp once generated -->
+        <img src="/assets/screenshots/{{ _shots }}/social-sports-group/01.webp" alt="{{ ys.alt1 | default: "Sports HQ event details screen with members and upcoming sessions" }}" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ── -->
+  <section class="uc-intro">
+    <div class="container">
+      <div class="uc-intro__card">
+        <div class="uc-intro__icon">🧒</div>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ ys.intro | default: "you coach, manage or volunteer for a junior club, school team or weekend academy — and you want parents in the loop, children's profiles managed by an adult, and a simple way to see who's coming to training." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="uc-rows" id="how">
+    <div class="container">
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ ys.row1_tag | default: "Guardian Accounts" }}</div>
+          <h2 class="section-title">{{ ys.row1_title | default: "Parents stay in control of their child's profile" }}</h2>
+          <p>{{ ys.row1_body | default: "Guardian accounts let a parent or carer manage a minor's event memberships and activity attendance, and receive alerts on their behalf. Children get to play; adults stay in the loop." }}</p>
+          <ul class="feature-list">
+            <li>{{ ys.row1_li1 | default: "A guardian account manages the junior's profile" }}</li>
+            <li>{{ ys.row1_li2 | default: "Guardian-managed membership requests for junior sports" }}</li>
+            <li>{{ ys.row1_li3 | default: "Age filters help keep events right for the age group" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/social-sports-group/03.webp" alt="{{ ys.alt2 | default: "Sports HQ screens for sharing an event by invite link or QR code" }}" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/social-sports-group/02.webp" alt="{{ ys.alt3 | default: "Sports HQ event privacy settings with private event and join restrictions" }}" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ ys.row2_tag | default: "Approval Workflows" }}</div>
+          <h2 class="section-title">{{ ys.row2_title | default: "Control who joins your junior team" }}</h2>
+          <p>{{ ys.row2_body | default: "Make your team or session private and review every request to join. Share a link or QR code at the clubhouse or the school gate, then approve the families you expect." }}</p>
+          <ol class="uc-steps">
+            <li>
+              <span class="uc-step__num">1</span>
+              <div class="uc-step__body"><strong>{{ ys.row2_step1_title | default: "Share your link or QR code" }}</strong><p>{{ ys.row2_step1_body | default: "Print it for the clubhouse or send it to the parents' group chat." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">2</span>
+              <div class="uc-step__body"><strong>{{ ys.row2_step2_title | default: "Families request to join" }}</strong><p>{{ ys.row2_step2_body | default: "Guardians submit membership requests on behalf of their child." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">3</span>
+              <div class="uc-step__body"><strong>{{ ys.row2_step3_title | default: "You approve who's in" }}</strong><p>{{ ys.row2_step3_body | default: "Admins review requests and keep the roster under control." }}</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ ys.row3_tag | default: "Training Day Made Easy" }}</div>
+          <h2 class="section-title">{{ ys.row3_title | default: "Know who's at training before you leave for the field" }}</h2>
+          <p>{{ ys.row3_body | default: "Recurring sessions generate automatically from your template. Parents confirm or decline with a tap, waitlists handle full squads, and team colors mean no bibs to hand out." }}</p>
+          <ul class="feature-list">
+            <li>{{ ys.row3_li1 | default: "Recurring weekly training and match-day sessions" }}</li>
+            <li>{{ ys.row3_li2 | default: "Capacity limits and waitlists for squads and clinics" }}</li>
+            <li>{{ ys.row3_li3 | default: "Optional team color assignments — no bibs needed" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/social-sports-group/04.webp" alt="{{ ys.alt4 | default: "Sports HQ recurring session schedule settings" }}" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="uc-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ ys.faq_tag | default: "Common Questions" }}</div>
+        <h2 class="section-title">{{ ys.faq_title | default: "Questions about youth sports on Sports HQ" }}</h2>
+      </div>
+      <div class="uc-faq__list">
+        <details class="uc-faq__item">
+          <summary>{{ _f1q }}</summary>
+          <p>{{ _f1a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f2q }}</summary>
+          <p>{{ _f2a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f3q }}</summary>
+          <p>{{ _f3a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f4q }}</summary>
+          <p>{{ _f4a }}</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RELATED USE CASES ── -->
+  <section class="uc-related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_related_tag | default: "More Use Cases" }}</div>
+        <h2 class="section-title">{{ _loc.uc_related_title | default: "Running a different kind of community?" }}</h2>
+      </div>
+      <div class="uc-related__grid">
+        <a href="{{ _base }}social-sports-group/" class="uc-card">
+          <div class="uc-card__icon">👥</div>
+          <h3>{{ _loc.uc_card_social_sports_group_title | default: "Large Social Sports Groups" }}</h3>
+          <p>{{ _loc.uc_card_social_sports_group_desc | default: "Public or private membership, shareable links, and waitlists for big recurring social groups." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}venue-owners/" class="uc-card">
+          <div class="uc-card__icon">🏟️</div>
+          <h3>{{ _loc.uc_card_venue_owners_title | default: "Venue & Facility Owners" }}</h3>
+          <p>{{ _loc.uc_card_venue_owners_desc | default: "Build a community of patrons around your facility with QR registration and venue discovery." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}fill-the-last-spot/" class="uc-card">
+          <div class="uc-card__icon">🔔</div>
+          <h3>{{ _loc.uc_card_fill_the_last_spot_title | default: "Fill Every Spot" }}</h3>
+          <p>{{ _loc.uc_card_fill_the_last_spot_desc | default: "Need-one-more alerts, reminders and waitlists to help your game reach its numbers." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {%- assign _dl_headline = ys.download_headline | default: 'Fewer forms. <span class="download__accent">More training.</span>' -%}
+  {%- assign _dl_sub = ys.download_sub | default: "Download Sports HQ for free and bring your parents, players and coaches into one place." -%}
+  {% include sections/download.html headline=_dl_headline sub=_dl_sub %}
+
+  <!-- ── Structured data ── -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":{{ _home_label | jsonify }},"item":{{ site.url | append: _home | jsonify }}},
+    {"@type":"ListItem","position":2,"name":{{ _uc_label | jsonify }},"item":{{ site.url | append: _base | jsonify }}},
+    {"@type":"ListItem","position":3,"name":{{ _crumb | jsonify }},"item":{{ site.url | append: page.url | jsonify }}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":{{ _f1q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f1a | jsonify }}}},
+    {"@type":"Question","name":{{ _f2q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f2a | jsonify }}}},
+    {"@type":"Question","name":{{ _f3q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f3a | jsonify }}}},
+    {"@type":"Question","name":{{ _f4q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f4a | jsonify }}}}
+  ]}
+  </script>

@@ -17,6 +17,14 @@ docker-compose run --rm jekyll jekyll build
 docker-compose down
 ```
 
+**In a git worktree**, `.git` is a file pointing at the main repo's `.git` dir, which isn't visible inside the container (git fails with "not a git repository", exit 128). Pass `GIT_COMMON_DIR` so `docker-compose.yml` mounts it read-only at the same path:
+
+```bash
+GIT_COMMON_DIR=$(git rev-parse --path-format=absolute --git-common-dir) docker compose up
+```
+
+In a normal checkout leave it unset. The same prefix applies to `docker-compose run`.
+
 First run pulls the Ruby image and installs gems into a named volume (takes a few minutes). Subsequent starts are fast.
 
 ## Deployment
