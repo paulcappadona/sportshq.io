@@ -6,11 +6,12 @@
         <div>
           <div class="section-tag">{{ _loc.features_tag | default: "Features" }}</div>
           <h2 class="section-title">{{ _loc.features_headline | default: 'Engineered for<br /><em class="features__title-accent">Excellence.</em>' }}</h2>
-          <p class="section-sub" style="margin:0">{{ _loc.features_sub | default: "Our features are built to bridge the gap between amateur play and professional organisation." }}</p>
+          <p class="section-sub" style="margin:0">{{ _loc.features_sub | default: "Our features are built to bridge the gap between amateur play and professional organization." }}</p>
         </div>
-        <div class="features__counter">01–06</div>
+        <div class="features__counter">01–09</div>
       </div>
 
+      {%- assign _shots_home = page.locale_id | default: "en-US" -%}
       <div class="features__bento">
 
         <!-- Card 1: Discovery -->
@@ -46,7 +47,7 @@
             <li>{{ _loc.feature_2_li_1 | default: "Recurring event scheduling" }}</li>
             <li>{{ _loc.feature_2_li_2 | default: "Capacity &amp; waitlists" }}</li>
             <li>{{ _loc.feature_2_li_3 | default: "Confirm / decline attendance" }}</li>
-            <li>{{ _loc.feature_2_li_4 | default: "Team colour assignments" }}</li>
+            <li>{{ _loc.feature_2_li_4 | default: "Team color assignments" }}</li>
           </ul>
         </div>
 
@@ -100,12 +101,58 @@
             <span class="material-symbols-outlined">shield</span>
           </div>
           <h3>{{ _loc.feature_6_title | default: "Safe &amp; Family Friendly" }}</h3>
-          <p>{{ _loc.feature_6_body | default: "Guardian accounts let parents manage minor profiles with full visibility and control. Age and gender filters keep events appropriate." }}</p>
+          <p>{{ _loc.feature_6_body | default: "Guardian accounts let parents manage minor profiles with full visibility and control. Safety contacts and live location sharing keep trusted people in the loop during activities." }}</p>
           <ul class="feature-list">
             <li>{{ _loc.feature_6_li_1 | default: "Parent / guardian accounts" }}</li>
             <li>{{ _loc.feature_6_li_2 | default: "Minor profile controls" }}</li>
             <li>{{ _loc.feature_6_li_3 | default: "Age &amp; gender filters on all events" }}</li>
+            <li>{{ _loc.feature_6_li_4 | default: "Safety contacts &amp; live location sharing" }}</li>
           </ul>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="bento-card bento-card--4 bento-card--dark">
+          <div class="feature-icon feature-icon--lime-on-dark">
+            <span class="material-symbols-outlined">verified</span>
+          </div>
+          <h3>{{ _loc.feature_7_title | default: "Play With People You Can Count On" }}</h3>
+          <p>{{ _loc.feature_7_body | default: "Rate teammates after each game and see who actually shows up. Reliability, punctuality and friendliness build into every player's profile." }}</p>
+          <ul class="feature-list">
+            <li>{{ _loc.feature_7_li_1 | default: "Rate punctuality, friendliness &amp; skill level" }}</li>
+            <li>{{ _loc.feature_7_li_2 | default: "Attended / no-show tracking" }}</li>
+            <li>{{ _loc.feature_7_li_3 | default: "Reliability summaries on profiles" }}</li>
+          </ul>
+          <img class="bento-card__shot" src="/assets/screenshots/{{ _shots_home }}/home/06.webp" alt="{{ _loc.feature_7_alt | default: "Sports HQ player profile with a reliability summary" }}" width="340" height="512" loading="lazy" onerror="this.remove()">
+        </div>
+
+        <!-- Card 8 -->
+        <div class="bento-card bento-card--4 bento-card--events">
+          <div class="feature-icon feature-icon--navy">
+            <span class="material-symbols-outlined">group_add</span>
+          </div>
+          <h3>{{ _loc.feature_8_title | default: "Fill Every Spot" }}</h3>
+          <p>{{ _loc.feature_8_body | default: "Smart activity alerts help games reach their numbers, even at the last minute." }}</p>
+          <ul class="feature-list">
+            <li>{{ _loc.feature_8_li_1 | default: "Need-one-more &amp; replacement alerts" }}</li>
+            <li>{{ _loc.feature_8_li_2 | default: "Reminders for members who haven't replied" }}</li>
+            <li>{{ _loc.feature_8_li_3 | default: "Reach nearby players matching sport, level &amp; availability" }}</li>
+          </ul>
+          <img class="bento-card__shot" src="/assets/screenshots/{{ _shots_home }}/home/07.webp" alt="{{ _loc.feature_8_alt | default: "Sports HQ activity alerts settings for need-one-more-player alerts and reminders" }}" width="340" height="512" loading="lazy" onerror="this.remove()">
+        </div>
+
+        <!-- Card 9 -->
+        <div class="bento-card bento-card--4 bento-card--notif">
+          <div class="feature-icon feature-icon--lime">
+            <span class="material-symbols-outlined">forum</span>
+          </div>
+          <h3>{{ _loc.feature_9_title | default: "Chat With Your Group" }}</h3>
+          <p>{{ _loc.feature_9_body | default: "Keep the conversation where the game is. Message players, start group chats, or switch on chats for any event, activity or venue." }}</p>
+          <ul class="feature-list">
+            <li>{{ _loc.feature_9_li_1 | default: "Direct messages &amp; group chats" }}</li>
+            <li>{{ _loc.feature_9_li_2 | default: "Optional event, activity &amp; venue chats" }}</li>
+            <li>{{ _loc.feature_9_li_3 | default: "Admin controls for posting and photos" }}</li>
+          </ul>
+          <img class="bento-card__shot" src="/assets/screenshots/{{ _shots_home }}/home/05.webp" alt="{{ _loc.feature_9_alt | default: "Sports HQ group chat conversation" }}" width="340" height="512" loading="lazy" onerror="this.remove()">
         </div>
 
       </div>

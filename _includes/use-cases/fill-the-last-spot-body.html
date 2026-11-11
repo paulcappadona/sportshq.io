@@ -1,0 +1,209 @@
+{%- if page.locale_id -%}{%- assign _loc = site.data.locales | where: "id", page.locale_id | first -%}{%- assign uc = site.data.use_cases | where: "id", page.locale_id | first -%}{%- endif -%}
+{%- assign fl = uc.fill_the_last_spot -%}
+{%- assign _shots = page.locale_id | default: "en-US" -%}
+{%- if page.locale_id -%}{%- assign _base = "/" | append: page.locale_id | append: "/use-cases/" -%}{%- else -%}{%- assign _base = "/use-cases/" -%}{%- endif -%}
+{%- assign _home = _loc.path | default: "/" -%}
+{%- assign _crumb = _loc.uc_card_fill_the_last_spot_title | default: "Fill Every Spot" -%}
+{%- assign _home_label = _loc.ad_breadcrumb_home | default: "Home" -%}
+{%- assign _uc_label = _loc.nav_use_cases | default: "Use Cases" -%}
+{%- assign _f1q = fl.faq1_q | default: "How do I find a replacement player at short notice?" -%}
+{%- assign _f1a = fl.faq1_a | default: "Switch on smart activity alerts for your event. Sports HQ can send need-one-more-player and last-minute replacement alerts to your members, or to nearby players who match your sport, level and availability." -%}
+{%- assign _f2q = fl.faq2_q | default: "Can Sports HQ remind people who haven't RSVP'd?" -%}
+{%- assign _f2a = fl.faq2_a | default: "Yes. Automatic reminders go to members who haven't responded to the RSVP, so you don't have to chase them yourself." -%}
+{%- assign _f3q = fl.faq3_q | default: "What happens when someone drops out?" -%}
+{%- assign _f3a = fl.faq3_a | default: "If your event has a waitlist, the next person on it is notified as soon as a spot opens up." -%}
+{%- assign _f4q = fl.faq4_q | default: "Can players turn alerts off?" -%}
+{%- assign _f4a = fl.faq4_a | default: "Yes. Players can opt out of alerts for events they're not part of." -%}
+{%- assign _f5q = fl.faq5_q | default: "How do I reduce no-shows?" -%}
+{%- assign _f5a = fl.faq5_a | default: "Mark who attended and who didn't at check-in, and let teammates rate each other's reliability and punctuality. Over time, each player's profile shows who reliably turns up, so you know who to count on for your roster. Reminders and waitlists then cover the gaps." -%}
+{%- assign _f6q = fl.faq6_q | default: "How do I find a sub for my league or team?" -%}
+{%- assign _f6a = fl.faq6_a | default: "Send a need-one-more alert to your own members first, or widen it to nearby players who match your sport, skill level and availability. The first to confirm takes the spot, and the headcount updates live." -%}
+{%- assign _f7q = fl.faq7_q | default: "Which sports does this work for?" -%}
+{%- assign _f7a = fl.faq7_a | default: "Any of the 60+ sports on Sports HQ, including soccer, basketball, volleyball, pickleball, padel, tennis, hockey, rugby and cricket. It works best for games with a set number of players." -%}
+
+  <!-- ── HERO ── -->
+  <section class="uc-hero">
+    <div class="container uc-hero__inner">
+      <div class="uc-hero__copy">
+        <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _home_label }}</a><span>›</span><a href="{{ _base }}">{{ _uc_label }}</a><span>›</span>{{ _crumb }}</div>
+        <div class="uc-hero__badge">{{ fl.badge | default: "For Organizers Who Hate Cancelling Games" }}</div>
+        <h1 class="uc-hero__title">{{ fl.title | default: "One Player Short? <span>Fill Every Spot.</span>" }}</h1>
+        <p class="uc-hero__sub">{{ fl.sub | default: "Nothing kills a weekly game like a late dropout. Sports HQ can nudge members who haven't replied, send need-one-more alerts, and tell the next person on the waitlist when a spot opens — to help a ten-player game reach ten." }}</p>
+        <div class="uc-hero__ctas">
+          <a href="#download" class="btn btn--lime btn--lg">{{ _loc.cta_download | default: "Download Free" }}</a>
+          <a href="#how" class="btn btn--outline-light btn--lg">{{ _loc.uc_cta_how | default: "See How It Works" }}</a>
+        </div>
+      </div>
+      <div class="uc-hero__visual">
+        <img src="/assets/screenshots/{{ _shots }}/fill-the-last-spot/01.webp" alt="{{ fl.alt1 | default: "Sports HQ event details screen with upcoming sessions and confirm or decline buttons" }}" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ── -->
+  <section class="uc-intro">
+    <div class="container">
+      <div class="uc-intro__card">
+        <div class="uc-intro__icon">🔔</div>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ fl.intro | default: "you organize a weekly pickup soccer game, volleyball night, pickleball ladder or league team, and you keep scrambling to find a replacement an hour before kick-off." }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="uc-rows" id="how">
+    <div class="container">
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ fl.row1_tag | default: "Smart Activity Alerts" }}</div>
+          <h2 class="section-title">{{ fl.row1_title | default: "Switch on alerts and let the app do the chasing" }}</h2>
+          <p>{{ fl.row1_body | default: "Turn on smart activity alerts for any event. Sports HQ sends need-one-more-player and last-minute replacement alerts, plus automatic reminders to members who haven't responded." }}</p>
+          <ul class="feature-list">
+            <li>{{ fl.row1_li1 | default: "Need-one-more and last-minute replacement alerts" }}</li>
+            <li>{{ fl.row1_li2 | default: "Automatic RSVP reminders for members who haven't replied" }}</li>
+            <li>{{ fl.row1_li3 | default: "Players can opt out of alerts for events they're not in" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/fill-the-last-spot/02.webp" alt="{{ fl.alt2 | default: "Sports HQ activity members list showing confirmed and pending members with a Send Reminder button" }}" loading="lazy">
+        </div>
+      </div>
+
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/fill-the-last-spot/03.webp" alt="{{ fl.alt3 | default: "Sports HQ screen for scheduling a session" }}" loading="lazy">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ fl.row2_tag | default: "Reach Nearby Players" }}</div>
+          <h2 class="section-title">{{ fl.row2_title | default: "Go beyond your group when you need to" }}</h2>
+          <p>{{ fl.row2_body | default: "Alert your own members only, or reach nearby players who match the sport, level and availability you need. Fill the gap with someone who actually wants to play." }}</p>
+          <ol class="uc-steps">
+            <li>
+              <span class="uc-step__num">1</span>
+              <div class="uc-step__body"><strong>{{ fl.row2_step1_title | default: "Choose who to alert" }}</strong><p>{{ fl.row2_step1_body | default: "Your members only, or nearby players who match." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">2</span>
+              <div class="uc-step__body"><strong>{{ fl.row2_step2_title | default: "Matching players are notified" }}</strong><p>{{ fl.row2_step2_body | default: "Sport, skill level and availability are taken into account." }}</p></div>
+            </li>
+            <li>
+              <span class="uc-step__num">3</span>
+              <div class="uc-step__body"><strong>{{ fl.row2_step3_title | default: "Confirm with a tap" }}</strong><p>{{ fl.row2_step3_body | default: "The spot is filled and the headcount updates live." }}</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="uc-row">
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ fl.row3_tag | default: "Waitlists &amp; Reliability" }}</div>
+          <h2 class="section-title">{{ fl.row3_title | default: "Back-ups ready, and a clearer view of who shows up" }}</h2>
+          <p>{{ fl.row3_body | default: "When a confirmed player drops out, the next person on the waitlist is notified. Teammate ratings and attendance tracking show who reliably turns up, so you know who to count on." }}</p>
+          <ul class="feature-list">
+            <li>{{ fl.row3_li1 | default: "Waitlists notify the next player when a spot opens" }}</li>
+            <li>{{ fl.row3_li2 | default: "Attended / no-show tracking at check-in" }}</li>
+            <li>{{ fl.row3_li3 | default: "Reliability, punctuality and friendliness on player profiles" }}</li>
+          </ul>
+        </div>
+        <div class="uc-row__visual uc-row__visual--wide">
+          <img src="/assets/screenshots/{{ _shots }}/fill-the-last-spot/04.webp" alt="{{ fl.alt4 | default: "Sports HQ event details, recurring schedule and QR code join screens" }}" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="uc-faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ fl.faq_tag | default: "Common Questions" }}</div>
+        <h2 class="section-title">{{ fl.faq_title | default: "Questions about filling a game" }}</h2>
+      </div>
+      <div class="uc-faq__list">
+        <details class="uc-faq__item">
+          <summary>{{ _f1q }}</summary>
+          <p>{{ _f1a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f2q }}</summary>
+          <p>{{ _f2a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f3q }}</summary>
+          <p>{{ _f3a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f4q }}</summary>
+          <p>{{ _f4a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f5q }}</summary>
+          <p>{{ _f5a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f6q }}</summary>
+          <p>{{ _f6a }}</p>
+        </details>
+        <details class="uc-faq__item">
+          <summary>{{ _f7q }}</summary>
+          <p>{{ _f7a }}</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RELATED USE CASES ── -->
+  <section class="uc-related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">{{ _loc.uc_related_tag | default: "More Use Cases" }}</div>
+        <h2 class="section-title">{{ _loc.uc_related_title | default: "Running a different kind of community?" }}</h2>
+      </div>
+      <div class="uc-related__grid">
+        <a href="{{ _base }}social-sports-group/" class="uc-card">
+          <div class="uc-card__icon">👥</div>
+          <h3>{{ _loc.uc_card_social_sports_group_title | default: "Large Social Sports Groups" }}</h3>
+          <p>{{ _loc.uc_card_social_sports_group_desc | default: "Public or private membership, shareable links, and waitlists for big recurring social groups." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}run-club/" class="uc-card">
+          <div class="uc-card__icon">🏃</div>
+          <h3>{{ _loc.uc_card_run_club_title | default: "Ad-Hoc Run Clubs" }}</h3>
+          <p>{{ _loc.uc_card_run_club_desc | default: "Coordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+        <a href="{{ _base }}office-sports-organizer/" class="uc-card">
+          <div class="uc-card__icon">🏢</div>
+          <h3>{{ _loc.uc_card_office_sports_organizer_title | default: "Office Sports Organizers" }}</h3>
+          <p>{{ _loc.uc_card_office_sports_organizer_desc | default: "See how a single organizer manages attendance and scheduling for a workplace sports group." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {%- assign _dl_headline = fl.download_headline | default: 'Help every game <span class="download__accent">reach its numbers.</span>' -%}
+  {%- assign _dl_sub = fl.download_sub | default: "Download Sports HQ for free and make filling spots easier." -%}
+  {% include sections/download.html headline=_dl_headline sub=_dl_sub %}
+
+  <!-- ── Structured data ── -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":{{ _home_label | jsonify }},"item":{{ site.url | append: _home | jsonify }}},
+    {"@type":"ListItem","position":2,"name":{{ _uc_label | jsonify }},"item":{{ site.url | append: _base | jsonify }}},
+    {"@type":"ListItem","position":3,"name":{{ _crumb | jsonify }},"item":{{ site.url | append: page.url | jsonify }}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":{{ _f1q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f1a | jsonify }}}},
+    {"@type":"Question","name":{{ _f2q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f2a | jsonify }}}},
+    {"@type":"Question","name":{{ _f3q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f3a | jsonify }}}},
+    {"@type":"Question","name":{{ _f4q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f4a | jsonify }}}},
+    {"@type":"Question","name":{{ _f5q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f5a | jsonify }}}},
+    {"@type":"Question","name":{{ _f6q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f6a | jsonify }}}},
+    {"@type":"Question","name":{{ _f7q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ _f7a | jsonify }}}}
+  ]}
+  </script>
