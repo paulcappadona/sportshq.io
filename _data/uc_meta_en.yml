@@ -1,0 +1,26 @@
+# Search-facing <title> and meta description for each indexed use-case page (en-US wording).
+# Used by the canonical English pages and by every English locale; en-GB/en-AU/en-IN/en-SG
+# are converted to British spelling at build time by _plugins/british_spelling.rb.
+# Non-English locales carry their own meta_title / meta_desc in use_cases.yml.
+# Keep titles <= ~60 characters and descriptions <= ~155.
+run_club:
+  title: "Run Club App — Coordinate Last-Minute Group Runs | Sports HQ"
+  description: "Get your run club out the door faster: instant notifications, one-tap RSVP and no group-chat chaos for ad-hoc and last-minute runs. Free on iOS and Android."
+venue_owners:
+  title: "Venue Community App — QR Sign-Ups & Events | Sports HQ"
+  description: "Turn patrons into a community. QR code sign-up, member discovery, recurring events and a roster of regulars for courts, pitches and sports venues."
+office_sports_organizer:
+  title: "Office Sports League App — RSVPs & Scheduling | Sports HQ"
+  description: "Run your workplace sports league without the spreadsheet: easy sign-up, recurring scheduling, RSVPs, rosters and waitlists in one free app."
+social_sports_group:
+  title: "Social Sports Group App — Manage Members & RSVPs | Sports HQ"
+  description: "Run a big social sports group without the chaos: public or private events, join links, player caps, waitlists, RSVPs and automatic reminders."
+communal_field_community:
+  title: "Local Court & Pitch Community — QR Code or Link | Sports HQ"
+  description: "Turn a shared park, court or pitch into a local community. QR code or link sign-up, nearby search and an easy way for regulars to find each other."
+safe_group_runs:
+  title: "Safer Group Runs for Women | Sports HQ"
+  description: "Prefer not to run alone? Create an event with trusted running partners, mark it private if you like, see who's confirmed and optionally share your live location."
+fill_the_last_spot:
+  title: "Find a Replacement Player Fast — Fill Every Spot | Sports HQ"
+  description: "One player short? Need-one-more alerts, reminders for members who haven't RSVP'd and waitlists help your pickup or league game fill every spot."

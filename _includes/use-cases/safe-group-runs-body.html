@@ -32,7 +32,7 @@
     <div class="container">
       <div class="uc-intro__card">
         <div class="uc-intro__icon">🛡️</div>
-        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ sg.intro | default: "you'd rather not run alone — especially early mornings, after dark, or on quieter routes — but your running partners' schedules never quite line up. Sports HQ coordinates people you already know and trust; it isn't a substitute for an emergency or live-location safety service." }}</p>
+        <p><strong>{{ _loc.uc_intro_lead | default: "This is for you if:" }}</strong> {{ sg.intro | default: "you'd rather not run alone — especially early mornings, after dark, or on quieter routes — but your running partners' schedules never quite line up. Sports HQ coordinates people you already know and trust, and can share your live location during an activity if you choose; it isn't an emergency service or a guarantee of safety." }}</p>
       </div>
     </div>
   </section>
@@ -49,7 +49,7 @@
           <ul class="feature-list">
             <li>{{ sg.row1_li1 | default: "Mark your event private if you want it visible only to the members you invite" }}</li>
             <li>{{ sg.row1_li2 | default: "Add members with a link or QR code, no separate account setup required" }}</li>
-            <li>{{ sg.row1_li3 | default: "Works for a dedicated running partner or a whole neighbourhood crew" }}</li>
+            <li>{{ sg.row1_li3 | default: "Works for a dedicated running partner or a whole neighborhood crew" }}</li>
           </ul>
         </div>
         <div class="uc-row__visual uc-row__visual--wide">
@@ -98,6 +98,22 @@
         </div>
       </div>
 
+      <div class="uc-row uc-row--reverse">
+        <div class="uc-row__visual">
+          <img src="/assets/screenshots/{{ _shots }}/safe-group-runs/05.webp" alt="{{ sg.row4_alt | default: 'Sports HQ live location sharing sheet with audience options for confirmed participants or safety contacts' }}" loading="lazy" onerror="var r=this.closest('.uc-row');r.classList.add('uc-row--no-visual');this.parentNode.remove()">
+        </div>
+        <div class="uc-row__copy">
+          <div class="section-tag">{{ sg.row4_tag | default: "Live Location Sharing" }}</div>
+          <h2 class="section-title">{{ sg.row4_title | default: "Share your live location with people you trust, only for the run" }}</h2>
+          <p>{{ sg.row4_body | default: "Start sharing from the activity and choose who can follow you: its confirmed participants, or safety contacts who have accepted your request. Sharing is only available around the activity, you can stop at any time, and it isn't an emergency service." }}</p>
+          <ul class="feature-list">
+            <li>{{ sg.row4_li1 | default: "Choose confirmed participants or your accepted safety contacts" }}</li>
+            <li>{{ sg.row4_li2 | default: "Available from an hour before the activity starts until it ends" }}</li>
+            <li>{{ sg.row4_li3 | default: "Stop whenever you like; it also ends when that window closes" }}</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -110,7 +126,7 @@
       </div>
       <div class="uc-faq__list">
         <details class="uc-faq__item">
-          <summary>{{ sg.faq1_q | default: "How does Sports HQ help me organise a safer group run?" }}</summary>
+          <summary>{{ sg.faq1_q | default: "How does Sports HQ help me organize a safer group run?" }}</summary>
           <p>{{ sg.faq1_a | default: "Create an event with the people you already know and trust, mark it private if you'd rather keep it just between you, propose a time and route for your next run, and see in real time who has confirmed before you head out." }}</p>
         </details>
         <details class="uc-faq__item">
@@ -126,8 +142,8 @@
           <p>{{ sg.faq4_a | default: "Yes. Any member of your event can confirm for a run, whether they're running alongside you or riding a bike as company and an extra set of eyes." }}</p>
         </details>
         <details class="uc-faq__item">
-          <summary>{{ sg.faq5_q | default: "Is Sports HQ an emergency or live-location safety app?" }}</summary>
-          <p>{{ sg.faq5_a | default: "No. Sports HQ helps you coordinate runs with people you already trust — it doesn't provide live location tracking, emergency alerts, or a guarantee of personal safety. Use a dedicated safety app or service alongside it if you need those features." }}</p>
+          <summary>{{ sg.faq5_q | default: "Does Sports HQ offer live location sharing, and is it an emergency service?" }}</summary>
+          <p>{{ sg.faq5_a | default: "Yes to the first, no to the second. During an activity you can choose to share your live location with its confirmed participants or with safety contacts who have accepted your request, and you can stop at any time. Sharing is only available around the activity — from an hour before it starts until it ends — and stops when you tap Stop or the window closes. Sports HQ doesn't contact emergency services, send emergency alerts or guarantee anyone's safety, so keep your phone's emergency features or a dedicated safety service to hand if you need them." }}</p>
         </details>
       </div>
     </div>
@@ -144,7 +160,7 @@
         <a href="{{ _base }}run-club/" class="uc-card">
           <div class="uc-card__icon">🏃</div>
           <h3>{{ _loc.uc_card_run_club_title | default: "Ad-Hoc Run Clubs" }}</h3>
-          <p>{{ _loc.uc_card_run_club_desc | default: "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
+          <p>{{ _loc.uc_card_run_club_desc | default: "Coordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
           <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
         </a>
         <a href="{{ _base }}social-sports-group/" class="uc-card">
@@ -177,10 +193,10 @@
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":{{ sg.faq1_q | default: "How does Sports HQ help me organise a safer group run?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq1_a | default: "Create an event with the people you already know and trust, mark it private if you'd rather keep it just between you, propose a time and route for your next run, and see in real time who has confirmed before you head out." | jsonify }}}},
+    {"@type":"Question","name":{{ sg.faq1_q | default: "How does Sports HQ help me organize a safer group run?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq1_a | default: "Create an event with the people you already know and trust, mark it private if you'd rather keep it just between you, propose a time and route for your next run, and see in real time who has confirmed before you head out." | jsonify }}}},
     {"@type":"Question","name":{{ sg.faq2_q | default: "Can I mark my running event as private?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq2_a | default: "Yes. Events are public by default, but you can mark yours private at any time so only the members you invite can see or join." | jsonify }}}},
     {"@type":"Question","name":{{ sg.faq3_q | default: "What happens if nobody confirms?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq3_a | default: "You'll see that clearly before you leave, so you can decide whether to wait, invite someone directly, or choose a different time or route. Sports HQ can't guarantee that someone will always be free to join you." | jsonify }}}},
     {"@type":"Question","name":{{ sg.faq4_q | default: "Can a friend cycle beside me instead of running?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq4_a | default: "Yes. Any member of your event can confirm for a run, whether they're running alongside you or riding a bike as company and an extra set of eyes." | jsonify }}}},
-    {"@type":"Question","name":{{ sg.faq5_q | default: "Is Sports HQ an emergency or live-location safety app?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq5_a | default: "No. Sports HQ helps you coordinate runs with people you already trust — it doesn't provide live location tracking, emergency alerts, or a guarantee of personal safety. Use a dedicated safety app or service alongside it if you need those features." | jsonify }}}}
+    {"@type":"Question","name":{{ sg.faq5_q | default: "Does Sports HQ offer live location sharing, and is it an emergency service?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ sg.faq5_a | default: "Yes to the first, no to the second. During an activity you can choose to share your live location with its confirmed participants or with safety contacts who have accepted your request, and you can stop at any time. Sharing is only available around the activity — from an hour before it starts until it ends — and stops when you tap Stop or the window closes. Sports HQ doesn't contact emergency services, send emergency alerts or guarantee anyone's safety, so keep your phone's emergency features or a dedicated safety service to hand if you need them." | jsonify }}}}
   ]}
   </script>

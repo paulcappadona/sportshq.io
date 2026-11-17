@@ -10,7 +10,7 @@
         <div class="uc-hero__breadcrumb"><a href="{{ _home }}">{{ _loc.ad_breadcrumb_home | default: "Home" }}</a><span>›</span>{{ _loc.nav_use_cases | default: "Use Cases" }}</div>
         <div class="uc-hero__badge">{{ _loc.nav_use_cases | default: "Use Cases" }}</div>
         <h1 class="uc-hero__title">{{ _loc.uc_hub_title | default: "Real Problems. <span>Real Solutions.</span>" }}</h1>
-        <p class="uc-hero__sub">{{ _loc.uc_hub_sub | default: "Whether you're running a tennis club, organising an office league, holding a social group together, or just trying to get a run club out the door on time — Sports HQ replaces the spreadsheets, group chats, and email threads with one app built for sports communities." }}</p>
+        <p class="uc-hero__sub">{{ _loc.uc_hub_sub | default: "Whether you're running a tennis club, organizing an office league, holding a social group together, or just trying to get a run club out the door on time — Sports HQ replaces the spreadsheets, group chats, and email threads with one app built for sports communities." }}</p>
         <div class="uc-hero__ctas">
           <a href="#use-cases" class="btn btn--lime btn--lg">{{ _loc.uc_hub_cta_browse | default: "Browse Use Cases" }}</a>
           <a href="{{ _home }}#download" class="btn btn--outline-light btn--lg">{{ _loc.cta_download | default: "Download Free" }}</a>
@@ -41,8 +41,8 @@
 
         <a href="{{ _base }}office-sports-organizer/" class="uc-card">
           <div class="uc-card__icon">🏢</div>
-          <h3>{{ _loc.uc_card_office_sports_organizer_title | default: "Office Sports Organisers" }}</h3>
-          <p>{{ _loc.uc_card_office_sports_organizer_desc | default: "See how a single organiser manages attendance and scheduling for a workplace sports group." }}</p>
+          <h3>{{ _loc.uc_card_office_sports_organizer_title | default: "Office Sports Organizers" }}</h3>
+          <p>{{ _loc.uc_card_office_sports_organizer_desc | default: "See how a single organizer manages attendance and scheduling for a workplace sports group." }}</p>
           <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
         </a>
 
@@ -63,7 +63,7 @@
         <a href="{{ _base }}run-club/" class="uc-card">
           <div class="uc-card__icon">🏃</div>
           <h3>{{ _loc.uc_card_run_club_title | default: "Ad-Hoc Run Clubs" }}</h3>
-          <p>{{ _loc.uc_card_run_club_desc | default: "Co-ordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
+          <p>{{ _loc.uc_card_run_club_desc | default: "Coordinate last-minute group activities with instant notifications and one-tap confirm/decline." }}</p>
           <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
         </a>
 
@@ -73,8 +73,24 @@
           <p>{{ _loc.uc_card_safe_group_runs_desc | default: "Build a trusted running circle and see who's confirmed before you head out." }}</p>
           <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
         </a>
+
+
+        <a href="{{ _base }}fill-the-last-spot/" class="uc-card">
+          <div class="uc-card__icon">🔔</div>
+          <h3>{{ _loc.uc_card_fill_the_last_spot_title | default: "Fill Every Spot" }}</h3>
+          <p>{{ _loc.uc_card_fill_the_last_spot_desc | default: "Need-one-more alerts, reminders and waitlists to help your game reach its numbers." }}</p>
+          <span class="uc-card__link">{{ _loc.uc_read_case | default: "Read the use case →" }}</span>
+        </a>
       </div>
     </div>
   </section>
 
   {% include sections/download.html %}
+
+  <!-- ── Structured data ── -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":{{ _loc.nav_use_cases | default: "Use Cases" | jsonify }},"itemListElement":[
+    {% assign _slugs = "run-club,safe-group-runs,venue-owners,office-sports-organizer,social-sports-group,communal-field-community,fill-the-last-spot" | split: "," -%}
+    {%- for _s in _slugs -%}{"@type":"ListItem","position":{{ forloop.index }},"url":{{ site.url | append: _base | append: _s | append: "/" | jsonify }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+  ]}
+  </script>
